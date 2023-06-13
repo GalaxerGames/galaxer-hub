@@ -8,8 +8,8 @@ export function NewTokenBalance() {
   const [account, setAccount] = useState(null);
   const [provider, setProvider] = useState(null);
 
-  const tokenAddress = '0x73b0856356279BdeAea503873EB8033F7311C671'; 
-  const claimAddress = '0x50e4252210e36b9D89106485cF23a58a0aD7550F'; 
+  const tokenAddress = '0xA17051ebD6DF3b9Ad31fe6ad4fdE373b53DF1a6a'; 
+  const claimAddress = '0xd9145CCE52D386f254917e481eB44e9943F39138'; 
 
   const [selectedDays, setSelectedDays] = useState(90);
   const stakeDuration = selectedDays * 24 * 60 * 60; // convert days to seconds
