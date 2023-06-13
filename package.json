@@ -8,12 +8,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mapbox/mapbox-sdk": "^0.15.1",
     "@web3modal/ethereum": "2.4.1",
     "@web3modal/react": "2.4.1",
     "buffer": "^6.0.3",
+    "leaflet": "^1.9.4",
+    "mapbox-gl": "^2.14.1",
     "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
+    "react-map-gl": "^7.0.23",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.11.2",
+    "react-sidebar": "^3.0.2",
     "util": "^0.12.4",
     "viem": "~0.3.24",
     "wagmi": "^1.0.5"

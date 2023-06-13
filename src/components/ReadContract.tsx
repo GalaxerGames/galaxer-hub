@@ -38,7 +38,7 @@ function TotalSupply() {
 
 function BalanceOf() {
   const [address, setAddress] = useState<Address>(
-    '0xa5cc3c03994DB5b0d9A5eEdD10CabaB0813678AC',
+    '0x75D0FB8dB2f6485fDFE6FF58321e91EFfAE759A8',
   )
   const { data, error, isLoading, isSuccess } = useContractRead({
     ...wagmiContractConfig,

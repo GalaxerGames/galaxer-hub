@@ -17,7 +17,7 @@ export function WriteContract() {
 
   return (
     <>
-      <h3>Mint a wagmi</h3>
+      <h3>Join the Tacaiocht</h3>
       <form
         onSubmit={(e) => {
           e.preventDefault()
@@ -30,7 +30,7 @@ export function WriteContract() {
       >
         <input name="tokenId" placeholder="token id" />
         <button disabled={isLoading} type="submit">
-          Mint
+          Join
         </button>
       </form>
 

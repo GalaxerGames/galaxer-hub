@@ -5,9 +5,12 @@ export function Account() {
   const { data: ensName } = useEnsName({ address })
 
   return (
-    <div>
-      {ensName ?? address}
-      {ensName ? ` (${address})` : null}
+    <div className="content-container">
+      <h2>Account</h2>
+      <div className="box">
+        {ensName ?? address}
+        {ensName ? ` (${address})` : null}
+      </div>
     </div>
   )
 }

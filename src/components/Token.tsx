@@ -3,7 +3,7 @@ import { type Address, useToken } from 'wagmi'
 
 export function Token() {
   const [address, setAddress] = useState<Address>(
-    '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
+    '0x75D0FB8dB2f6485fDFE6FF58321e91EFfAE759A8',
   )
   const { data, error, isError, isLoading, refetch } = useToken({ address })
 

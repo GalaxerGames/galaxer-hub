@@ -1,0 +1,9 @@
+.worldParagraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh; /* Optional: adjust to fit your design */
+    margin: 0;
+    padding: 0;
+}

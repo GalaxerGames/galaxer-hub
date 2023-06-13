@@ -6,27 +6,30 @@ export function NetworkSwitcher() {
     useSwitchNetwork()
 
   return (
-    <div>
-      <div>
-        Connected to {chain?.name ?? chain?.id}
-        {chain?.unsupported && ' (unsupported)'}
-      </div>
-      <br />
-      {switchNetwork && (
+    <div className="content-container">
+      <h2>Network Switcher</h2>
+      <div className="box">
         <div>
-          Switch to:{' '}
-          {chains.map((x) =>
-            x.id === chain?.id ? null : (
-              <button key={x.id} onClick={() => switchNetwork(x.id)}>
-                {x.name}
-                {isLoading && x.id === pendingChainId && ' (switching)'}
-              </button>
-            ),
-          )}
+          Connected to {chain?.name ?? chain?.id}
+          {chain?.unsupported && ' (unsupported)'}
         </div>
-      )}
+        <br />
+        {switchNetwork && (
+          <div>
+            Switch to:{' '}
+            {chains.map((x) =>
+              x.id === chain?.id ? null : (
+                <button key={x.id} onClick={() => switchNetwork(x.id)}>
+                  {x.name}
+                  {isLoading && x.id === pendingChainId && ' (switching)'}
+                </button>
+              ),
+            )}
+          </div>
+        )}
 
-      <div>{error?.message}</div>
+        <div>{error?.message}</div>
+      </div>
     </div>
   )
 }
