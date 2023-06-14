@@ -1,8 +1,7 @@
 // components/Header.tsx
 
 import Link from 'next/link';
-import {ConnectButton } from "@rainbow-me/rainbowkit";
-import Head from "next/head";
+
 import styles from './modules/Header.module.css';
 import '../styles/globals.css';
 
@@ -57,7 +56,7 @@ export const Header = () => (
       </nav> 
  
     <div className={styles.buttons}>
-    <ConnectButton />
+
       <Link href="https://genpen.io/login.xhtml" className={styles.loginButton}>Connect Wallet
       </Link>
       {/* <Link href="https://genpen.io/signup.xhtml" className={styles.signUpButton}>Sign Up
