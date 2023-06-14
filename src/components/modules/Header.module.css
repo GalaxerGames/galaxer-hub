@@ -1,7 +1,7 @@
 /* Header.module.css */
 
 .header {
-    background-color: #c8ff0096;
+    background-color: #ffbf0095;
     color: #757575;
     display: flex;
     justify-content: space-between;
@@ -17,7 +17,7 @@
   }
   
   .nav {
-    color: #757575;
+    color: #ffbf0095;
   }
   
   .menu {
@@ -30,7 +30,7 @@
   }
   
   .menuItem {
-    color: #c8ff0096;
+    color: #ffbf0095;
     position: relative;
     margin-right: 1rem;
     text-decoration: none;
@@ -44,13 +44,13 @@
     margin: 0;
     top: 100%;
     left: 0;
-    background-color: #c8ff0096;
+    background-color: #ffbf0095;
     text-decoration: none;
   }
   
   .menuItem:hover .submenu {
     display: block;
-    color: #c8ff0096;
+    color: #ffbf0095;
   }
   
   .buttons {
@@ -60,7 +60,7 @@
   
   .loginButton, .signUpButton {
     color: #252525;
-    background-color: #c8ff0096;
+    background-color: #ffbf0095;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     text-decoration: none;

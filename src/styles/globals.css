@@ -7,7 +7,7 @@ body {
   }
   .button {
     text-decoration: none;
-    background-color: #c8ff0096;
+    background-color: #ffbf0095(50, 100%, 50%, 0.588);
     color: #252525;
     padding: 10px 20px;
     border-radius: 5px;

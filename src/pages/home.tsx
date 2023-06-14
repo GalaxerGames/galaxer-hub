@@ -10,15 +10,16 @@ export default function Home() {
       <Header />
      
       <div className={styles.page}>
-      <h1 className={styles.title}>Introducing GenPen IDE for Remote Desktop</h1>
+      <h1 className={styles.title}>Welcome Galaxer,<br/> to the New World</h1>
       <div className={styles.buttons}>
-        <a href="https://genpen.io/login.xhtml" className={styles.button}>Begin<br/>Session
+        <a href="https://genpen.io/login.xhtml" className={styles.button}>Begin<br/>Claim
         </a>
         <a href="https://www.youtube.com/@genpenai"
-          className={styles.button}>The Making of GenPen AI
+          className={styles.button}>View Teaser
         </a>
       </div>
       </div>
+      {/*
       <div className={styles.section}>
         <div className={styles.container}>
           <h2 className={styles.smallHeader}>Development Costs <br />Should be Black & <br /> White</h2>
@@ -103,8 +104,8 @@ export default function Home() {
   <div className={styles.buttons}>
     <a href="./careers" className={styles.button}>View Opportunities</a>
   </div>
-
-<Footer />
+ 
+<Footer />  */}
 </div>
     
   )

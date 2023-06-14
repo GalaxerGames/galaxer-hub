@@ -1,0 +1,27 @@
+/* module.css */
+
+.header {
+    text-align: center;
+}
+
+.paragraph {
+    text-align: center;
+    color: #757575;
+}
+
+.token-balance,
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    background-color: #ffbf00;
+    color: #9595a5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}

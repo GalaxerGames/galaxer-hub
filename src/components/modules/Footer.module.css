@@ -1,5 +1,5 @@
 .footer {
-  background-color: #c8ff0096;
+  background-color: #ffbf0095;
   color: #757575;
   display: flex;
   justify-content: space-between;
@@ -46,7 +46,7 @@
 
 .loginButton, .signUpButton {
   color: #212121;
-  background-color: #c8ff0096;
+  background-color: #ffbf0095;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   text-decoration: none;
