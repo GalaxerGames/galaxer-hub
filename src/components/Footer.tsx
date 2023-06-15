@@ -5,10 +5,10 @@ import styles from './modules/Footer.module.css';
 export const Footer = () => (
   <footer className={styles.footer}>
     <a href="/">
-      <img src="/logo.png" alt="Logo" className={styles.logo} />
+      <img src="/horitlogo.png" alt="Logo" className={styles.logo} />
     </a>
      <nav className={styles.nav}>
-      <ul className={styles.menu}>
+     {/* <ul className={styles.menu}>
         <li className={styles.menuItem}>
           <a href="/research-overview" className={styles.button}>Research</a>
           <ul className={styles.submenu}>
@@ -49,13 +49,13 @@ export const Footer = () => (
 </ul> */}
     </nav> 
  
-    <div className={styles.buttons}>
+   {/* <div className={styles.buttons}>
       <Link href="https://genpen.io/login.xhtml" className={styles.loginButton}>Login
       </Link>
       <Link href="https://genpen.io/signup.xhtml" className={styles.signUpButton}>Sign Up
       </Link>
     </div>
-    <hr/>
+<hr/> */}
     <div className={styles.titleFooter}>
    
         <h1>Galaxer © 2021-2023</h1>

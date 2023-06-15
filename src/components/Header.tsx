@@ -5,16 +5,27 @@ import { useConnect, WagmiConfig } from 'wagmi';
 import styles from './modules/Header.module.css';
 import '../styles/globals.css';
 import { useAccount } from 'wagmi'
+import { disconnect } from '@wagmi/core';
 
 export const Header = () => {
   const { connect, connectors, error, isLoading, pendingConnector } = useConnect();
+  const account = useAccount();
 
   const onConnectWallet = async () => {
     // Assume that you want to connect with the first available connector.
     if (connectors[0]) {
       await connect({ connector: connectors[0] });
     }
-  }
+  };
+
+  const onDisconnectWallet = async () => {
+    try {
+      await disconnect();
+      // update your UI state to reflect the disconnection if necessary
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return(
   <header className={styles.header}>
@@ -63,13 +74,14 @@ export const Header = () => {
       </ul>
       </nav> 
  
-    <div className={styles.buttons}>
 
-       <button onClick={onConnectWallet} className={styles.loginButton}>Connect Wallet
-      </button>
-      {/* <Link href="https://genpen.io/signup.xhtml" className={styles.signUpButton}>Sign Up
-      </Link> */}
-    </div>
-  </header>
-);
-    };
+      <div className={styles.buttons}>
+        {account ? (
+          <button onClick={onConnectWallet} className={styles.loginButton}>Connect Wallet</button>
+        ) : (
+          <button onClick={onDisconnectWallet} className={styles.loginButton}>Disconnect Wallet</button>
+        )}
+      </div>
+    </header>
+  );
+};

@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "@emotion/babel-plugin": "^11.11.0",
+    "@headlessui/tailwindcss": "^0.1.3",
     "@mapbox/mapbox-sdk": "^0.15.1",
-    "@rainbow-me/rainbowkit": "^1.0.1",
+    "@rainbow-me/rainbowkit": "^1.0.2",
     "encoding": "^0.1.13",
     "lokijs": "^1.5.12",
     "mapbox-gl": "^2.14.1",
