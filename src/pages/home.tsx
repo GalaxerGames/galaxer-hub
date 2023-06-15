@@ -8,13 +8,12 @@ export default function Home() {
   return (
     <div>
       <Header />
-     
       <div className={styles.page}>
       <h1 className={styles.title}>Welcome Galaxer,<br/> to the New World</h1>
       <div className={styles.buttons}>
-        <a href="https://genpen.io/login.xhtml" className={styles.button}>Begin<br/>Claim
+        <a href="/claim" className={styles.button}>Begin<br/>Claim
         </a>
-        <a href="https://www.youtube.com/@genpenai"
+        <a href="https://youtu.be/IhP4k0wRtcc"
           className={styles.button}>View Teaser
         </a>
       </div>
@@ -104,7 +103,6 @@ export default function Home() {
   <div className={styles.buttons}>
     <a href="./careers" className={styles.button}>View Opportunities</a>
   </div>
- 
 <Footer />  */}
 </div>
     

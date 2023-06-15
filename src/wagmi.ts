@@ -1,5 +1,5 @@
 import { configureChains, createConfig } from 'wagmi'
-import { goerli, mainnet } from 'wagmi/chains'
+import { goerli, mainnet, polygon, polygonMumbai } from 'wagmi/chains'
 import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
@@ -10,7 +10,7 @@ import { publicProvider } from 'wagmi/providers/public'
 const walletConnectProjectId = 'd9b1fb8b69ef33f157dc7c7a1ff76453'
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [mainnet, ...(process.env.NODE_ENV === 'development' ? [goerli] : [])],
+  [mainnet, polygon, polygonMumbai, ...(process.env.NODE_ENV === 'development' ? [goerli] : [])],
   [
     publicProvider(),
   ],
@@ -23,7 +23,7 @@ export const config = createConfig({
     new CoinbaseWalletConnector({
       chains,
       options: {
-        appName: 'wagmi',
+        appName: 'Galaxer',
       },
     }),
     new WalletConnectConnector({
