@@ -5,7 +5,7 @@ import styles from './modules/Footer.module.css';
 export const Footer = () => (
   <footer className={styles.footer}>
     <a href="/">
-      <img src="/logo.png" alt="Logo" className={styles.logo} />
+      <img src="/horitlogo.png" alt="Logo" className={styles.logo} />
     </a>
      <nav className={styles.nav}>
       <ul className={styles.menu}>
@@ -46,7 +46,7 @@ export const Footer = () => (
             <li><a href="/charter">Charter</a></li>
           </ul>
         </li>
-</ul> */}
+</ul> 
     </nav> 
  
     <div className={styles.buttons}>
