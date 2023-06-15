@@ -1,14 +1,22 @@
 // components/Header.tsx
 
 import Link from 'next/link';
-
+import { useConnect, WagmiConfig } from 'wagmi';
 import styles from './modules/Header.module.css';
 import '../styles/globals.css';
-
-
 import { useAccount } from 'wagmi'
 
-export const Header = () => (
+export const Header = () => {
+  const { connect, connectors, error, isLoading, pendingConnector } = useConnect();
+
+  const onConnectWallet = async () => {
+    // Assume that you want to connect with the first available connector.
+    if (connectors[0]) {
+      await connect({ connector: connectors[0] });
+    }
+  }
+
+  return(
   <header className={styles.header}>
     <a href="/home">
       <img src="/logo.png" alt="Logo" className={styles.logo} />
@@ -57,10 +65,11 @@ export const Header = () => (
  
     <div className={styles.buttons}>
 
-      <Link href="https://genpen.io/login.xhtml" className={styles.loginButton}>Connect Wallet
-      </Link>
+       <button onClick={onConnectWallet} className={styles.loginButton}>Connect Wallet
+      </button>
       {/* <Link href="https://genpen.io/signup.xhtml" className={styles.signUpButton}>Sign Up
       </Link> */}
     </div>
   </header>
 );
+    };
