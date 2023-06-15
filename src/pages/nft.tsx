@@ -1,137 +1,142 @@
-import { useState , useEffect } from 'react';
-import { InjectedConnector, connect, watchWalletClient, writeContract, watchContractEvent } from '@wagmi/core';
-import GLXRClaim from '../artifacts/contracts/GLXRClaim.json'; 
-import styles from '../components/modules/claim.module.css';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
+import { useEffect, useState } from 'react'
+import { recoverTypedDataAddress } from 'viem'
+import { type Address, useSignTypedData, useAccount } from 'wagmi'
 
-const tokenAddress = '0xA17051ebD6DF3b9Ad31fe6ad4fdE373b53DF1a6a'; 
-const claimAddress = '0xd9145CCE52D386f254917e481eB44e9943F39138'; 
+import { Header } from '../components/Header.tsx';
+import { Footer } from '../components/Footer.tsx';
+import styles from '../components/modules/nft.module.css';
 
-export default function Claim() {
-  const [balance, setBalance] = useState(null);
-  const [account, setAccount] = useState<string | null>(null);
-  const [signer, setSigner] = useState<any | null>(null);
 
-  const [selectedDays, setSelectedDays] = useState(90);
-  const stakeDuration = selectedDays * 24 * 60 * 60; // convert days to seconds
-  const [newBalance, setNewBalance] = useState<number | null>(null);
+const drochImage = '/drochImage.png';
+const seasamhImage = '/seasamhImage.png';
+const tacaiochtImage = '/tacaiochtImage.png';
+const teadanImage = '/teadanImage.png';
 
-  const injectedConnector = new InjectedConnector({
-    options: {
-      shimDisconnect: true,
-    },
-  });
 
-const handleButtonClick = (days: number) => {
-  setSelectedDays(days);
-  let multiplier;
+const domain = {
+  name: 'Ether Mail',
+  version: '1',
+  chainId: 1,
+  verifyingContract: '0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC',
+} as const
 
-  switch(days) {
-    case 180:
-      multiplier = 10;
-      break;
-    case 270:
-      multiplier = 100;
-      break;
-    case 365:
-      multiplier = 250;
-      break;
-    default:
-      multiplier = 1;
-  }
+const types = {
+  Person: [
+    { name: 'name', type: 'string' },
+    { name: 'wallet', type: 'address' },
+  ],
+  Mail: [
+    { name: 'from', type: 'Person' },
+    { name: 'to', type: 'Person' },
+    { name: 'contents', type: 'string' },
+  ],
+} as const
 
-  if (balance !== null) {
-  setNewBalance(balance * multiplier);
-}
-}
+const messageCreator = (fromName, fromWallet, contents) => ({
+  from: {
+    name: fromName,
+    wallet: fromWallet,
+  },
+  to: {
+    name: 'Bob',
+    wallet: '0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB',
+  },
+  contents,
+} as const)
 
- // Fetching Account and Signer
-useEffect(() => {
-  const doAsync = async () => {
-    const {account} = await connect({ connector: injectedConnector });
-    setAccount(account);
-  };
-  doAsync();
-}, []);
+const elfComponentCreator = (title, message, description, image, signButtonText) => {
+  return function ElfComponent() {
+    const { data, error, isLoading, signTypedData } = useSignTypedData({
+      domain,
+      types,
+      message,
+      primaryType: 'Mail',
+    })
 
-// Fetching signer
-useEffect(() => {
-  const providerAsync = async () => {
-    const unwatch = watchWalletClient(
-      {
-        chainId: 1, // or whichever chainId you want to use
-      },
-      async (walletClient) => {
-        if(walletClient !== null){
-            setSigner(walletClient.getSigner());
-        }
-      },
-    );
+    const [recoveredAddress, setRecoveredAddress] = useState<Address>()
+    useEffect(() => {
+      if (!data) return
+      ;(async () => {
+        setRecoveredAddress(
+          await recoverTypedDataAddress({
+            domain,
+            types,
+            message,
+            primaryType: 'Mail',
+            signature: data,
+          }),
+        )
+      })()
+    }, [data])
 
-    // Cleanup function to be called when component unmounts
-    return () => unwatch();
-  };
-  providerAsync();
-}, []);
-
-// Then, when calling claimNewToken
-
-async function claimNewToken() {
-  try {
-      const transactionResponse = await writeContract({
-          abi: GLXRClaim.abi,
-          contractAddress: claimAddress,
-          functionName: 'claimNewToken',
-          args: [stakeDuration],
-          signer: signer,
-      });
-    
-      watchContractEvent({
-        abi: GLXRClaim.abi,
-        contractAddress: claimAddress,
-        eventName: "Claimed",
-        args: [/* args matching the event in your contract */],
-        callback: (event: any) => {
-          console.log('Event data:', event);
-        }
-      });
-
-    console.log(`Transaction hash: ${transactionResponse.hash}`);
-  } catch (error) {
-    console.error(`Failed to claim tokens: ${error}`);
-  }
-}
-return (
-  <>
-    <Header className={styles.header}/>
-    <div className={styles.contentContainer}>
-      <h1>Choose Your Faction</h1>
-      <div className={styles.worldParagraph}>
-          <p>Welcome, brave soul, to the Machine Elf Alliance (MEA). <br/>  <br/>  You have proven your mettle, enduring struggles that have shaped you into a true warrior.<br/><br/>   Now, you stand on the precipice of a new world, a realm governed by the intricate balance of the Droch, Seasamh, and Tacaíocht. <br/><br/>   The Droch, the guardians of the multiverse, view our existence as a threat, seeking to maintain stability even at the cost of annihilation. <br/> The Seasamh, the mediators, strive to uphold a delicate equilibrium, ensuring neither we nor the Machine Elves gain too much power.<br/>  And the Tacaíocht, the nurturers, believe in our potential, offering their knowledge and protection as we navigate this complex universe. <br/><br/>  As part of the MEA, you are now a key player in this cosmic dance. <br/><br/> <br/>  Welcome to your new reality.</p>
-        </div>
-        <div className={styles.tokenBalance}>
-        <p>My Expected Claim: {newBalance}</p>
-      </div>
-      <div className={styles.worldParagraph}>
-      <p>When You Claim You will be automatically staked for a minimum of 90days and <br/> instantly receive Nebula Notes which you will need for the game.</p>
-     </div> 
-     <div className={styles.buttonGroup}>
-        {[90, 180, 270, 365].map(days => (
-          <button
-            key={days}
-            className={selectedDays === days ? 'selected' : ''}
-            onClick={() => handleButtonClick(days)}>
-            {days} Days
+    return (
+      <div className={styles.signMessageContainer}>
+        <img className={styles.image} src={image} alt={`${title} Elf`} />
+        <div className={styles.content}>
+          <h1>{title}</h1>
+          <p>{description}</p>
+          <button disabled={isLoading} onClick={() => signTypedData()}>
+            {isLoading ? 'Check Wallet' : signButtonText}
           </button>
-        ))}
+        </div>
+  
+        {data && (
+          <div className={styles.contentContainer}>
+            <div>Signature: {data}</div>
+            <div>Recovered address {recoveredAddress}</div>
+          </div>
+        )}
+        {error && <div>Error: {error?.message}</div>}
       </div>
-      <div className={styles.worldParagraph}>
-      <p>Choose Your Multiplier Before Claiming. <br/> 90days: 1x <br/> 180days: 10x <br/> 270days: 100x <br/> 365days: 250x</p>
-      </div>
-      <button className={styles.buttons} onClick={() => claimNewToken(selectedDays * 24 * 60 * 60)}>Claim New Tokens</button>
-    </div>
-    <Footer/>
-    </>
-  );
+    )
+  }
 }
+
+const SignDroch = elfComponentCreator(
+  'The Droch',
+  messageCreator('Galaxer', useAccount, "In the infinite stretches of the Galaxer universe, we, the humans, solemnly pledge our allegiance to the Droch, the Warring Elves. We vow to respect your strength and strategy, using your combat prowess as a guide in our journey. In a separate vow, we promise to uphold the principles of courage and determination, standing firm for the prosperity of all dimensions."),
+  "The Droch, known as the Warring Elves, represent the relentless strength and strategic prowess in the Galaxer universe. Their combat skills and determination serve as a guide for humans, inspiring courage and resilience in the face of adversity.",
+  drochImage,
+  'Sign with the Droch',
+)
+
+const SignSeasamh = elfComponentCreator(
+  'The Seasamh',
+  messageCreator('Galaxer', useAccount, "In the limitless realms of the Galaxer universe, we, the humans, solemnly pledge our allegiance to the Seasamh, the Balanced Elves. We vow to respect your equilibrium and wisdom, using your balance as a compass in our journey. In a separate vow, we promise to maintain the harmony and stability of our shared existence, standing united for the prosperity of all dimensions."),
+  "The Seasamh, or the Balanced Elves, embody equilibrium and wisdom in the vast Galaxer universe. Their innate sense of balance and harmony serves as a compass for humans, guiding them towards stability and unity in their interdimensional journey.",
+  seasamhImage,
+  'Sign with the Seasamh',
+)
+
+const SignTacaiocht = elfComponentCreator(
+  'The Tacaiocht',
+  messageCreator('Galaxer', useAccount, "As we traverse the infinite expanses of the Galaxer universe, we, the humans, solemnly pledge our loyalty to the Tacaíocht, the Supportive Elves. We vow to honor your wisdom and guidance, using your support as a foundation for our endeavors. In a separate pledge, we promise to uphold the principles of unity and cooperation, standing together for the prosperity of all dimensions."),
+  "The Tacaíocht, known as the Supportive Elves, symbolize guidance and unity in the expansive Galaxer universe. Their unwavering support and wisdom serve as a foundation for humans, fostering cooperation and mutual growth in their cosmic journey.",
+  tacaiochtImage,
+  'Sign with the Tacaiocht',
+)
+
+const SignTeadan = elfComponentCreator(
+  'The Teadan',
+  messageCreator('Galaxer', useAccount, 
+  "In the vast expanse of the Galaxer universe, we, the humans, pledge our allegiance to the Téadán, the Bright Tardigrade. We vow to harness your radiant power with respect and wisdom, and to use your resilience as a beacon in our journey. In a second vow, we promise to uphold the balance and harmony of our shared existence, standing in unity for the prosperity of all dimensions."),
+  "Téadán, the Bright Tardigrade, symbolizes the radiant power and resilience that tardigrades bestow upon the machine elves, illuminating their path in the vast universe of Galaxer.",
+  teadanImage,
+  'Sign with the Taedan',
+)
+function NFT() {
+  return (
+    <div className={styles.Header}>
+      <Header />
+    <div className={styles.mainContainer}>
+      <SignDroch />
+      <SignSeasamh />
+      <SignTacaiocht />
+      <SignTeadan />
+      <Footer />
+    </div>
+    </div>
+  )
+}
+
+export default NFT;
