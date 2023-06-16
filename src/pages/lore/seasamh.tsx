@@ -53,37 +53,36 @@ const Seasamh = () => {
           </div>
           <hr />
           <div className={styles.section}>
-            <h2 className={styles.smallHeader}>Content & Ownership</h2>
+            <h2 className={styles.smallHeader}>Seasamh Base Stats</h2>
             <table className={styles.table}>
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>Ownership</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>Images</td>
-                    <td>You</td>
-                    <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Code</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Text</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Voice</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-              </tbody>
+            <thead>
+    <tr>
+      <th>Stat</th>
+      <th>Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Magic</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Metaphysical</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Digital</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Health</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Density</td>
+      <td>Medium</td>
+    </tr>
+  </tbody>
             </table>
           </div>
           <hr />
