@@ -10,26 +10,26 @@ const About = () => {
           <Header />
           <div className={styles.researchOverview}>
         <blockquote className={styles.quote}>
-          About
+          GG
         </blockquote>
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph}>
-            GenPen AI is an AI<br/>Enhancement and<br/>development company. Our<br/>mission is to ensure that all<br/>humans have access to<br/>Artificially Intelligen tools.
+          Galaxer Games is unleashing interdimensional journeys through immersive gaming experiences.
           </p>
         </div>
       </div>
-      <div className={styles.sectionItem}>
+      {/* <div className={styles.sectionItem}>
     <img src="/logo.png" alt="Research at GenPen AI" className={styles.image1}/>
-  </div>
+  </div> */}
   <hr />
 
   <div className={styles.quoteSection}>
             <div className={styles.textContainer}>
-              <h2 className={styles.header}>Our vision for<br/>the future of<br/>AIE</h2>
+              <h2 className={styles.header}>Our vision for<br/>the future of<br/>Spatial Computing Entertainment</h2>
               <p className={styles.paragraph1}>
-                Our mission is to ensure all<br/>humans have access to the<br/>benefit of artificial<br/>intelligence enhancement.
+                Our mission is to ensure all<br/>humans have access to the<br/>benefit of spatial<br/>computing entertainment.
               </p>
-              <a href="/blog/plan-for-aie" className={styles.button}>Read our Plan for AIE</a>
+              <a href="/blog/plan-for-sce" className={styles.button}>Read our Plan for SCE</a>
               <a href="/charter" className={styles.button}>Read our Charter</a>
 
             </div>
@@ -38,7 +38,7 @@ const About = () => {
             </div>
           </div>
           <hr />
-          <h3 className={styles.header1}>Our Work</h3>
+        {/*  <h3 className={styles.header1}>Our Work</h3>
           <hr />
           <h3>Research</h3>
                 <div className={styles.section}>
@@ -84,14 +84,14 @@ const About = () => {
           <h2 className={styles.header3}>Opportunities<br/>at GenPen AI</h2>
           <div className={styles.sectionItem}>
     <img src="/logo.png" alt="Research at GenPen AI" className={styles.image1}/>
-  </div>
-<hr/>
+  </div> 
+<hr/>*/}
           <div className={styles.quoteSection}>
             <div className={styles.textContainer}>
               <h2 className={styles.header}>Our structure</h2>
               <p className={styles.paragraph1}>
-                We are governed by members and our general<br/> profit drives our commitment to make money.<br/>This means that as AI beomes more powerful,<br/>so shall we.</p>
-              <Link href="/blog/synapse-alliance" className={styles.button}>Read about Synapse Alliance</Link>
+               We are governed by the InterPlanetary Fund Management Group.</p>
+              <Link href="/blog/synapse-alliance" className={styles.button}>Read about the IPFM</Link>
               <Link href="/blog/structure" className={styles.button}>Read about our structure</Link>
 
             </div>
@@ -103,7 +103,7 @@ const About = () => {
 <div>
  <h1 className={styles.titleBottom}>Join us to make a brighter future.</h1>
   <div className={styles.buttonsBottom}>
-    <Link href="/companyCareers" className={styles.buttonBottom}>View Opportunities</Link>
+    <Link href="/careers" className={styles.buttonBottom}>View Opportunities</Link>
   </div>
   </div>
 <hr />
