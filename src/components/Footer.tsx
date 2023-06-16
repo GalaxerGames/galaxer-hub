@@ -10,41 +10,49 @@ export const Footer = () => (
      <nav className={styles.nav}>
       <ul className={styles.menu}>
         <li className={styles.menuItem}>
-          <a href="/research-overview" className={styles.button}>Lore</a>
+          <a href="/lore-overview" className={styles.button}>Lore</a>
           <ul className={styles.submenu}>
-            <li><a href="/research-overview" className={styles.button}>The Droch</a></li>
-            <li><a href="/research-index" className={styles.button}>The Seasamh</a></li>
-            <li><a href="/tacaiocht" className={styles.button}>The Tacaiocht</a></li>
+            <li><a href="/lore/humanity" className={styles.button}>Humanity</a></li>
+            <li><a href="/lore/dimensions" className={styles.button}>Portals</a></li>
+            <li><a href="/lore/conflict" className={styles.button}>Cosmic Conflict</a></li>
+            <li><a href="/lore/droch" className={styles.button}>The Droch</a></li>
+            <li><a href="/lore/seasamh" className={styles.button}>The Seasamh</a></li>
+            <li><a href="/lore/tacaiocht" className={styles.button}>The Tacaiocht</a></li>
+            <li><a href="/lore/teadan" className={styles.button}>The Teadan</a></li>
+            <li><a href="/lore/galaxers" className={styles.button}>The Galaxer Guild</a></li>
           </ul>
         </li>
         <li className={styles.menuItem}>
-          <a href="/product-overview">Product</a>
+          <a href="/product/overview">Product</a>
           <ul className={styles.submenu}>
-            <li><a href="/product-overview">Overview</a></li> 
-            <li><a href="/scratchpad">iOS</a></li>
-            <li><a href="/journal">Android</a></li>
-            <li><a href="/ai1de">Desktop</a></li>
-            <li><a href="/holly">VR</a></li>
-            <li><a href="/customer-stories">Xbox</a></li>
-            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/product/overview">Overview</a></li> 
+            <li><a href="/product/ios">iOS</a></li>
+            <li><a href="/product/android">Android</a></li>
+            <li><a href="/product/desktop">Desktop</a></li>
+            <li><a href="/product/vr">VR</a></li>
+            <li><a href="/product/xbox">Xbox</a></li>
+            <li><a href="/product/playstation">PlayStation</a></li>
+            <li><a href="/product/switch">Nintendo</a></li>
+
           </ul>
         </li>
         <li className={styles.menuItem}>
-          <a href="/developer-overview">Developers</a>
+          <a href="/ecosystem/overview">Ecosystem</a>
           <ul className={styles.submenu}>
-            <li><a href="/developer-overview">Overview</a></li>
-            <li><a href="/developer-docs">Docs</a></li>
-            <li><a href="/developer-api">API Reference</a></li>
-            <li><a href="/developer-examples">Examples</a></li>
+            <li><a href="/ecosystem/overview">Overview</a></li>
+            <li><a href="/ecosystem/glxr">GLXR</a></li>
+            <li><a href="/ecosystem/nebula">Nebula Notes</a></li>
+            <li><a href="/ecosystem/materials">Materials</a></li>
           </ul>
         </li>
         <li className={styles.menuItem}>
-          <a href="/about">Company</a>
+          <a href="/about">Studio</a>
           <ul className={styles.submenu}>
-            <li><a href="/about">About</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/careers">Careers</a></li>
-            <li><a href="/charter">Charter</a></li>
+            <li><a href="/studio/about">About</a></li>
+            <li><a href="/studio/blog">Blog</a></li>
+            <li><a href="/studio/careers">Careers</a></li>
+            <li><a href="/studio/charter">Charter</a></li>
+            <li><a href="/studio/investors">Investors</a></li>
           </ul>
         </li>
 </ul> 

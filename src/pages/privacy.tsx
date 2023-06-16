@@ -9,14 +9,14 @@ const Privacy = () => {
           <Header />
           <div className={styles.quoteSection}>
             <div className={styles.textContainer}>
-          <h1 className={styles.header}>GenPen AI Charter</h1>
+          <h1 className={styles.header}>Privacy Policy</h1>
               <p className={styles.paragraph}>
-                Our Charter describes the<br/>principles we use to execute<br/>on GenPen AI's mission.
+                Read Carefully
               </p>
             
             </div>
             <div className={styles.imageContainer}>
-              <img src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
+              <img src="/horitlogo.png" alt="Career Image" className={styles.careerImage}/>
             </div>
           </div>
           <hr />

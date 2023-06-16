@@ -1,6 +1,6 @@
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
-import styles from '../components/modules/product-overview.module.css'
+import { Header } from '../../components/Header'
+import { Footer } from '../../components/Footer'
+import styles from '../../components/modules/product-overview.module.css'
 import Link from 'next/link'
 import '../styles/globals.css';
 

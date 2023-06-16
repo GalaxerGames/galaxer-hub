@@ -1,10 +1,10 @@
 import '../styles/globals.css';
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
-import styles from '../components/modules/aide.module.css'
+import { Header } from '../../components/Header'
+import { Footer } from '../../components/Footer'
+import styles from '../../components/modules/aide.module.css'
 import Link from 'next/link'
 
-const AIDE = () => {
+const Desktop = () => {
     return (
         <div>
             <Header />
@@ -92,4 +92,4 @@ const AIDE = () => {
     );
 }
 
-export default AIDE;
+export default Desktop;

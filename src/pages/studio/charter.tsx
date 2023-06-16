@@ -1,15 +1,15 @@
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
-import styles from '../components/modules/charter.module.css'
+import { Header } from '../../components/Header'
+import { Footer } from '../../components/Footer'
+import styles from '../../components/modules/charter.module.css'
 import Link from 'next/link'
-import '../styles/globals.css';
-const Brand = () => {
+import '../../styles/globals.css';
+const Charter = () => {
   return (
       <div>
           <Header />
           <div className={styles.quoteSection}>
             <div className={styles.textContainer}>
-          <h1 className={styles.header}>Brand Guidelines</h1>
+          <h1 className={styles.header}>GenPen AI Charter</h1>
               <p className={styles.paragraph}>
                 Our Charter describes the<br/>principles we use to execute<br/>on GenPen AI's mission.
               </p>
@@ -78,4 +78,4 @@ const Brand = () => {
   );
 }
 
-export default Brand;
+export default Charter;
