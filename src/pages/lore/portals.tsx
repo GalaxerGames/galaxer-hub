@@ -10,7 +10,7 @@ const Portals = () => {
             <Header />
             <div className={styles.page}>
              <h1 className={styles.title}>Portals: The Interdimensional Gateways of the Galaxer Universe</h1>
-            <div className={styles.buttons}>
+           {/* <div className={styles.buttons}>
             <Link href="https://genpen.io/login.xhtml" className={styles.button}>Schedule a Demo
             </Link>
              <Link href="https://www.youtube.com/@genpenai"
@@ -49,7 +49,7 @@ const Portals = () => {
             </div>
             <div className={styles.imageContainer}>
               <img src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
-            </div>
+    </div> */}
           </div>
           <hr />
           <div className={styles.section}>

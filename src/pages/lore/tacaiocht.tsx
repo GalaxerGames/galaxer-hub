@@ -1,6 +1,6 @@
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
-import styles from '../../components/modules/holly.module.css'
+import styles from '../../components/modules/humanity.module.css'
 import Link from 'next/link'
 import '../../styles/globals.css';
 
@@ -10,7 +10,7 @@ const Tacaiocht = () => {
             <Header />
             <div className={styles.page}>
              <h1 className={styles.title}>Tacaíocht: The Supportive Elves, Pillars of Unity</h1>
-            <div className={styles.buttons}>
+           {/* <div className={styles.buttons}>
             <Link href="https://genpen.io/login.xhtml" className={styles.button}>Schedule a Demo
             </Link>
              <Link href="https://www.youtube.com/@genpenai"
@@ -49,7 +49,7 @@ const Tacaiocht = () => {
             </div>
             <div className={styles.imageContainer}>
               <img src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
-            </div>
+            </div> */}
           </div>
           <hr />
           <div className={styles.section}>

@@ -10,16 +10,16 @@ const Guild = () => {
             <Header />
             <div className={styles.page}>
              <h1 className={styles.title}>Galaxers: The Diverse Guild of Humans, Navigating the Vastness</h1>
-            <div className={styles.buttons}>
+           {/* <div className={styles.buttons}>
             <Link href="https://genpen.io/login.xhtml" className={styles.button}>Schedule a Demo
             </Link>
              <Link href="https://www.youtube.com/@genpenai"
              className={styles.button}>Join Waitlist
              </Link>
-             </div>
-            </div>
+             </div> */}
+    </div>
             <hr />
-                <h3>Latest Updates</h3>
+               {/* <h3>Latest Updates</h3>
                 <div className={styles.section}>
             <div className={styles.sectionItem}>
               <img src="/logotri.png" alt="Image 1" className={styles.image}/>
@@ -51,7 +51,7 @@ const Guild = () => {
               <img src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
             </div>
           </div>
-          <hr />
+    <hr /> */}
           <div className={styles.section}>
             <h2 className={styles.smallHeader}>Guild Values</h2>
             <table className={styles.table}>
