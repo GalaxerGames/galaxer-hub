@@ -1,8 +1,8 @@
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
-import styles from '../components/modules/blog.module.css'
+import { Header } from '../../components/Header'
+import { Footer } from '../../components/Footer'
+import styles from '../../components/modules/blog.module.css'
 import Link from 'next/link'
-import '../styles/globals.css';
+import '../../styles/globals.css';
 
 
 const Blog = () => {

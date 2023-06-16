@@ -13,12 +13,12 @@ const Terms = () => {
             <div className={styles.textContainer}>
           <h1 className={styles.header}>Terms of Service</h1>
               <p className={styles.paragraph}>
-                Our Charter describes the<br/>principles we use to execute<br/>on GenPen AI's mission.
+                Read Carefuly
               </p>
             
             </div>
             <div className={styles.imageContainer}>
-              <img src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
+              <img src="/horitlogo.png" alt="Career Image" className={styles.careerImage}/>
             </div>
           </div>
           <hr />
