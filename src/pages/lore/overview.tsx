@@ -170,7 +170,7 @@ const ResearchOverview = () => {
   <hr />
   <h1 className={styles.title}>Join us to make a brighter future.</h1>
   <div className={styles.buttons}>
-    <Link href="/companyCareers" className={styles.button}>Begin Session</Link>
+    <Link href="/product/overview" className={styles.button}>Start Your Journey</Link>
   </div>
 <hr />
       <Footer />

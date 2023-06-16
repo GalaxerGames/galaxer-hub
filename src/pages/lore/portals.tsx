@@ -1,6 +1,6 @@
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
-import styles from '../../components/modules/holly.module.css'
+import styles from '../../components/modules/humanity.module.css'
 import Link from 'next/link'
 import '../../styles/globals.css';
 
@@ -10,7 +10,7 @@ const Portals = () => {
             <Header />
             <div className={styles.page}>
              <h1 className={styles.title}>Portals: The Interdimensional Gateways of the Galaxer Universe</h1>
-            <div className={styles.buttons}>
+           {/* <div className={styles.buttons}>
             <Link href="https://genpen.io/login.xhtml" className={styles.button}>Schedule a Demo
             </Link>
              <Link href="https://www.youtube.com/@genpenai"
@@ -49,41 +49,65 @@ const Portals = () => {
             </div>
             <div className={styles.imageContainer}>
               <img src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
-            </div>
+    </div> */}
           </div>
           <hr />
           <div className={styles.section}>
-            <h2 className={styles.smallHeader}>Content & Ownership</h2>
+            <h2 className={styles.smallHeader}>Starter Portals</h2>
             <table className={styles.table}>
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>Ownership</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>Images</td>
-                    <td>You</td>
-                    <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Code</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Text</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Voice</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-              </tbody>
+            <thead>
+    <tr>
+      <th>Type</th>
+      <th>Stability</th>
+      <th>Energy Consumption</th>
+      <th>Travel Accuracy</th>
+      <th>Cooldown Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Astral Gateways</td>
+      <td>High</td>
+      <td>Low</td>
+      <td>Medium</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Temporal Vortexes</td>
+      <td>Low</td>
+      <td>High</td>
+      <td>High</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Quantum Doorways</td>
+      <td>High</td>
+      <td>Medium</td>
+      <td>High</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td>Elemental Rifts</td>
+      <td>Medium</td>
+      <td>Medium</td>
+      <td>Medium</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Spectral Windows</td>
+      <td>Low</td>
+      <td>Low</td>
+      <td>Low</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Reality Tears</td>
+      <td>Very Low</td>
+      <td>Very High</td>
+      <td>Very High</td>
+      <td>Very High</td>
+    </tr>
+  </tbody>
             </table>
           </div>
           <hr />

@@ -10,13 +10,13 @@ const Humanity = () => {
             <Header />
             <div className={styles.page}>
              <h1 className={styles.title}>Humanity: The Resilient Explorers of the Galaxy</h1>
-            <div className={styles.buttons}>
+          {/*  <div className={styles.buttons}>
             <Link href="https://genpen.io/login.xhtml" className={styles.button}>Schedule a Demo
             </Link>
              <Link href="https://www.youtube.com/@genpenai"
              className={styles.button}>Join Waitlist
              </Link>
-             </div>
+    </div> 
             </div>
             <hr />
                 <h3>Latest Updates</h3>
@@ -49,42 +49,129 @@ const Humanity = () => {
             </div>
             <div className={styles.imageContainer}>
               <img src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
-            </div>
-          </div>
+            </div> */}
+    </div> 
           <hr />
           <div className={styles.section}>
-            <h2 className={styles.smallHeader}>Content & Ownership</h2>
+            <h2 className={styles.smallHeader}>Starting Jobs and Traits</h2>
             <table className={styles.table}>
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>Ownership</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>Images</td>
-                    <td>You</td>
-                    <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Code</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Text</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Voice</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-              </tbody>
-            </table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Health</th>
+      <th>Magic</th>
+      <th>Metaphysical</th>
+      <th>Digital</th>
+      <th>Density</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Doctor</td>
+      <td>High</td>
+      <td>Low</td>
+      <td>Medium</td>
+      <td>Medium</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td>Engineer</td>
+      <td>Medium</td>
+      <td>Low</td>
+      <td>Low</td>
+      <td>High</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Teacher</td>
+      <td>Medium</td>
+      <td>Medium</td>
+      <td>Medium</td>
+      <td>Medium</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td>Scientist</td>
+      <td>Low</td>
+      <td>Low</td>
+      <td>High</td>
+      <td>High</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Artist</td>
+      <td>Low</td>
+      <td>High</td>
+      <td>Medium</td>
+      <td>Medium</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td>Athlete</td>
+      <td>High</td>
+      <td>Low</td>
+      <td>Low</td>
+      <td>Low</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Programmer</td>
+      <td>Low</td>
+      <td>Low</td>
+      <td>Low</td>
+      <td>High</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Chef</td>
+      <td>Medium</td>
+      <td>Medium</td>
+      <td>Low</td>
+      <td>Low</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Journalist</td>
+      <td>Medium</td>
+      <td>Low</td>
+      <td>Medium</td>
+      <td>High</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td>Architect</td>
+      <td>Medium</td>
+      <td>Low</td>
+      <td>Low</td>
+      <td>High</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Farmer</td>
+      <td>High</td>
+      <td>Medium</td>
+      <td>Low</td>
+      <td>Low</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Musician</td>
+      <td>Low</td>
+      <td>High</td>
+      <td>Medium</td>
+      <td>Medium</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td>Lawyer</td>
+      <td>Medium</td>
+      <td>Low</td>
+      <td>High</td>
+      <td>Medium</td>
+      <td>Medium</td>
+    </tr>
+    </tbody>
+    </table>
           </div>
           <hr />
             <Footer />

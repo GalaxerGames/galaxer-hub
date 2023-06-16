@@ -1,0 +1,170 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .title {
+    text-align: left;
+    font-size: 6em;
+    width: 100%;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #252525;
+    background-color: #ffbf0095;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .button:hover {
+    background-color: #444;
+  }
+  
+  .section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 2rem auto;
+  }
+  
+  .container {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .smallHeader {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .sectionItem {
+    text-align: left;
+    margin-right: 2rem;
+  }
+  
+  .image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  .viewAll {
+    display: block;
+    text-align: right;
+    margin: 2rem auto;
+  }
+  
+  .quoteSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+  }
+  
+  .header {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  
+  .paragraph {
+    margin-bottom: 1em;
+  }
+  
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .careerImage {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #eee;
+  }
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .event {
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    display: flex;
+  }
+  
+  .event img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .event:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+  
+  .event h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2em;
+  }
+  
+  .event p {
+    margin: 5px 0 0;
+    color: #666;
+  }
+  
+  .diamond {
+    width: 100%;
+    text-align: center;
+    color: #ccc;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

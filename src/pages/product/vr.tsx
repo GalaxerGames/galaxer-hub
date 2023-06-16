@@ -1,6 +1,6 @@
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
-import styles from '../../components/modules/holly.module.css'
+import styles from '../../components/modules/android.module.css'
 import Link from 'next/link'
 import '../../styles/globals.css';
 
@@ -9,16 +9,14 @@ const VR = () => {
         <div>
             <Header />
             <div className={styles.page}>
-             <h1 className={styles.title}>Holly is your Holographic<br/>Virtual Assistant Ready to<br/>Speak and be Spoken to<br/>like a real person</h1>
+             <h1 className={styles.title}>Virtual Reality: A Leap into the Cosmos, One Headset at a Time</h1>
             <div className={styles.buttons}>
-            <Link href="https://genpen.io/login.xhtml" className={styles.button}>Schedule a Demo
-            </Link>
-             <Link href="https://www.youtube.com/@genpenai"
+             <Link href="https://t.me/galaxer_glxr"
              className={styles.button}>Join Waitlist
              </Link>
              </div>
             </div>
-            <hr />
+           {/* <hr />
                 <h3>Latest Updates</h3>
                 <div className={styles.section}>
             <div className={styles.sectionItem}>
@@ -86,7 +84,7 @@ const VR = () => {
               </tbody>
             </table>
           </div>
-          <hr />
+    <hr /> */}
             <Footer />
         </div>
     );

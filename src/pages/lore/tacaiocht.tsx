@@ -1,6 +1,6 @@
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
-import styles from '../../components/modules/holly.module.css'
+import styles from '../../components/modules/humanity.module.css'
 import Link from 'next/link'
 import '../../styles/globals.css';
 
@@ -10,7 +10,7 @@ const Tacaiocht = () => {
             <Header />
             <div className={styles.page}>
              <h1 className={styles.title}>Tacaíocht: The Supportive Elves, Pillars of Unity</h1>
-            <div className={styles.buttons}>
+           {/* <div className={styles.buttons}>
             <Link href="https://genpen.io/login.xhtml" className={styles.button}>Schedule a Demo
             </Link>
              <Link href="https://www.youtube.com/@genpenai"
@@ -49,41 +49,40 @@ const Tacaiocht = () => {
             </div>
             <div className={styles.imageContainer}>
               <img src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
-            </div>
+            </div> */}
           </div>
           <hr />
           <div className={styles.section}>
-            <h2 className={styles.smallHeader}>Content & Ownership</h2>
+            <h2 className={styles.smallHeader}>Tacaiocht Base Stats</h2>
             <table className={styles.table}>
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>Ownership</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>Images</td>
-                    <td>You</td>
-                    <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Code</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Text</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Voice</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-              </tbody>
+            <thead>
+    <tr>
+      <th>Stat</th>
+      <th>Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Magic</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td>Metaphysical</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Digital</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Health</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td>Density</td>
+      <td>Medium</td>
+    </tr>
+  </tbody>
             </table>
           </div>
           <hr />

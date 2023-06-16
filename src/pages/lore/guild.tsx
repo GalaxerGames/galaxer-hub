@@ -1,6 +1,6 @@
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
-import styles from '../../components/modules/holly.module.css'
+import styles from '../../components/modules/humanity.module.css'
 import Link from 'next/link'
 import '../../styles/globals.css';
 
@@ -10,16 +10,16 @@ const Guild = () => {
             <Header />
             <div className={styles.page}>
              <h1 className={styles.title}>Galaxers: The Diverse Guild of Humans, Navigating the Vastness</h1>
-            <div className={styles.buttons}>
+           {/* <div className={styles.buttons}>
             <Link href="https://genpen.io/login.xhtml" className={styles.button}>Schedule a Demo
             </Link>
              <Link href="https://www.youtube.com/@genpenai"
              className={styles.button}>Join Waitlist
              </Link>
-             </div>
-            </div>
+             </div> */}
+    </div>
             <hr />
-                <h3>Latest Updates</h3>
+               {/* <h3>Latest Updates</h3>
                 <div className={styles.section}>
             <div className={styles.sectionItem}>
               <img src="/logotri.png" alt="Image 1" className={styles.image}/>
@@ -51,39 +51,42 @@ const Guild = () => {
               <img src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
             </div>
           </div>
-          <hr />
+    <hr /> */}
           <div className={styles.section}>
-            <h2 className={styles.smallHeader}>Content & Ownership</h2>
+            <h2 className={styles.smallHeader}>Guild Values</h2>
             <table className={styles.table}>
-              <thead>
-                <tr>
-                  <th>Type</th>
-                  <th>Ownership</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>Images</td>
-                    <td>You</td>
-                    <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Code</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Text</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-                <tr>
-                  <td>Voice</td>
-                  <td>You</td>
-                  <td><Link href="https://genpen.io/login.xhtml" className={styles.button}>Try Now</Link></td>
-                </tr>
-              </tbody>
+            <thead>
+    <tr>
+      <th>Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cooperation</td>
+      <td>Ability to work effectively in a team, contributing to shared goals and supporting other members.</td>
+    </tr>
+    <tr>
+      <td>Leadership</td>
+      <td>Ability to take charge, make decisions, and inspire others.</td>
+    </tr>
+    <tr>
+      <td>Resourcefulness</td>
+      <td>Ability to effectively use and manage resources, including both tangible and intangible resources.</td>
+    </tr>
+    <tr>
+      <td>Diplomacy</td>
+      <td>Ability to negotiate, manage conflicts, and maintain good relationships with others.</td>
+    </tr>
+    <tr>
+      <td>Perseverance</td>
+      <td>Ability to stay committed to goals, even in the face of challenges or setbacks.</td>
+    </tr>
+    <tr>
+      <td>Adaptability</td>
+      <td>Ability to adjust to new situations or changes in the game environment.</td>
+    </tr>
+  </tbody>
             </table>
           </div>
           <hr />
