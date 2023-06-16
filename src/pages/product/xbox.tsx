@@ -9,7 +9,7 @@ const Xbox = () => {
         <div>
             <Header />
             <div className={styles.page}>
-             <h1 className={styles.title}>Commit Context to <br />Memory and Keep Chats in<br />Check with Simple Pricing</h1>
+             <h1 className={styles.title}>Xbox: Galactic Adventures at Your Fingertips with Game Pass and Xbox Live</h1>
             <div className={styles.buttons}>
             <a href="https://genpen.io/login.xhtml" className={styles.button}>Try on the Web
             </a>

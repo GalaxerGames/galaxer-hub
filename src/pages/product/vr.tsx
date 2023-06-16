@@ -9,7 +9,7 @@ const VR = () => {
         <div>
             <Header />
             <div className={styles.page}>
-             <h1 className={styles.title}>Holly is your Holographic<br/>Virtual Assistant Ready to<br/>Speak and be Spoken to<br/>like a real person</h1>
+             <h1 className={styles.title}>Virtual Reality: A Leap into the Cosmos, One Headset at a Time</h1>
             <div className={styles.buttons}>
             <Link href="https://genpen.io/login.xhtml" className={styles.button}>Schedule a Demo
             </Link>

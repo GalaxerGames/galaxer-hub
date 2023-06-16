@@ -9,7 +9,7 @@ const Playstation = () => {
         <div>
             <Header />
             <div className={styles.page}>
-             <h1 className={styles.title}>Generate Text & Images <br /> with a Single Prompt all <br /> for Free</h1>
+             <h1 className={styles.title}>PlayStation: Journey Through the Stars with PlayStation Plus and PlayStation VR</h1>
             <div className={styles.buttons}>
             <Link href="https://genpen.io/login.xhtml" className={styles.button}>Try on the Web
             </Link>

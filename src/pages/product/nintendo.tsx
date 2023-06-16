@@ -9,7 +9,7 @@ const Nintendo = () => {
         <div>
             <Header />
             <div className={styles.page}>
-             <h1 className={styles.title}>Generate Text & Images <br /> with a Single Prompt all <br /> for Free</h1>
+             <h1 className={styles.title}>Nintendo Switch: Portable and Versatile, Your Gateway to the Cosmos</h1>
             <div className={styles.buttons}>
             <Link href="https://genpen.io/login.xhtml" className={styles.button}>Try on the Web
             </Link>
