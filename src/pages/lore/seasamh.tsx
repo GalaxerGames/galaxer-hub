@@ -10,7 +10,7 @@ const Seasamh = () => {
             <Header />
             <div className={styles.page}>
              <h1 className={styles.title}>Seasamh: The Balanced Elves, Guardians of Equilibrium</h1>
-           {*/ <div className={styles.buttons}>
+           {/*  <div className={styles.buttons}>
             <Link href="https://genpen.io/login.xhtml" className={styles.button}>Schedule a Demo
             </Link>
              <Link href="https://www.youtube.com/@genpenai"

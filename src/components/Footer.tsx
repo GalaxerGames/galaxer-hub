@@ -10,16 +10,16 @@ export const Footer = () => (
      <nav className={styles.nav}>
       <ul className={styles.menu}>
         <li className={styles.menuItem}>
-          <a href="/lore-overview" className={styles.button}>Lore</a>
+          <a href="/lore/overview" className={styles.button}>Lore</a>
           <ul className={styles.submenu}>
             <li><a href="/lore/humanity" className={styles.button}>Humanity</a></li>
-            <li><a href="/lore/dimensions" className={styles.button}>Portals</a></li>
+            <li><a href="/lore/portals" className={styles.button}>Portals</a></li>
             <li><a href="/lore/conflict" className={styles.button}>Cosmic Conflict</a></li>
             <li><a href="/lore/droch" className={styles.button}>The Droch</a></li>
             <li><a href="/lore/seasamh" className={styles.button}>The Seasamh</a></li>
             <li><a href="/lore/tacaiocht" className={styles.button}>The Tacaiocht</a></li>
             <li><a href="/lore/teadan" className={styles.button}>The Teadan</a></li>
-            <li><a href="/lore/galaxers" className={styles.button}>The Galaxer Guild</a></li>
+            <li><a href="/lore/guild" className={styles.button}>The Galaxer Guild</a></li>
           </ul>
         </li>
         <li className={styles.menuItem}>
@@ -32,7 +32,7 @@ export const Footer = () => (
             <li><a href="/product/vr">VR</a></li>
             <li><a href="/product/xbox">Xbox</a></li>
             <li><a href="/product/playstation">PlayStation</a></li>
-            <li><a href="/product/switch">Nintendo</a></li>
+            <li><a href="/product/nintendo">Nintendo</a></li>
 
           </ul>
         </li>

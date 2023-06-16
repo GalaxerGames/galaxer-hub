@@ -53,7 +53,7 @@ const Droch = () => {
           </div>
           <hr />
           <div className={styles.section}>
-            <h2 className={styles.smallHeader}>Content & Ownership</h2>
+            <h2 className={styles.smallHeader}>Droch Base Stats</h2>
             <table className={styles.table}>
             <thead>
     <tr>
