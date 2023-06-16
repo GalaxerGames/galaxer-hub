@@ -5,26 +5,27 @@ import styles from './modules/Footer.module.css';
 export const Footer = () => (
   <footer className={styles.footer}>
     <a href="/">
-      <img src="/logo.png" alt="Logo" className={styles.logo} />
+      <img src="/horitlogo.png" alt="Logo" className={styles.logo} />
     </a>
      <nav className={styles.nav}>
       <ul className={styles.menu}>
         <li className={styles.menuItem}>
-          <a href="/research-overview" className={styles.button}>Research</a>
+          <a href="/research-overview" className={styles.button}>Lore</a>
           <ul className={styles.submenu}>
-            <li><a href="/research-overview" className={styles.button}>Overview</a></li>
-            <li><a href="/research-index" className={styles.button}>Index</a></li>
+            <li><a href="/research-overview" className={styles.button}>The Droch</a></li>
+            <li><a href="/research-index" className={styles.button}>The Seasamh</a></li>
+            <li><a href="/tacaiocht" className={styles.button}>The Tacaiocht</a></li>
           </ul>
         </li>
         <li className={styles.menuItem}>
           <a href="/product-overview">Product</a>
           <ul className={styles.submenu}>
             <li><a href="/product-overview">Overview</a></li> 
-            <li><a href="/scratchpad">ScratchPad</a></li>
-            <li><a href="/journal">Journal</a></li>
-            <li><a href="/ai1de">AI-IDE</a></li>
-            <li><a href="/holly">Holly</a></li>
-            <li><a href="/customer-stories">Customer Stories</a></li>
+            <li><a href="/scratchpad">iOS</a></li>
+            <li><a href="/journal">Android</a></li>
+            <li><a href="/ai1de">Desktop</a></li>
+            <li><a href="/holly">VR</a></li>
+            <li><a href="/customer-stories">Xbox</a></li>
             <li><a href="/pricing">Pricing</a></li>
           </ul>
         </li>
@@ -46,15 +47,15 @@ export const Footer = () => (
             <li><a href="/charter">Charter</a></li>
           </ul>
         </li>
-</ul> */}
+</ul> 
     </nav> 
  
-    <div className={styles.buttons}>
+   {/* <div className={styles.buttons}>
       <Link href="https://genpen.io/login.xhtml" className={styles.loginButton}>Login
       </Link>
       <Link href="https://genpen.io/signup.xhtml" className={styles.signUpButton}>Sign Up
       </Link>
-    </div>
+</div> */}
     <hr/>
     <div className={styles.titleFooter}>
    

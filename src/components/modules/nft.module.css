@@ -1,0 +1,22 @@
+.mainContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .signMessageContainer {
+    flex: 1 1 300px; 
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .signMessageContainer .image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .signMessageContainer .content {
+    margin-top: 10px;
+  }
+  
