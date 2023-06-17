@@ -16,7 +16,7 @@ export default function Home() {
         <div className={styles.titleSection}>
           <h1 className={styles.title}>Welcome Galaxer,<br/> to the New World</h1>
           <div className={styles.buttons}>
-            <a href="/claim" className={styles.button}>Begin<br/>Claim</a>
+           
             <button onClick={handleScrollToVideo} className={styles.button}>View Teaser</button>
           </div>
         </div>
@@ -26,10 +26,19 @@ export default function Home() {
             <video className={styles.video} src="/video1.mp4" controls></video>
           </div>
           <div className={styles.textContainer}>
-            <h2 className={styles.header}>Header for the section</h2>
-            <p className={styles.paragraph}>This is a paragraph that describes the content of the video. You can replace it with your own content.</p>
+            <h2 className={styles.header}>Shape the Destiny of Dimensions</h2>
+            <p className={styles.paragraph}>Galaxer is being built for the future. Search our codex for more information.</p>
+            <a href="/lore/codex" className={styles.button}>Search Codex</a>
+            <a href="/claim" className={styles.button}>Begin Claim</a>
           </div>
         </div>
+        {/* <div id="claimSection" className={styles.claimSection}>
+        <a href="/claim" className={styles.button}>Begin<br/>Claim</a>
+
+  </div> */}
+
+
+
       </div>
       {/*
       <div className={styles.section}>
