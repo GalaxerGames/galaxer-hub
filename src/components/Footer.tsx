@@ -75,7 +75,7 @@ export const Footer = () => (
         <a href="https://linkedin.com/galaxer" className={styles.socialFooter}>Linkedin</a>
         <a href="/terms" className={styles.titleFooter}>Terms</a>
         <a href="/privacy" className={styles.titleFooter}>Policy</a>
-        <a href="/brand" className={styles.titleFooter}>Brand</a>
+        <a href="/studio/brand" className={styles.titleFooter}>Brand</a>
         </div>
     </div>
   </footer>
