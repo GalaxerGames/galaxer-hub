@@ -1,6 +1,6 @@
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
-import styles from '../components/modules/charter.module.css'
+import styles from '../components/modules/privacy.module.css'
 import Link from 'next/link'
 import '../styles/globals.css';
 const Privacy = () => {
