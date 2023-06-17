@@ -1,3 +1,5 @@
+/* Footer.module.css */
+
 .footer {
   background-color: #ffbf0095;
   color: #757575;
@@ -77,3 +79,43 @@
   text-decoration: none;
 }
 
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .logo {
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .nav, .menu, .titleFooter, .socialFooter {
+    justify-content: center;
+  }
+
+  .menuItem {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .loginButton, .signUpButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .titleFooter {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .titleFooter h1, .titleFooter a, .socialFooter a {
+    font-size: 0.8em;  /* Adjust as necessary */
+    margin: 0.3rem;
+  }
+}

@@ -72,10 +72,10 @@ export const Footer = () => (
         <a href="https://twitter.com/Galaxer_glxr" className={styles.socialFooter}>Twitter</a>
         <a href="https://www.youtube.com/@galaxer-glxr" className={styles.socialFooter}>Youtube</a>
         <a href="https://github.com/galaxergames" className={styles.socialFooter}>Github</a>
-        <a href="https://linkedin.com/galaxer" className={styles.socialFooter}>Linkedin</a>
+        <a href="https://linkedin.com/galaxer" className={styles.socialFooter}>Linkedin</a> <br/>
         <a href="/terms" className={styles.titleFooter}>Terms</a>
         <a href="/privacy" className={styles.titleFooter}>Policy</a>
-        <a href="/studio/brand" className={styles.titleFooter}>Brand</a>
+        {/* <a href="/studio/brand" className={styles.titleFooter}>Brand</a> */}
         </div>
     </div>
   </footer>

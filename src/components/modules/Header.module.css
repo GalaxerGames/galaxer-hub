@@ -1,68 +1,94 @@
 /* Header.module.css */
 
 .header {
-    background-color: #ffbf0095;
-    color: #757575;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  .logo {
-    height: 50px;
-  }
-  
-  .nav {
-    color: #ffbf0095;
-  }
-  
-  .menu {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    color: #757575;
-    text-decoration: none;
-  }
-  
-  .menuItem {
-    color: #ffbf0095;
-    position: relative;
-    margin-right: 1rem;
-    text-decoration: none;
-  }
-  
-  .submenu {
-    display: none;
-    position: absolute;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    top: 100%;
-    left: 0;
-    background-color: #ffbf0095;
-    text-decoration: none;
-  }
-  
-  .menuItem:hover .submenu {
-    display: block;
-    color: #ffbf0095;
-  }
-  
-  .buttons {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .loginButton, .signUpButton {
-    color: #252525;
-    background-color: #ffbf0095;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-  }
-  
+  background-color: #ffbf0095;
+  color: #757575;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav {
+  color: #ffbf0095;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #757575;
+  text-decoration: none;
+}
+
+.menuItem {
+  color: #ffbf0095;
+  position: relative;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  background-color: #ffbf0095;
+  text-decoration: none;
+}
+
+.menuItem:hover .submenu {
+  display: block;
+  color: #ffbf0095;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.loginButton, .signUpButton {
+  color: #252525;
+  background-color: #ffbf0095;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+.header {
+  flex-direction: column;
+}
+
+.menu {
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuItem {
+  margin-right: 0;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.loginButton, .signUpButton {
+  width: 100%;
+  text-align: center;
+}
+}
