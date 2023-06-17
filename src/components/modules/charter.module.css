@@ -127,13 +127,15 @@
   
   .paragraphContainer {
     display: flex;
+    font-size: large;
+    font-weight: bold; /* Makes the text bold */
+    line-height: 1.5; /* Sets the spacing between lines */
     flex-direction: column;
     justify-content: right;
     align-items: flex-end; /* Aligns items to the right */
     width: 50%;
+}
 
-  }
-  
   .quote {
     font-size: 5.5em;
     text-align: right;
@@ -167,6 +169,7 @@
 
   .sectionCharter {
     display: flex;
+    font-weight: bold;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
