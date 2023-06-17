@@ -245,5 +245,60 @@
     margin: 1%; /* added margin for some spacing */
   }
   
+  @media screen and (max-width: 768px) {
+    .quoteSection, .section3, .imageContainer2, .threeImageSection, .sectionTable, .sectionUpdates, .sectionBuilt, .largeImagesBuilt, .smallImagesBuilt {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+      text-align: center;
+    }
     
+    .textContainer, .imageContainer, .imageListItem, .smallHeaderTable, .sectionItemUpdates, .imageContainerBuilt {
+      width: 100%;
+    }
+  
+    .quote2, .bulletItem, .header3, .button, .paragraph, .header, .bulletTitle, .titleCareers, .headerBuilt {
+      font-size: 2em; /* Adjust as needed */
+    }
+  
+    .imageContainer {
+      margin-top: 50px;
+    }
+  
+    .videoContainer {
+      height: 50vh;
+    }
+  
+    .bulletList {
+      margin-top: 1em;
+    }
+  
+    .bulletItem {
+      margin-right: 0;
+    }
+  
+    .imageListItem img, .largeImageBuilt, .smallImageBuilt {
+      max-width: 100%;
+    }
+  
+    .imageListItem {
+      width: 100%;
+      margin-bottom: 1em;
+    }
+  
+    .table, .imageUpdates {
+      max-width: 100%;
+    }
+  
+    .buttonsCareers {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .buttonCareers {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
   

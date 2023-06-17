@@ -46,14 +46,14 @@ export const Footer = () => (
           </ul>
         </li>
         <li className={styles.menuItem}>
-          <a href="/about">Studio</a>
+          <a href="/studio/about">Studio</a>
           <ul className={styles.submenu}>
             <li><a href="/studio/about">About</a></li>
             <li><a href="/studio/blog">Blog</a></li>
-            <li><a href="/studio/careers">Careers</a></li>
+            {/* <li><a href="/studio/careers">Careers</a></li> */}
             <li><a href="/studio/charter">Charter</a></li>
             <li><a href="/studio/investors">Investors</a></li>
-            <li><a href="/studio/brand">Brand</a></li>
+            {/* <li><a href="/studio/brand">Brand</a></li> */}
           </ul>
         </li>
 </ul> 

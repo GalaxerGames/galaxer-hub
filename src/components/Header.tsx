@@ -94,7 +94,7 @@ export const Header = () => {
               <ul className={`${styles.submenu} ${activeMenu === 'studio' ? styles.open : ''}`}>
                 <li><a href="/studio/about">About</a></li>
                 <li><a href="/studio/blog">Blog</a></li>
-                <li><a href="/studio/careers">Careers</a></li>
+               {/* <li><a href="/studio/careers">Careers</a></li> */}
                 <li><a href="/studio/charter">Charter</a></li>
                 <li><a href="/studio/investors">Investors</a></li>
               </ul>
