@@ -42,6 +42,8 @@ export const Footer = () => (
             <li><a href="/ecosystem/overview">Overview</a></li>
             <li><a href="/ecosystem/glxr">GLXR</a></li>
             <li><a href="/ecosystem/nebula">Nebula Notes</a></li>
+            <li><a href="/ecosystem/mea">Machine Elf Alliance</a></li>
+            <li><a href="/ecosystem/tardigrades">Tardigrades</a></li>
             <li><a href="/ecosystem/materials">Materials</a></li>
           </ul>
         </li>
