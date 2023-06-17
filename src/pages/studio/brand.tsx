@@ -11,7 +11,7 @@ const Brand = () => {
             <div className={styles.textContainer}>
           <h1 className={styles.header}>Brand Guidelines</h1>
               <p className={styles.paragraph}>
-                Our Charter describes the<br/>principles we use to execute<br/>on GenPen AI's mission.
+               Come back for more information on how to use the Galaxer Brand when its ready!
               </p>
             
             </div>
@@ -20,7 +20,7 @@ const Brand = () => {
             </div>
           </div>
           <hr />
-          <div className={styles.sectionCharter}>
+         {/* <div className={styles.sectionCharter}>
       <h2 className={styles.headerCharter}>Published May 1, 2023</h2>
   <p className={styles.paragraphCharter}>
   This is a placeholder text. Please replace this with your actual content.
@@ -69,7 +69,7 @@ const Brand = () => {
     Your long paragraph text goes here. This is a placeholder text. 
     Please replace this with your actual content. <br/>
   </p>
-</div>
+</div> */}
 
 
 <hr/>
