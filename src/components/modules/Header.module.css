@@ -34,6 +34,7 @@
   position: relative;
   margin-right: 1rem;
   text-decoration: none;
+  border-bottom: 1px solid #757575; /* Add a line between each item */
 }
 
 .submenu {
@@ -68,27 +69,88 @@
 
 /* Mobile view */
 @media screen and (max-width: 768px) {
-.header {
-  flex-direction: column;
+  .header {
+    flex-direction: column;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menuItem {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .loginButton, .signUpButton {
+    width: 100%;
+    text-align: center;
+  }
 }
 
-.menu {
-  flex-direction: column;
-  align-items: center;
+/* Add styles for Sidebar */
+.openbtn, .closebtn {
+  font-size: 1em;
+  margin: 10px;
+  display: inline-block; /* Set to inline-block by default */
+  background: transparent;
+  border: none;
 }
 
-.menuItem {
-  margin-right: 0;
-  margin-bottom: 1rem;
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-width: 450px) {
+  .openbtn, .closebtn {
+    font-size: 1em;
+    background: transparent;
+    border: none;
+    width: 50px;
+    margin: 15px;
+  }
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  left: auto;
+  background-color: #ffbf0095;
+  overflow-x: hidden;
+  transition: 0.3s ease-out;
+  padding-top: 60px;
 }
 
-.buttons {
-  flex-direction: column;
-  gap: 0.5rem;
+.open {
+  width: 250px !important;
+  transform: translateX(0);
 }
 
-.loginButton, .signUpButton {
-  width: 100%;
-  text-align: center;
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #757575;
+  display: block;
+  transition: 0.3s;
 }
+
+.sidebar a:hover {
+  color: #f1f1f1;
 }
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+

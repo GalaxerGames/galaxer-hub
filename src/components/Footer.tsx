@@ -53,6 +53,7 @@ export const Footer = () => (
             <li><a href="/studio/careers">Careers</a></li>
             <li><a href="/studio/charter">Charter</a></li>
             <li><a href="/studio/investors">Investors</a></li>
+            <li><a href="/studio/brand">Brand</a></li>
           </ul>
         </li>
 </ul> 
