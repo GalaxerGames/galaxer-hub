@@ -54,6 +54,10 @@ const Humanity = () => {
           <hr />
           <div className={styles.section}>
             <h2 className={styles.smallHeader}>Starting Jobs and Traits</h2>
+            <div className={styles.rotateDeviceMessage}>
+             Please rotate your device to see the table.
+            </div>
+            <div className={styles.tableContainer}>
             <table className={styles.table}>
   <thead>
     <tr>
@@ -172,6 +176,7 @@ const Humanity = () => {
     </tr>
     </tbody>
     </table>
+          </div>
           </div>
           <hr />
             <Footer />

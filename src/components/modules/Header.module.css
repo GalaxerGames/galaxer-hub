@@ -1,68 +1,197 @@
 /* Header.module.css */
 
 .header {
-    background-color: #ffbf0095;
-    color: #757575;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: #ffbf0095;
+  color: #757575;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav {
+  color: #ffbf0095;
+}
+
+.menuItem {
+  color: #000000;
+  position: relative;
+  margin-bottom: 1rem; /* Adjust according to your design */
+  text-decoration: none;
+  border-bottom: 2px solid #757575; /* Add a line underneath */
+  cursor: pointer;
+}
+
+.menuItem:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none; /* This hides the submenu by default */
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%; /* This positions the submenu below the menu item */
+  left: 0; /* This positions the submenu to start at the left edge of the menu item */
+  background-color: #ffbf0095;
+  width: 100%;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.menuItemActive .submenu {
+  display: block; /* This shows the submenu when the menu item is active */
+}
+
+.menuItem:hover .submenu {
+  display: block;
+  color: #ffbf0095;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.loginButton, .signUpButton {
+  color: #252525;
+  background-color: #ffbf0095;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
   }
-  
-  .logo {
-    height: 50px;
-  }
-  
-  .nav {
-    color: #ffbf0095;
-  }
-  
+
   .menu {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    color: #757575;
-    text-decoration: none;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .menuItem {
-    color: #ffbf0095;
-    position: relative;
-    margin-right: 1rem;
-    text-decoration: none;
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
-  
-  .submenu {
-    display: none;
-    position: absolute;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    top: 100%;
-    left: 0;
-    background-color: #ffbf0095;
-    text-decoration: none;
-  }
-  
-  .menuItem:hover .submenu {
-    display: block;
-    color: #ffbf0095;
-  }
-  
+
   .buttons {
-    display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
   }
-  
+
   .loginButton, .signUpButton {
-    color: #252525;
-    background-color: #ffbf0095;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
+    width: 100%;
+    text-align: center;
   }
-  
+}
+
+/* Add styles for Sidebar */
+.openbtn, .closebtn {
+  font-size: 1em;
+  margin: 10px;
+  display: inline-block; /* Set to inline-block by default */
+  background: transparent;
+  border: none;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-width: 450px) {
+  .openbtn, .closebtn {
+    font-size: 1em;
+    background: transparent;
+    border: none;
+    width: 50px;
+    margin: 15px;
+  }
+}
+.sidebar {
+  height: auto; /* 100% Full-height */
+  width: 100%; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  right: 0;
+  top: auto;
+  left: auto;
+  bottom: 0;
+  margin-top: 102px;
+  margin-right: 7px;
+  transform: translateX(100%);
+  background-color: #ffbf0095; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.3s ease-out; /* 0.5 second transition effect to slide in the sidebar */
+  padding-top: 60px; /* Place content 60px from the top */
+}
+
+.open {
+  width: 250px !important;
+  transform: translateX(0%) !important;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style for the nav and menu in the sidebar */
+.sidebar .nav {
+  height: 100%;
+  display: row;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.sidebar .menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .menuItem {
+  border-bottom: none;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #757575;
+  display: block;
+}
+
+.sidebar .submenu {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #ffbf0095;
+  position:static;
+}
+
+.sidebar .menuItemActive .submenu {
+  display: block; /* This shows the submenu when the menu item is active in the sidebar */
+}

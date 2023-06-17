@@ -186,4 +186,107 @@
   .table th {
     background-color: #eee;
   }
+  @media (max-width: 600px) {
+    .page {
+      height: auto;
+    }
+    
+    .titleEnd {
+      font-size: 3em;
+    }
+    
+    .buttons, .buttons1 {
+      flex-direction: column;
+      width: 100%;
+      position: static;
+      margin-bottom: 1em;
+    }
+  
+    .buttonsContainer, .buttons1 {
+      height: auto;
+    }
+    
+    .button {
+      margin: 10px 0; /* Spacing between buttons when stacked vertically */
+    }
+    
+    .section {
+      flex-direction: column;
+      margin: 1rem 0;
+    }
+  
+    .container {
+      margin-bottom: 1em;
+    }
+    
+    .smallHeader {
+      text-align: center;
+    }
+    
+    .sectionItem {
+      margin-right: 0;
+      margin-bottom: 1em;
+    }
+    
+    .quoteSection {
+      flex-direction: column;
+      font-size: 2em;
+    }
+    
+    .textContainer {
+      width: 100%;
+      align-items: center;
+    }
+    
+    .header {
+      font-size: 1.5em;
+    }
+    
+    .paragraph {
+      font-size: 1em;
+    }
+  
+    .quote {
+      font-size: 2em;
+      padding-right: 0;
+      text-align: center;
+    }
+    
+    .buttons1 {
+      width: 100%;
+    }
+    
+    .container {
+      flex-direction: column;
+    }
+    
+    .imageContainer {
+      width: 100%;
+    }
+    
+    .image1 {
+      max-width: 100%;
+    }
+  
+    .paragraphContainer {
+      align-items: center;
+    }
+    
+    .quote {
+      text-align: center;
+    }
+    
+    .paragraph1 {
+      text-align: center;
+      font-size: 1.5em;
+    }
+    
+    .table {
+      max-width: 100%;
+    }
+    
+    .table th, .table td {
+      padding: 0.5rem;
+    }
+  }
   

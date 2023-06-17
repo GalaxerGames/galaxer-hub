@@ -104,6 +104,10 @@
   height: auto;
 }
 
+.tableContainer {
+  display: none; /* Hide the table by default */
+}
+
 .table {
   width: 100%;
   max-width: 800px;
@@ -118,4 +122,83 @@
 
 .table th {
   background-color: #eee;
+}
+
+
+/* Show a message prompting the user to rotate their device when in portrait orientation */
+@media screen and (orientation: portrait) {
+  .rotateDeviceMessage {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Show the table when the device is in landscape orientation and hide the message */
+@media screen and (orientation: landscape) {
+  .tableContainer {
+    display: block;
+  }
+  .rotateDeviceMessage {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page {
+    height: auto;
+  }
+
+  .title {
+    font-size: 3em;
+  }
+
+  .buttons {
+    flex-direction: column;
+    position: static;
+    width: 100%;
+  }
+
+  .button {
+    margin-bottom: 1rem;
+  }
+
+  .section {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .container, .smallHeader, .sectionItem {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .image {
+    max-width: 100%;
+  }
+
+  .quoteSection {
+    flex-direction: column;
+  }
+
+  .textContainer {
+    width: 100%;
+  }
+
+  .header {
+    font-size: 1.5em;
+  }
+
+  .paragraph {
+    text-align: center;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+
+  .table {
+    max-width: none;
+  }
+  .tableContainer {
+    display: none; /* Hide the table by default */
+  }
 }

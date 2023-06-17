@@ -1,0 +1,43 @@
+.quoteSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.textContainer {
+    width: 50%;
+}
+
+.header {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.paragraph {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.imageContainer {
+    width: 50%;
+}
+
+.careerImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.sectionCharter {
+    padding: 20px;
+}
+
+.headerCharter {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.paragraphCharter {
+    font-size: 1.2em;
+    line-height: 1.5;
+}

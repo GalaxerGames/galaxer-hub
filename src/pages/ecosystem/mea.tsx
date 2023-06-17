@@ -9,10 +9,10 @@ const GLXR = () => {
       <div>
           <Header />
           <div className={styles.page}>
-             <h1 className={styles.title}>GLXR Token</h1>
+             <h1 className={styles.title}>Machine Elf Alliance</h1>
             <div className={styles.buttons}>
             <Link href="https://t.me/galaxer_glxr"
-             className={styles.button}>Join Today
+             className={styles.button}>Learn More
              </Link>
              </div>
             </div>
