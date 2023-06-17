@@ -23,7 +23,7 @@ export const Footer = () => (
           </ul>
         </li>
         <li className={styles.menuItem}>
-          <a href="/platforms/overview">PLatforms</a>
+          <a href="/platforms/overview">Platforms</a>
           <ul className={styles.submenu}>
             <li><a href="/platforms/overview">Overview</a></li> 
             <li><a href="/platforms/ios">iOS</a></li>
