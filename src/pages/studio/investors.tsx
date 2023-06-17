@@ -1,10 +1,10 @@
-import { Header } from '../components/Header'
-import { Footer } from '../components/Footer'
-import styles from '../components/modules/pricing.module.css'
+import { Header } from '../../components/Header'
+import { Footer } from '../../components/Footer'
+import styles from '../../components/modules/investors.module.css'
 import Link from 'next/link'
-import '../styles/globals.css';
+import '../../styles/globals.css';
 
-const Pricing = () => {
+const Investors = () => {
   return (
       <div>
           <Header />
@@ -12,17 +12,17 @@ const Pricing = () => {
             <div className={styles.textContainer}>
           
               <p className={styles.paragraph}>
-                Pricing<br />from basic to<br />comprehensive
+                Investing<br />from equity to<br />tokens
               </p>
-              <Link href="https://genpen.io/login.xhtml" className={styles.button}>Contact Sales</Link>
-              <Link href="" className={styles.link}>Learn More</Link>
+              <Link href="https://genpen.io/login.xhtml" className={styles.button}>Contact IR</Link>
+             {/* <Link href="/blog/investors" className={styles.link}>Learn More</Link> */}
             </div>
             <div className={styles.imageContainer}>
               <img src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
             </div>
           </div>
           <hr />
-          <h3>Latest Updates</h3>
+         {/* <h3>Latest Updates</h3>
                 <div className={styles.section}>
             <div className={styles.sectionItem}>
               <img src="/logotri.png" alt="Image 1" className={styles.image}/>
@@ -41,17 +41,17 @@ const Pricing = () => {
               <Link href="/link/to/post4" className={styles.button}>Blog post 4</Link>
             </div>
           </div>
-          <hr />
+  <hr /> */}
 <div className={styles.container}>
   <div className={styles.imageContainer}>
     <img src="/logotri.png" alt="Image 4" className={styles.image1}/>
   </div>
   <div className={styles.paragraphContainer}>
     <blockquote className={styles.quote}>
-      INK
+      GLXR
     </blockquote>
     <p className={styles.paragraph1}>
-      Just as data<br/>powers your phone<br/> INK lets your<br/>GenPen AI flow.
+      GLXR token provides ample<br/>opportunity to small to institutional<br/>investors to bring about<br/>change in the Galaxer Ecosystem.
     </p>
   </div>
 </div>
@@ -59,11 +59,11 @@ const Pricing = () => {
 
 
           <div>
-          <h1 className={styles.titleEnd}>Start creating with GenPen AI's <br /> powerful tools.</h1>
+          <h1 className={styles.titleEnd}>Start investing in A LRG Corp <br /> today.</h1>
           <div className={styles.buttonsContainerBottom}>
          <div className={styles.buttons1}>
-        <Link href="https://genpen.io/signup.xhtml" className={styles.button}>Sign Up</Link>
-        <Link href="https://genpen.io/login.xhtml" className={styles.button}>Login</Link>
+        <Link href="https://t.me/galaxer_glxr" className={styles.button}>Inquire Here</Link>
+       {/* <Link href="https://genpen.io/login.xhtml" className={styles.button}>Login</Link> */}
         </div>
         </div>
         <hr />
@@ -74,4 +74,4 @@ const Pricing = () => {
   );s
 }
 
-export default Pricing;
+export default Investors;
