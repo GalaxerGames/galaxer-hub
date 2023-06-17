@@ -5,18 +5,31 @@ import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 
 export default function Home() {
+  const handleScrollToVideo = () => {
+    document.getElementById("videoSection").scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <div>
       <Header />
       <div className={styles.page}>
-      <h1 className={styles.title}>Welcome Galaxer,<br/> to the New World</h1>
-      <div className={styles.buttons}>
-        <a href="/claim" className={styles.button}>Begin<br/>Claim
-        </a>
-        <a href="https://youtu.be/IhP4k0wRtcc"
-          className={styles.button}>View Teaser
-        </a>
-      </div>
+        <div className={styles.titleSection}>
+          <h1 className={styles.title}>Welcome Galaxer,<br/> to the New World</h1>
+          <div className={styles.buttons}>
+            <a href="/claim" className={styles.button}>Begin<br/>Claim</a>
+            <button onClick={handleScrollToVideo} className={styles.button}>View Teaser</button>
+          </div>
+        </div>
+        
+        <div id="videoSection" className={styles.videoSection}>
+          <div className={styles.videoContainer}>
+            <video className={styles.video} src="/video1.mp4" controls></video>
+          </div>
+          <div className={styles.textContainer}>
+            <h2 className={styles.header}>Header for the section</h2>
+            <p className={styles.paragraph}>This is a paragraph that describes the content of the video. You can replace it with your own content.</p>
+          </div>
+        </div>
       </div>
       {/*
       <div className={styles.section}>
@@ -102,8 +115,8 @@ export default function Home() {
  <h1 className={styles.title}>Join us to make a brighter future.</h1>
   <div className={styles.buttons}>
     <a href="./careers" className={styles.button}>View Opportunities</a>
-  </div>
-<Footer />  */}
+  </div> */}
+<Footer />  
 </div>
     
   )
