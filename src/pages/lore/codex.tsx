@@ -15,11 +15,11 @@ const ResearchOverview = () => {
         </blockquote>
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph}>
-          An ancient and revered tome within the Galaxer universe,<br/> a compendium of knowledge and lore that spans the ages.
+          An ancient and revered tome for Galaxers,<br/> a compendium of knowledge and lore that spans the ages.
           </p>
           <div className={styles.buttons}>
             <Link href="/research-index"
-              className={styles.button}>View Research Index
+              className={styles.button}>View Research<br/> Index
             </Link>
             <Link href="/governance"
               className={styles.button}>Learn More About Governance

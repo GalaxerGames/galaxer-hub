@@ -10,7 +10,7 @@ export const Footer = () => (
      <nav className={styles.nav}>
       <ul className={styles.menu}>
         <li className={styles.menuItem}>
-          <a href="/lore/overview" className={styles.button}>Lore</a>
+          <a href="/lore/codex" className={styles.button}>Codex</a>
           <ul className={styles.submenu}>
             <li><a href="/lore/humanity" className={styles.button}>Humanity</a></li>
             <li><a href="/lore/portals" className={styles.button}>Portals</a></li>

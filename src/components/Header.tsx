@@ -1,7 +1,6 @@
-// components/Header.tsx
 
-import React, {useState } from 'react';
-import Link from 'next/link';
+
+import React, {useState} from 'react';
 import { useConnect, WagmiConfig } from 'wagmi';
 import styles from './modules/Header.module.css';
 import '../styles/globals.css';
@@ -10,44 +9,43 @@ import { useAccount } from 'wagmi'
 export const Header = () => {
   const { connect, connectors, error, isLoading, pendingConnector } = useConnect();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState('');
 
   const onConnectWallet = async () => {
-    // Assume that you want to connect with the first available connector.
     if (connectors[0]) {
       await connect({ connector: connectors[0] });
     }
   }
 
   const openNav = () => {
-    console.log("openNav function called");
     setSidebarOpen(true);
   }
+
   const closeNav = () => {
     setSidebarOpen(false);
   }
 
-  return(
-  <header className={styles.header}>
+  const handleSubMenu = (menu) => {
+    setActiveMenu(activeMenu === menu ? '' : menu);
+  }
+
+  return (
+    <header className={styles.header}>
       <a href="/home">
       <img src="/logo.png" alt="Logo" className={styles.logo} />
     </a>
     <div className={styles.buttons}>
-
-<button onClick={onConnectWallet} className={styles.loginButton}>Connect Wallet
-</button>
-<button className={styles.openbtn} onClick={openNav}>☰</button>
-{/* <Link href="https://genpen.io/signup.xhtml" className={styles.signUpButton}>Sign Up
-</Link> */}
-</div> 
-<div id="mySidebar" className={`${styles.sidebar} ${sidebarOpen ? styles.open : ''}`}>
-       <a href="javascript:void(0)" className={styles.closebtn} onClick={closeNav}>×</a>
-
-        <nav className={styles.nav}>
-          <ul className={styles.menu}>
-          <li className={styles.menuItem}>
-              <a href="/lore/overview">Lore</a>
-              <ul className={styles.submenu}>
-                <li><a href="/lore/humanity">Humanity</a></li>
+      <button onClick={onConnectWallet} className={styles.loginButton}>Connect Wallet</button>
+      <button className={styles.openbtn} onClick={openNav}>☰</button>
+    </div> 
+    <div id="mySidebar" className={`${styles.sidebar} ${sidebarOpen ? styles.open : ''}`}>
+      <a href="javascript:void(0)" className={styles.closebtn} onClick={closeNav}>×</a>
+      <nav className={styles.nav}>
+        <ul className={styles.menu}>
+        <li className={`${styles.menuItem} ${activeMenu === 'lore' ? styles.menuItemActive : ''}`} onClick={() => handleSubMenu('lore')}>
+            <a href="/lore/codex">Lore</a>
+            <ul className={`${styles.submenu} ${activeMenu === 'lore' ? styles.open : ''}`}>
+              <li><a href="/lore/humanity">Humanity</a></li>
                 <li><a href="/lore/portals">Portals</a></li>
                 <li><a href="/lore/conflict">Cosmic Conflict</a></li>
                 <li><a href="/lore/droch">The Droch</a></li>
@@ -58,21 +56,29 @@ export const Header = () => {
               </ul>
             </li>
             <li className={styles.menuItem}>
-              <a href="/product/overview">Product</a>
-              <ul className={styles.submenu}>
-                <li><a href="/product/overview">Overview</a></li> 
-                <li><a href="/product/ios">iOS</a></li>
-                <li><a href="/product/android">Android</a></li>
-                <li><a href="/product/desktop">Desktop</a></li>
-                <li><a href="/product/vr">VR</a></li>
-                <li><a href="/product/xbox">Xbox</a></li>
-                <li><a href="/product/playstation">PlayStation</a></li>
-                <li><a href="/product/nintendo">Nintendo</a></li>
+              <a href="/platforms/overview" 
+              onClick={(e) => handleMenuClick(e, 'platforms')} 
+                onDoubleClick={(e) => handleMenuDoubleClick(e, '/platforms/overview')}>
+                  Platforms
+                  </a>
+              <ul className={`${styles.submenu} ${activeMenu === 'platforms' ? styles.open : ''}`}>
+                <li><a href="/platforms/overview">Overview</a></li> 
+                <li><a href="/platforms/ios">iOS</a></li>
+                <li><a href="/platforms/android">Android</a></li>
+                <li><a href="/platforms/desktop">Desktop</a></li>
+                <li><a href="/platforms/vr">VR</a></li>
+                <li><a href="/platforms/xbox">Xbox</a></li>
+                <li><a href="/platforms/playstation">PlayStation</a></li>
+                <li><a href="/platforms/nintendo">Nintendo</a></li>
               </ul>
             </li>
             <li className={styles.menuItem}>
-              <a href="/ecosystem/overview">Ecosystem</a>
-              <ul className={styles.submenu}>
+            <a href="/ecosystem/overview" 
+              onClick={(e) => handleMenuClick(e, 'ecosystem')} 
+                onDoubleClick={(e) => handleMenuDoubleClick(e, '/ecosystem/overview')}>
+                  Ecosystem
+                  </a>
+              <ul className={`${styles.submenu} ${activeMenu === 'ecosystem' ? styles.open : ''}`}>
                 <li><a href="/ecosystem/overview">Overview</a></li>
                 <li><a href="/ecosystem/glxr">GLXR</a></li>
                 <li><a href="/ecosystem/nebula">Nebula Notes</a></li>
@@ -80,8 +86,12 @@ export const Header = () => {
               </ul>
             </li>
             <li className={styles.menuItem}>
-              <a href="/about">Studio</a>
-              <ul className={styles.submenu}>
+            <a href="/studio/about" 
+              onClick={(e) => handleMenuClick(e, 'studio')} 
+                onDoubleClick={(e) => handleMenuDoubleClick(e, '/studio/about')}>
+                  Studio
+                  </a>
+              <ul className={`${styles.submenu} ${activeMenu === 'studio' ? styles.open : ''}`}>
                 <li><a href="/studio/about">About</a></li>
                 <li><a href="/studio/blog">Blog</a></li>
                 <li><a href="/studio/careers">Careers</a></li>
