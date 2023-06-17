@@ -156,6 +156,75 @@
     margin: 1%; /* added margin for some spacing */
   }
   
-
+  @media screen and (max-width: 768px) {
+    .researchOverview {
+      flex-direction: column;
+      height: auto; /* let the height auto-adjust to content */
+    }
+    
+    .quote, .quote2 {
+      font-size: 2.5em;
+      padding-right: 10px;
+    }
+  
+    .section {
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+  
+    .container, .smallHeader, .sectionItem {
+      margin-bottom: 1rem; /* Add some space between stacked elements */
+      text-align: center; /* Centered text on mobile */
+    }
+    
+    .image {
+      max-width: 100%;
+    }
+    
+    .quoteSection {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .quote3 {
+      font-size: 1em;
+    }
+    
+    .paragraphContainer {
+      font-size: 1.2em;
+      padding-left: 10px;
+    }
+    
+    .paragraph, .paragraph1 {
+      text-align: center; /* Centered text on mobile */
+    }
+    
+    .buttons {
+      width: 100%;
+    }
+  
+    .button {
+      padding: 10px;
+    }
+  
+    .headerBuilt {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+  
+    .imageContainerBuilt {
+      width: 100%;
+    }
+    
+    .smallImagesBuilt {
+      flex-wrap: wrap; /* Allow images to wrap to next line */
+    }
+    
+    .smallImageBuilt {
+      width: 45%; /* Allows two images per row */
+      margin: 2.5%; /* Adjust margin for smaller screen */
+    }
+  }
+  
   
   

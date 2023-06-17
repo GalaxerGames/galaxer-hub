@@ -125,3 +125,43 @@
 .table th {
   background-color: #eee;
 }
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 3em;
+  }
+
+  .button {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .section {
+    flex-direction: column;
+    margin: 1rem auto;
+  }
+
+  .container, .smallHeader {
+    margin-bottom: 2rem; /* Add some space between stacked elements */
+  }
+  
+  .sectionItem {
+    margin-right: 0; /* No right margin needed for vertical stack */
+  }
+
+  .textContainer, .imageContainer {
+    width: 100%; /* Full width on mobile */
+  }
+  
+  .header {
+    font-size: 2em; /* Smaller font size for smaller screens */
+  }
+
+  .table {
+    max-width: 100%; /* Full width on mobile */
+  }
+
+  .table th, .table td {
+    padding: 0.5rem; /* Less padding for smaller screens */
+  }
+}

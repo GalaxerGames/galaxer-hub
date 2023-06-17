@@ -185,6 +185,69 @@
     color: white;
   }
   
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  .researchOverview {
+    padding: 10px;
+    height: auto; /* Flexible height to accommodate content */
+  }
+  
+  .quote, .quote2 {
+    font-size: 3em; /* Smaller font size for smaller screens */
+    padding-right: 10px;
+  }
+
+  .paragraphContainer {
+    font-size: 1.5em;
+    padding-left: 10px;
+  }
+
+  .paragraph, .paragraph1 {
+    margin-bottom: 10px;
+  }
+  
+  .buttons {
+    width: 100%; /* Full width buttons for easier touch */
+  }
+  
+  .button {
+    padding: 10px; /* More padding for easier touch */
+  }
+
+  .section {
+    flex-direction: column; /* Stack elements vertically */
+    margin: 1rem auto;
+  }
+  
+  .container {
+    margin-bottom: 2rem; /* Add some space between stacked elements */
+  }
+  
+  .sectionItem {
+    margin-right: 0; /* No right margin needed for vertical stack */
+  }
+
+  .textContainer {
+    width: 100%; /* Full width on mobile */
+  }
+  
+  .imageContainer {
+    width: 100%; /* Full width on mobile */
+  }
+  
+  .header, .header1, .header2, .header3 {
+    font-size: 2em; /* Smaller font size for smaller screens */
+  }
+  
+  .buttonsBottom {
+    padding: 10px 0;
+  }
+  
+  .buttonBottom {
+    padding: 20px 0; /* Larger touch area for buttons */
+    font-size: 1.5em; /* Larger font for easier reading */
+  }
+}
 
   
   

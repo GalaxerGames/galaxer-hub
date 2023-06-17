@@ -23,16 +23,16 @@ export const Footer = () => (
           </ul>
         </li>
         <li className={styles.menuItem}>
-          <a href="/product/overview">Product</a>
+          <a href="/platforms/overview">PLatforms</a>
           <ul className={styles.submenu}>
-            <li><a href="/product/overview">Overview</a></li> 
-            <li><a href="/product/ios">iOS</a></li>
-            <li><a href="/product/android">Android</a></li>
-            <li><a href="/product/desktop">Desktop</a></li>
-            <li><a href="/product/vr">VR</a></li>
-            <li><a href="/product/xbox">Xbox</a></li>
-            <li><a href="/product/playstation">PlayStation</a></li>
-            <li><a href="/product/nintendo">Nintendo</a></li>
+            <li><a href="/platforms/overview">Overview</a></li> 
+            <li><a href="/platforms/ios">iOS</a></li>
+            <li><a href="/platforms/android">Android</a></li>
+            <li><a href="/platforms/desktop">Desktop</a></li>
+            <li><a href="/platforms/vr">VR</a></li>
+            <li><a href="/platforms/xbox">Xbox</a></li>
+            <li><a href="/platforms/playstation">PlayStation</a></li>
+            <li><a href="/platforms/nintendo">Nintendo</a></li>
 
           </ul>
         </li>

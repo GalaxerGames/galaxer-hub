@@ -1,0 +1,111 @@
+.researchOverview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    padding: 0 20px;
+  }
+  
+  .quote {
+    flex: 1;
+    font-size: 5.5em;
+    text-align: right;
+    padding-right: 100px;
+  }
+
+  .quote2 {
+    flex: 1;
+    font-size: 5.5em;
+    text-align: left;
+    padding-right: 20px;
+  }
+  
+  .paragraphContainer {
+    flex: 2;
+    font-size: 2.0em;
+    padding-left: 20px;
+  }
+  
+  .paragraph {
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  .button {
+    color: #252525;
+    background-color: #ffbf0095;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #757575;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #444;
+  }
+
+.title {
+    text-align: center;
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .researchOverview {
+    flex-direction: column; /* stack elements vertically */
+    height: auto; /* adjust height to fit content */
+    padding: 1rem; /* adjust padding to fit smaller screens */
+  }
+  
+  .image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .quote, .quote2 {
+    font-size: 2em; /* reduce font size for smaller screens */
+    text-align: center; /* center text for smaller screens */
+    padding-right: 0; /* remove right padding */
+  }
+  
+  .paragraphContainer {
+    font-size: 1em; /* reduce font size for smaller screens */
+    padding-left: 0; /* remove left padding */
+  }
+  
+  .paragraph {
+    text-align: center; /* center paragraph text for smaller screens */
+  }
+
+  .buttons {
+    flex-direction: column; /* stack buttons vertically */
+    align-items: stretch; /* stretch buttons to full width */
+  }
+  
+  .button {
+    margin-left: 0; /* remove left margin */
+    margin-bottom: 10px; /* add bottom margin for stacked buttons */
+    padding: 5px; /* reduce padding for smaller screens */
+    border: none; /* remove border */
+  }
+  
+  .title {
+    font-size: 2em; /* reduce title size for smaller screens */
+  }
+}
+
+  
