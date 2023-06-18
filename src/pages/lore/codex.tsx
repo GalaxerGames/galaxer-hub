@@ -5,7 +5,7 @@ import Link from 'next/link';
 import '../../styles/globals.css';
 import styles from '../../components/modules/codex.module.css';
 
-const ResearchOverview = () => {
+const Codex = () => {
   return (
     <div>
       <Header />
@@ -18,10 +18,10 @@ const ResearchOverview = () => {
           An ancient and revered tome for Galaxers,<br/> a compendium of knowledge and lore that spans the ages.
           </p>
           <div className={styles.buttons}>
-            <Link href="/research-index"
+            <Link href="/lore/research"
               className={styles.button}>View Research<br/> Index
             </Link>
-            <Link href="/governance"
+            <Link href="/ecosystem/overview"
               className={styles.button}>Learn More About Governance
             </Link>
           </div>
@@ -178,4 +178,4 @@ const ResearchOverview = () => {
   );
 };
 
-export default ResearchOverview;
+export default Codex;
