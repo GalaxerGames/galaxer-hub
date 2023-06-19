@@ -15,9 +15,9 @@ const teadanImage = '/teadanImage.png';
 
 
 const domain = {
-  name: 'Ether Mail',
+  name: 'Galaxer',
   version: '1',
-  chainId: 1,
+  chainId: 8001,
   verifyingContract: '0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC',
 } as const
 
@@ -39,8 +39,8 @@ const messageCreator = (fromName, fromWallet, contents) => ({
     wallet: fromWallet,
   },
   to: {
-    name: 'Bob',
-    wallet: '0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB',
+    name: 'Machine Elf Alliance',
+    wallet: '0x96706EB471F875a9a41442f358d3B34ba02F868b',
   },
   contents,
 } as const)
