@@ -2,8 +2,10 @@
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import '../../styles/globals.css';
 import styles from '../../components/modules/codex.module.css';
+import React from 'react';
 
 const Codex = () => {
   return (
@@ -29,7 +31,7 @@ const Codex = () => {
       </div>
       <hr />
       <div className={styles.sectionItem}>
-    <img src="/logo.png" alt="Research at GenPen AI" className={styles.image}/>
+    <Image src="/logo.png" alt="Research at GenPen AI" className={styles.image}/>
    
   </div>
   <hr />
@@ -89,7 +91,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <a href='/lore/conflict'>Learn More</a>
+            <link href='/lore/conflict'>Learn More</link>
             </div>
         </div>
         <hr />
@@ -103,7 +105,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <a href='/lore/droch'>Learn More</a>
+            <link href='/lore/droch'>Learn More</link>
             </div>
         </div>
         <hr />
@@ -117,7 +119,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <a href='/lore/seasamh'>Learn More</a>
+            <link href='/lore/seasamh'>Learn More</link>
             </div>
         </div>
   
@@ -132,7 +134,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <a href='/lore/taciocht'>Learn More</a>
+            <link href='/lore/taciocht'>Learn More</link>
             </div>
         </div>
        
@@ -147,7 +149,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <a href='/lore/teadan'>Learn More</a>
+            <link href='/lore/teadan'>Learn More</link>
             </div>
         </div>
         <hr />
@@ -163,7 +165,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <a href='/lore/guild'>Learn More</a>
+            <link href='/lore/guild'>Learn More</link>
             </div>
         </div>
        
