@@ -3,12 +3,14 @@
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 20px;
+    height: 100vh;
   }
   
   .signMessageContainer {
     flex: 1 1 300px; 
     margin: 20px;
     text-align: center;
+    height: 50vh;
   }
   
   .signMessageContainer .image {

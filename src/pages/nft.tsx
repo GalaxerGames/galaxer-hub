@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { recoverTypedDataAddress } from 'viem'
 import { type Address, useSignTypedData, useAccount } from 'wagmi'
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from 'next/link';
+import Image from 'next/image';
 import { Header } from '../components/Header.tsx';
 import { Footer } from '../components/Footer.tsx';
 import styles from '../components/modules/nft.module.css';
@@ -15,9 +15,9 @@ const teadanImage = '/teadanImage.png';
 
 
 const domain = {
-  name: 'Ether Mail',
+  name: 'Galaxer',
   version: '1',
-  chainId: 1,
+  chainId: 8001,
   verifyingContract: '0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC',
 } as const
 
@@ -39,13 +39,13 @@ const messageCreator = (fromName, fromWallet, contents) => ({
     wallet: fromWallet,
   },
   to: {
-    name: 'Bob',
-    wallet: '0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB',
+    name: 'Machine Elf Alliance',
+    wallet: '0x96706EB471F875a9a41442f358d3B34ba02F868b',
   },
   contents,
 } as const)
 
-const elfComponentCreator = (title, message, description, image, signButtonText) => {
+const elfComponentCreator = (title , message, description, image, signButtonText) => {
   return function ElfComponent() {
     const { data, error, isLoading, signTypedData } = useSignTypedData({
       domain,

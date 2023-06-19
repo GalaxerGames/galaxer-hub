@@ -46,6 +46,8 @@ export const Footer = () => (
             <li><Link href='/ecosystem/mea'>Machine Elf Alliance</Link></li>
             <li><Link href='/ecosystem/tardigrades'>Tardigrades</Link></li>
             <li><Link href='/ecosystem/materials'>Materials</Link></li>
+            <li><Link href='/claim'>Claim GLXR</Link></li>
+            <li><Link href='/nft'>Claim NFTs</Link></li>
           </ul>
         </li>
         <li className={styles.menuItem}>

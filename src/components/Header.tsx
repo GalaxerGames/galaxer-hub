@@ -110,6 +110,17 @@ export const Header = () => {
                 <li><Link href='/studio/investors'>Investors</Link></li>
               </ul>
             </li>
+            <li className={styles.menuItem}>
+              <Link href='/ecosystem/overview' 
+              onClick={(e) => handleMenuClick(e, 'overview')} 
+                onDoubleClick={(e) => handleMenuClick(e, '/ecosystem/overview')}>
+                  Claims
+                  </Link>
+              <ul className={`${styles.submenu} ${activeMenu === 'overview' ? styles.open : ''}`}>
+                <li><Link href='/claim'>CLaim GLXR</Link></li> 
+                <li><Link href='/nft'>Claim NFTs</Link></li>
+                </ul>
+            </li>
           </ul>
           </nav>
           </div>
