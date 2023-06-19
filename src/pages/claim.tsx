@@ -11,6 +11,12 @@ import { WalletConnectConnector } from '@wagmi/core/connectors/walletConnect'
 const tokenAddress = '0xA17051ebD6DF3b9Ad31fe6ad4fdE373b53DF1a6a'; 
 const claimAddress = '0xd9145CCE52D386f254917e481eB44e9943F39138'; 
 
+async function getMerkleProofs(userAddress: string): Promise<string[]> {
+  const response = await fetch(`https://yourserver.com/merkleProof/${userAddress}`);
+  const data = await response.json();
+  return data.merkleProof;
+}
+
 function Claim() {
   const [balance, setBalance] = useState(null);
   const [account, setAccount] = useState<string | null>(null);
@@ -59,11 +65,17 @@ function Claim() {
 
   async function claimNewToken() {
     try {
-      const transactionResponse = await walletClient.sendTransaction({ 
+      if (account === null) {
+        throw new Error("Account not loaded");
+      }
+
+      const merkleProofs = await getMerkleProofs(account);
+
+      const transactionResponse = await walletClient.sendTransaction({
         to: claimAddress,
-        data: walletClient.interface.encodeFunctionData('claimNewToken', [stakeDuration, balance, merkleProofs]), // merkleProofs needs to be defined in your code
+        data: walletClient.interface.encodeFunctionData('claimNewToken', [stakeDuration, balance, merkleProofs]),
       });
-  
+
       console.log(`Transaction hash: ${transactionResponse.hash}`);
     } catch (error) {
       console.error(`Failed to claim tokens: ${error}`);
