@@ -3,6 +3,7 @@ import { Footer } from '../../components/Footer'
 import styles from '../../components/modules/android.module.css'
 import Link from 'next/link'
 import '../../styles/globals.css';
+import React from 'react';
 
 const Nintendo = () => {
     return (

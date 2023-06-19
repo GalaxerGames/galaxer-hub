@@ -3,6 +3,7 @@ import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import styles from '../../components/modules/android.module.css'
 import Link from 'next/link'
+import React from 'react';
 
 const Android = () => {
     return (

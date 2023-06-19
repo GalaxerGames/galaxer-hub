@@ -2,6 +2,7 @@ import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import styles from '../../components/modules/charter.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 import '../../styles/globals.css';
 const Brand = () => {
   return (
@@ -16,7 +17,7 @@ const Brand = () => {
             
             </div>
             <div className={styles.imageContainer}>
-              <img src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
+              <Image src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
             </div>
           </div>
           <hr />

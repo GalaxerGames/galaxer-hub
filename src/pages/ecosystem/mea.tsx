@@ -3,6 +3,7 @@ import { Footer } from '../../components/Footer'
 import Link  from 'next/link';
 import styles from '../../components/modules/android.module.css';
 import '../../styles/globals.css';
+import React from 'react';
 
 const GLXR = () => {
   return (

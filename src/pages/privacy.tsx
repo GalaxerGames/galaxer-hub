@@ -2,6 +2,7 @@ import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import styles from '../components/modules/privacy.module.css'
 import Link from 'next/link'
+import Image from 'next/Image'
 import '../styles/globals.css';
 const Privacy = () => {
   return (
@@ -16,7 +17,7 @@ const Privacy = () => {
             
             </div>
             <div className={styles.imageContainer}>
-              <img src="/horitlogo.png" alt="Career Image" className={styles.careerImage}/>
+              <Image src='/horitlogo.png' alt='Career Image' className={styles.careerImage}/>
             </div>
           </div>
           <hr />
@@ -42,7 +43,7 @@ const Privacy = () => {
 <p>Link to the privacy policy of third-party service providers used by the app:</p>
 
 <ul>
-  <li><a href="https://www.google.com/policies/privacy/">Google Play Services</a></li>
+  <li><a href='https://www.google.com/policies/privacy/'>Google Play Services</a></li>
 </ul>
 
 <h2>Log Data</h2>

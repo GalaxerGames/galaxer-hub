@@ -2,6 +2,7 @@ import portal1 from '../public/portal1.png';
 import portal2 from '../public/portal2.png';
 import portal3 from '../public/portal3.png';
 import portal4 from '../public/portal4.png';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const images = [portal1, portal2, portal3, portal4]; // You can add as many images as you want
@@ -19,7 +20,7 @@ export function ParallaxSlider() {
 
   return (
     <div className="parallax-slider">
-      <img className="parallax-slider__image" src={images[currentImageIndex]} alt="Gallery" />
+      <Image className="parallax-slider__image" src={images[currentImageIndex]} alt="Gallery" />
       <div className="parallax-slider__buttons">
         <button onClick={handlePreviousImage}>Previous</button>
         <button onClick={handleNextImage}>Next</button>

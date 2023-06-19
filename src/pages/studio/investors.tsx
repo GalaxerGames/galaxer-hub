@@ -2,6 +2,7 @@ import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import styles from '../../components/modules/investors.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 import '../../styles/globals.css';
 
 const Investors = () => {
@@ -14,11 +15,11 @@ const Investors = () => {
               <p className={styles.paragraph}>
                 Investing<br />from equity to<br />tokens
               </p>
-              <Link href="https://genpen.io/login.xhtml" className={styles.button}>Contact IR</Link>
-             {/* <Link href="/blog/investors" className={styles.link}>Learn More</Link> */}
+              <Link href='https://genpen.io/login.xhtml' className={styles.button}>Contact IR</Link>
+             {/* <Link href='/blog/investors' className={styles.link}>Learn More</Link> */}
             </div>
             <div className={styles.imageContainer}>
-              <img src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
+              <Image src='/logotri.png' alt='Career Image' className={styles.careerImage}/>
             </div>
           </div>
           <hr />
@@ -44,7 +45,7 @@ const Investors = () => {
   <hr /> */}
 <div className={styles.container}>
   <div className={styles.imageContainer}>
-    <img src="/logotri.png" alt="Image 4" className={styles.image1}/>
+    <Image src='/logotri.png' alt='Image 4' className={styles.image1}/>
   </div>
   <div className={styles.paragraphContainer}>
     <blockquote className={styles.quote}>
@@ -62,7 +63,7 @@ const Investors = () => {
           <h1 className={styles.titleEnd}>Start investing in A LRG Corp <br /> today.</h1>
           <div className={styles.buttonsContainerBottom}>
          <div className={styles.buttons1}>
-        <Link href="https://t.me/galaxer_glxr" className={styles.button}>Inquire Here</Link>
+        <Link href='https://t.me/galaxer_glxr' className={styles.button}>Inquire Here</Link>
        {/* <Link href="https://genpen.io/login.xhtml" className={styles.button}>Login</Link> */}
         </div>
         </div>

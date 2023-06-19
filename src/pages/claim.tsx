@@ -1,5 +1,5 @@
 import { useState , useEffect } from 'react';
-import { InjectedConnector, connect, watchWalletClient, writeContract, watchContractEvent } from '@wagmi/core';
+import { injectedConnector, connect, watchWalletClient, writeContract, watchContractEvent } from '@wagmi/core';
 import GLXRClaim from '../artifacts/contracts/GLXRClaim.json'; 
 import styles from '../components/modules/claim.module.css';
 import { Header } from '../components/Header';
@@ -17,7 +17,7 @@ export default function Claim() {
   const stakeDuration = selectedDays * 24 * 60 * 60; // convert days to seconds
   const [newBalance, setNewBalance] = useState<number | null>(null);
 
-  const injectedConnector = new InjectedConnector({
+  const injectedConnector = new injectedConnector({
     options: {
       shimDisconnect: true,
     },
@@ -90,7 +90,7 @@ async function claimNewToken() {
       watchContractEvent({
         abi: GLXRClaim.abi,
         contractAddress: claimAddress,
-        eventName: "Claimed",
+        eventName: 'Claimed',
         args: [/* args matching the event in your contract */],
         callback: (event: any) => {
           console.log('Event data:', event);

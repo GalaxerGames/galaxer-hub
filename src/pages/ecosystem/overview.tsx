@@ -2,6 +2,7 @@ import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import '../../styles/globals.css';
 import Link from 'next/link'; 
+import Image from 'next/image';
 import styles from '../../components/modules/codex.module.css'
 
 const EcoOverview = () => {
@@ -17,10 +18,10 @@ const EcoOverview = () => {
           Embark on an interstellar journey where blockchain meets gaming. Uncover hidden treasures, conquer alien worlds, and shape the destiny of the Galaxer Universe. Your adventure begins here.
           </p>
           <div className={styles.buttons}>
-            <Link href="https://t.me/galaxer_glxr"
+            <Link href='https://t.me/galaxer_glxr'
               className={styles.button}>Join Whitelist
             </Link>
-            <Link href="https://snapshot.org/galaxer.eth"
+            <Link href='https://snapshot.org/galaxer.eth'
               className={styles.button}>Vote on Proposals
             </Link>
           </div>
@@ -28,7 +29,7 @@ const EcoOverview = () => {
       </div>
       <hr />
       <div className={styles.sectionItem}>
-    <img src="/logo.png" alt="Research at GenPen AI" className={styles.image}/>
+    <Image src='/logo.png' alt='Research at GenPen AI' className={styles.image}/>
    
   </div>
   <hr />
@@ -73,7 +74,7 @@ const EcoOverview = () => {
 <br/>But the GLXR token's importance extends beyond commerce and conflict. It is also a beacon of aspiration, a symbol of the potential that lies within each being to shape their destiny and leave their mark on the cosmos. As the Galaxer universe continues to evolve, the GLXR token will remain at its core, driving exploration, fostering alliances, and igniting the spark of adventure in all who dare to reach for the stars.          </p>
           </div>
           <div className={styles.button}>
-            <a href='/ecosystem/glxr'>Learn More</a>
+            <Link href='/ecosystem/glxr'>Learn More</Link>
             </div>
         </div>
         <hr />
@@ -96,7 +97,7 @@ const EcoOverview = () => {
 <br/>As the Galaxer universe continues to evolve, the Cosmic Crucible and the Nebula Notes it generates will remain at its core, driving exploration, fostering alliances, and igniting the spark of adventure in all who dare to reach for the stars.          </p>
           </div>
           <div className={styles.button}>
-            <a href='/ecosystem/nebula'>Learn More</a>
+            <Link href='/ecosystem/nebula'>Learn More</Link>
             </div>
         </div>
         <hr />
@@ -119,7 +120,7 @@ const EcoOverview = () => {
 <br/>The MEA is more than just an alliance; it is a testament to the power of unity in diversity. It is a symbol of the potential that lies in cooperation between different beings, and a beacon of hope for a future where all dimensions can coexist in harmony.          </p>
           </div>
           <div className={styles.button}>
-            <a href='/ecosystem/mea'>Learn More</a>
+            <Link href='/ecosystem/mea'>Learn More</Link>
             </div>
         </div>
         <hr />
@@ -129,20 +130,20 @@ const EcoOverview = () => {
         </blockquote>
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph}>
-          In the vast cosmos of Galaxer, the humble tardigrades, often referred to as "water bears" or "moss piglets" in the 3rd dimension, hold a position of unparalleled significance. These microscopic creatures, known for their incredible resilience, are not just survivors but powerhouses of potential, hailing from the farthest corners of the cosmos, each species carrying unique abilities that can be harnessed by the Galaxers.
+          In the vast cosmos of Galaxer, the humble tardigrades, often referred to as 'water bears' or 'moss piglets' in the 3rd dimension, hold a position of unparalleled significance. These microscopic creatures, known for their incredible resilience, are not just survivors but powerhouses of potential, hailing from the farthest corners of the cosmos, each species carrying unique abilities that can be harnessed by the Galaxers.
 
 <br/>The Machine Elves, in their infinite wisdom, discovered the tardigrades' potential eons ago. They found that these tiny creatures, when in symbiosis with the Machine Elves, could amplify their powers in extraordinary ways. This led to the formation of the Tardigrade Pact, a bond between the Machine Elves and the tardigrades, allowing the Galaxers to power up their chosen Machine Elf by forming alliances with these resilient creatures.
 
 <br/>There are 15 known species of tardigrades in the Galaxer universe, each with its unique abilities. The Luminary Lichen tardigrade, for instance, can harness the energy of stars, enhancing a Machine Elf's energy-based abilities. The Quantum Quirk tardigrade, on the other hand, can manipulate the fabric of spacetime, allowing a Machine Elf to perform feats that defy the laws of physics.
 
-<br/>The process of forming an alliance with a tardigrade species involves a ritual known as the "Tardigrade Tango". This ritual, unique to each tardigrade species, forms a bond between the Galaxer, their Machine Elf, and the tardigrade, unlocking new powers and abilities for the Machine Elf.
+<br/>The process of forming an alliance with a tardigrade species involves a ritual known as the 'Tardigrade Tango'. This ritual, unique to each tardigrade species, forms a bond between the Galaxer, their Machine Elf, and the tardigrade, unlocking new powers and abilities for the Machine Elf.
 
 <br/>The choice of which tardigrade species to ally with is a strategic decision for each Galaxer. It depends on their chosen Machine Elf, their play style, and their role in the ongoing interdimensional conflict. This adds a layer of depth and customization to the Galaxer experience, making each Galaxer's journey unique and personal.
 
 <br/>The lore of the tardigrades is still being written, with new species and abilities waiting to be discovered. As Galaxers explore the cosmos, who knows what other secrets these microscopic powerhouses hold?          </p>
           </div>
           <div className={styles.button}>
-            <a href='/ecosystem/tardigrade'>Learn More</a>
+            <Link href='/ecosystem/tardigrade'>Learn More</Link>
             </div>
         </div>
         <hr />
@@ -167,14 +168,14 @@ const EcoOverview = () => {
 <br/>The use of Materials and their resulting power-ups and traps adds a layer of strategy and unpredictability to the Galaxer experience. It encourages Galaxers to explore, experiment, and think creatively, turning the vast cosmos into a playground of infinite possibilities.          </p>
           </div>
           <div className={styles.button}>
-            <a href='/ecosystem/materials'>Learn More</a>
+            <Link href='/ecosystem/materials'>Learn More</Link>
             </div>
         </div>
        
           <hr />
           <h1 className={styles.title}>Join us to make a brighter future.</h1>
           <div className={styles.buttons}>
-            <Link href="/platforms/overview" className={styles.button}>Start Your Journey</Link>
+            <Link href='/platforms/overview' className={styles.button}>Start Your Journey</Link>
           </div>
         <hr />
 

@@ -20,10 +20,10 @@ const Codex = () => {
           An ancient and revered tome for Galaxers,<br/> a compendium of knowledge and lore that spans the ages.
           </p>
           <div className={styles.buttons}>
-            <Link href="/lore/research"
+            <Link href='/lore/research'
               className={styles.button}>View Research<br/> Index
             </Link>
-            <Link href="/ecosystem/overview"
+            <Link href='/ecosystem/overview'
               className={styles.button}>Learn More About Governance
             </Link>
           </div>
@@ -31,7 +31,7 @@ const Codex = () => {
       </div>
       <hr />
       <div className={styles.sectionItem}>
-    <Image src="/logo.png" alt="Research at GenPen AI" className={styles.image}/>
+    <Image src='/logo.png' alt='Research at GenPen AI' className={styles.image}/>
    
   </div>
   <hr />
@@ -48,7 +48,7 @@ const Codex = () => {
         </blockquote>
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph}>
-          Its pages hold the wisdom of the past and the hope for the future,<br/> serving as a compass for those who seek to navigate the vast expanse of the universe. Whether a Galaxer seeks to understand the intricacies of interdimensional politics, the mysteries of <br/>metaphysical magic, or the strategies of cosmic combat, "The Stellar Codex" is their ultimate guide.
+          Its pages hold the wisdom of the past and the hope for the future,<br/> serving as a compass for those who seek to navigate the vast expanse of the universe. Whether a Galaxer seeks to understand the intricacies of interdimensional politics, the mysteries of <br/>metaphysical magic, or the strategies of cosmic combat, 'The Stellar Codex' is their ultimate guide.
           </p>
           </div>
         </div>
@@ -63,7 +63,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <a href='/lore/humanity'>Learn More</a>
+            <Link href='/lore/humanity'>Learn More</Link>
             </div>
         </div>
         <hr />
@@ -77,7 +77,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <a href='/lore/portals'>Learn More</a>
+            <Link href='/lore/portals'>Learn More</Link>
             </div>
         </div>
         <hr />
@@ -172,7 +172,7 @@ const Codex = () => {
   <hr />
   <h1 className={styles.title}>Join us to make a brighter future.</h1>
   <div className={styles.buttons}>
-    <Link href="/product/overview" className={styles.button}>Start Your Journey</Link>
+    <Link href='/product/overview' className={styles.button}>Start Your Journey</Link>
   </div>
 <hr />
       <Footer />

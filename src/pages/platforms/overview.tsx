@@ -2,7 +2,9 @@ import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import styles from '../../components/modules/product-overview.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 import '../../styles/globals.css';
+import React from 'react';
 
 const ProductOverview = () => {
   return (
@@ -17,17 +19,17 @@ const ProductOverview = () => {
             We're targeting a cross platform launch in 2024. Follow our journey.
           </p>
           <div className={styles.buttons}>
-            <Link href="/research-index"
+            <Link href='/research-index'
               className={styles.button}>Get started
             </Link>
-            <Link href="/governance"
+            <Link href='/governance'
               className={styles.button}>For developers
             </Link>
           </div>
         </div>
       </div>
       
-          <img src="/logo.png" alt="Research at Galaxer" className={styles.image}/>
+          <Image src='/logo.png' alt='Research at Galaxer' className={styles.image}/>
           <hr />
         <div >
         <blockquote className={styles.quote}>
@@ -122,20 +124,20 @@ const ProductOverview = () => {
 
      {/*   <div className={styles.section}>
   <div className={styles.sectionItem}>
-    <img src="/logotri.png" alt="Image 1" className={styles.image}/>
-    <Link href="/link/to/post1" className={styles.button}>Blog post 1</Link>
+    <Image src='/logotri.png' alt='Image 1' className={styles.image}/>
+    <Link href='/link/to/post1' className={styles.button}>Blog post 1</Link>
   </div>
   <div className={styles.sectionItem}>
-    <img src="/logotri.png" alt="Image 2" className={styles.image}/>
-    <Link href="/link/to/post2" className={styles.button}>Blog post 2</Link>
+    <Image src='/logotri.png' alt='Image 2' className={styles.image}/>
+    <Link href='/link/to/post2' className={styles.button}>Blog post 2</Link>
   </div>
   <div className={styles.sectionItem}>
-    <img src="/logotri.png" alt="Image 3" className={styles.image}/>
-    <Link  href="/link/to/post3" className={styles.button}>Blog post 3</Link>
+    <Image src='/logotri.png' alt='Image 3' className={styles.image}/>
+    <Link  href='/link/to/post3' className={styles.button}>Blog post 3</Link>
   </div>
   <div className={styles.sectionItem}>
-    <img src="/logotri.png" alt="Image 4" className={styles.image}/>
-    <Link href="/link/to/post4" className={styles.button}>Blog post 4</Link>
+    <Image src='/logotri.png' alt='Image 4' className={styles.image}/>
+    <Link href='/link/to/post4' className={styles.button}>Blog post 4</Link>
   </div>
 </div>
 <hr />
@@ -144,7 +146,7 @@ const ProductOverview = () => {
     Ensuring <br /> responsible <br /> use of our<br /> tools.
   </blockquote>
   <div className={styles.imageContainer}>
-    <img src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
+    <Image src='/logotri.png' alt='Career Image' className={styles.careerImage}/>
   </div>
 </div>
 <hr />
@@ -153,34 +155,34 @@ const ProductOverview = () => {
 
       <div className={styles.largeImagesBuilt}>
         <div className={styles.imageContainer}>
-          <img src="/logotri.png" alt="Description of image 1" className={styles.largeImage} />
+          <Image src='/logotri.png' alt='Description of image 1' className={styles.largeImage} />
           <p className={styles.imageCaption}>Your description for image 1.</p>
         </div>
         <div className={styles.imageContainerBuilt}>
-          <img src="/logotri.png" alt="Description of image 2" className={styles.largeImage} />
+          <Image src='/logotri.png' alt='Description of image 2' className={styles.largeImage} />
           <p className={styles.imageCaption}>Your description for image 2.</p>
         </div>
       </div>
 
       <div className={styles.section}>
        <div className={styles.sectionItem}>
-        <Link href="/subpage1">
-          <img src="/logotri.png" alt="Link to subpage 1" className={styles.image} />
+        <Link href='/subpage1'>
+          <Image src='/logotri.png' alt='Link to subpage 1' className={styles.image} />
         </Link>
         </div>
         <div className={styles.sectionItem}>
-        <Link href="/subpage2">
-          <img src="/logotri.png" alt="Link to subpage 2" className={styles.image} />
+        <Link href='/subpage2'>
+          <Image src='/logotri.png' alt='Link to subpage 2' className={styles.image} />
         </Link>
         </div>
         <div className={styles.sectionItem}>
-        <Link href="/subpage3">
-          <img src="/logotri.png" alt="Link to subpage 3" className={styles.image} />
+        <Link href='/subpage3'>
+          <Image src='/logotri.png' alt='Link to subpage 3' className={styles.image} />
         </Link>
         </div>
         <div className={styles.sectionItem}>
-        <Link href="/subpage4">
-          <img src="/logotri.png" alt="Link to subpage 4" className={styles.image} />
+        <Link href='/subpage4'>
+          <Image src='/logotri.png' alt='Link to subpage 4' className={styles.image} />
         </Link>
       </div>
     </div>
@@ -190,8 +192,8 @@ const ProductOverview = () => {
 
   <h1 className={styles.titleEnd}>Start creating with GenPen AI's <br /> powerful tools.</h1>
   <div className={styles.buttons}>
-    <Link href="https://genpen.io/login.xhtml" className={styles.button}>Get Started</Link>
-    <Link href="/pricing" className={styles.button}>View pricing</Link>
+    <Link href='https://genpen.io/login.xhtml' className={styles.button}>Get Started</Link>
+    <Link href='/pricing' className={styles.button}>View pricing</Link>
   </div>
   <hr /> */}
 

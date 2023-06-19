@@ -2,6 +2,7 @@ import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import styles from '../../components/modules/careers.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 import '../../styles/globals.css';
 
 const Careers = () => {
@@ -14,23 +15,23 @@ const Careers = () => {
               <p className={styles.paragraph}>
                 Join us to build<br/>a brighter future
               </p>
-              <Link href="https://genpen.io/login.xhtml" className={styles.button}>View all Opportunities</Link>
+              <Link href='https://genpen.io/login.xhtml' className={styles.button}>View all Opportunities</Link>
             </div>
             <div className={styles.imageContainer}>
               <p>Developing AI Enhanced tools<br/>requires humans from a wide range<br/>of disciplines and backgrounds.<br/>We're always looking for the best<br/>minds to join our globally remote<br/>team.</p>
             </div>
           </div>
           <hr />
-          <div className="videoContainer">
+          <div className='videoContainer'>
            <video autoplay loop muted>
-           <source src="path_to_your_video.mp4" type="video/mp4" />
+           <source src='path_to_your_video.mp4' type='video/mp4' />
           Your browser does not support the video.
           </video>
           </div>
           <hr/>
           <div className={styles.quoteSection2}>
             <p className={styles.quote2}>
-              "This is a quote that takes up 50% of the viewport height"
+              'This is a quote that takes up 50% of the viewport height'
             </p>
           </div>
           <hr/>
@@ -64,7 +65,7 @@ const Careers = () => {
               </ul>
           </div>
           <div className={styles.imageContainer2}>
-            <img src="/logo.png" alt="Image description" className={styles.fullWidthImage2}/>
+            <Image src='/logo.png' alt='Image description' className={styles.fullWidthImage2}/>
           </div>
           <hr/>
           <div className={styles.quoteSection}>
@@ -79,7 +80,7 @@ const Careers = () => {
             </div>
             <div className={styles.threeImageSection}>
               <div className={styles.imageListItem}>
-                <img src="/logotri.png" alt="Image 1 description" className={styles.image}/>
+                <Image src='/logotri.png' alt='Image 1 description' className={styles.image}/>
                 <ul>
                   <li>Point 1</li>
                   <li>Point 2</li>
@@ -87,7 +88,7 @@ const Careers = () => {
                 </ul>
               </div>
               <div className={styles.imageListItem}>
-                <img src="logotri.png" alt="Image 2 description" className={styles.image}/>
+                <Image src='logotri.png' alt='Image 2 description' className={styles.image}/>
                 <ul>
                   <li>Point 1</li>
                   <li>Point 2</li>
@@ -95,7 +96,7 @@ const Careers = () => {
                 </ul>
               </div>
               <div className={styles.imageListItem}>
-                <img src="logotri.png" alt="Image 3 description" className={styles.image}/>
+                <img src='logotri.png' alt='Image 3 description' className={styles.image}/>
                 <ul>
                   <li>Point 1</li>
                   <li>Point 2</li>
@@ -128,22 +129,22 @@ const Careers = () => {
                 <tr>
                     <td>Junior AI Developer</td>
                     <td>Remote</td>
-                    <td><Link href="https://discord.gg/9MN9smcFPZ" className={styles.button}>Apply Now</Link></td>
+                    <td><Link href='https://discord.gg/9MN9smcFPZ' className={styles.button}>Apply Now</Link></td>
                 </tr>
                 <tr>
                   <td>Marking Director</td>
                   <td>Remote</td>
-                  <td><Link href="https://discord.gg/9MN9smcFPZ" className={styles.button}>Apply Now</Link></td>
+                  <td><Link href='https://discord.gg/9MN9smcFPZ' className={styles.button}>Apply Now</Link></td>
                 </tr>
                 <tr>
                   <td>Junior Web Developer</td>
                   <td>Remote</td>
-                  <td><Link href="https://discord.gg/9MN9smcFPZ" className={styles.button}>Apply Now</Link></td>
+                  <td><Link href='https://discord.gg/9MN9smcFPZ' className={styles.button}>Apply Now</Link></td>
                 </tr>
                 <tr>
                   <td>Sales Specialist</td>
                   <td>Remote</td>
-                  <td><Link href="https://discord.gg/9MN9smcFPZ" className={styles.button}>Apply Now</Link></td>
+                  <td><Link href='https://discord.gg/9MN9smcFPZ' className={styles.button}>Apply Now</Link></td>
                 </tr>
               </tbody>
             </table>
@@ -156,10 +157,10 @@ const Careers = () => {
                 Pricing<br />from basic to<br />comprehensive
               </p>
               
-              <a href="" className={styles.button}>Read about GenPen AI Internship</a>
+              <a href='' className={styles.button}>Read about GenPen AI Internship</a>
             </div>
             <div className={styles.imageContainer}>
-              <img src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
+              <img src='/logotri.png' alt='Career Image' className={styles.careerImage}/>
             </div>
           </div>
           <hr />
@@ -169,11 +170,11 @@ const Careers = () => {
 
                   <div className={styles.largeImagesBuilt}>
                     <div className={styles.imageContainerBuilt}>
-                      <img src="/logotri.png" alt="Description of image 1" className={styles.largeImageBuilt} />
+                      <Image src='/logotri.png' alt='Description of image 1' className={styles.largeImageBuilt} />
                       <p className={styles.imageCaption}>Your description for image 1.</p>
                     </div>
                     <div className={styles.imageContainerBuilt}>
-                      <img src="/logotri.png" alt="Description of image 2" className={styles.largeImagesBuilt} />
+                      <img src='/logotri.png' alt='Description of image 2' className={styles.largeImagesBuilt} />
                       <p className={styles.imageCaption}>Your description for image 2.</p>
                     </div>
               </div>
@@ -182,7 +183,7 @@ const Careers = () => {
           <hr />
           <div className={styles.quoteSection2}>
             <p className={styles.quote2}>
-              "This is a quote that takes up 50% of the viewport height"
+              'This is a quote that takes up 50% of the viewport height'
             </p>
           </div>
 
@@ -191,20 +192,20 @@ const Careers = () => {
           <h3>Latest Updates</h3>
                 <div className={styles.sectionUpdates}>
             <div className={styles.sectionItemUpdates}>
-              <img src="/logotri.png" alt="Image 1" className={styles.imageUpdates}/>
-              <Link href="/link/to/post1" className={styles.button}>Blog post 1</Link>
+              <img src='/logotri.png' alt='Image 1' className={styles.imageUpdates}/>
+              <Link href='/link/to/post1' className={styles.button}>Blog post 1</Link>
             </div>
             <div className={styles.sectionItemUpdates}>
-              <img src="/logotri.png" alt="Image 2" className={styles.imageUpdates}/>
-              <Link href="/link/to/post2" className={styles.button}>Blog post 2</Link>
+              <img src='/logotri.png' alt='Image 2' className={styles.imageUpdates}/>
+              <Link href='/link/to/post2' className={styles.button}>Blog post 2</Link>
             </div>
             <div className={styles.sectionItemUpdates}>
-              <img src="/logotri.png" alt="Image 3" className={styles.imageUpdates}/>
-              <Link  href="/link/to/post3" className={styles.button}>Blog post 3</Link>
+              <img src='/logotri.png' alt='Image 3' className={styles.imageUpdates}/>
+              <Link  href='/link/to/post3' className={styles.button}>Blog post 3</Link>
             </div>
             <div className={styles.sectionItemUpdates}>
-              <img src="/logotri.png" alt="Image 4" className={styles.imageUpdates}/>
-              <Link href="/link/to/post4" className={styles.button}>Blog post 4</Link>
+              <img src='/logotri.png' alt='Image 4' className={styles.imageUpdates}/>
+              <Link href='/link/to/post4' className={styles.button}>Blog post 4</Link>
             </div>
           </div>
           
@@ -212,7 +213,7 @@ const Careers = () => {
           <hr />
                 <h1 className={styles.titleCareers}>Join us to make a brighter future.</h1>
             <div className={styles.buttonsCareers}>
-              <Link href="/companyCareers" className={styles.button}>View Opportunities</Link>
+              <Link href='/companyCareers' className={styles.button}>View Opportunities</Link>
             </div>
           <hr />
           <Footer />

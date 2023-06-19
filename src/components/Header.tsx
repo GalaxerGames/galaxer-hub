@@ -4,6 +4,8 @@ import React, {useState} from 'react';
 import { useConnect, WagmiConfig } from 'wagmi';
 import styles from './modules/Header.module.css';
 import '../styles/globals.css';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useAccount } from 'wagmi'
 
 export const Header = () => {
@@ -31,74 +33,74 @@ export const Header = () => {
 
   return (
     <header className={styles.header}>
-      <a href="/home">
-      <img src="/logo.png" alt="Logo" className={styles.logo} />
-    </a>
+      <Link href='/home'>
+      <Image src='/logo.png' alt='Logo' className={styles.logo} />
+    </Link>
     <div className={styles.buttons}>
       <button onClick={onConnectWallet} className={styles.loginButton}>Connect Wallet</button>
       <button className={styles.openbtn} onClick={openNav}>☰</button>
     </div> 
-    <div id="mySidebar" className={`${styles.sidebar} ${sidebarOpen ? styles.open : ''}`}>
-      <a href="javascript:void(0)" className={styles.closebtn} onClick={closeNav}>×</a>
+    <div id='mySidebar' className={`${styles.sidebar} ${sidebarOpen ? styles.open : ''}`}>
+      <Link href='javascript:void(0)' className={styles.closebtn} onClick={closeNav}>×</Link>
       <nav className={styles.nav}>
         <ul className={styles.menu}>
         <li className={`${styles.menuItem} ${activeMenu === 'lore' ? styles.menuItemActive : ''}`} onClick={() => handleSubMenu('lore')}>
-            <a href="/lore/codex">Lore</a>
+            <Link href='/lore/codex'>Lore</Link>
             <ul className={`${styles.submenu} ${activeMenu === 'lore' ? styles.open : ''}`}>
-              <li><a href="/lore/humanity">Humanity</a></li>
-                <li><a href="/lore/portals">Portals</a></li>
-                <li><a href="/lore/conflict">Cosmic Conflict</a></li>
-                <li><a href="/lore/droch">The Droch</a></li>
-                <li><a href="/lore/seasamh">The Seasamh</a></li>
-                <li><a href="/lore/tacaiocht">The Tacaiocht</a></li>
-                <li><a href="/lore/teadan">The Teadan</a></li>
-                <li><a href="/lore/guild">The Galaxer Guild</a></li>
+              <li><Link href='/lore/humanity'>Humanity</Link></li>
+                <li><Link href='/lore/portals'>Portals</Link></li>
+                <li><Link href='/lore/conflict'>Cosmic Conflict</Link></li>
+                <li><Link href='/lore/droch'>The Droch</Link></li>
+                <li><Link href='/lore/seasamh'>The Seasamh</Link></li>
+                <li><Link href='/lore/tacaiocht'>The Tacaiocht</Link></li>
+                <li><Link href='/lore/teadan'>The Teadan</Link></li>
+                <li><Link href='/lore/guild'>The Galaxer Guild</Link></li>
               </ul>
             </li>
             <li className={styles.menuItem}>
-              <a href="/platforms/overview" 
+              <Link href='/platforms/overview' 
               onClick={(e) => handleMenuClick(e, 'platforms')} 
                 onDoubleClick={(e) => handleMenuDoubleClick(e, '/platforms/overview')}>
                   Platforms
-                  </a>
+                  </Link>
               <ul className={`${styles.submenu} ${activeMenu === 'platforms' ? styles.open : ''}`}>
-                <li><a href="/platforms/overview">Overview</a></li> 
-                <li><a href="/platforms/ios">iOS</a></li>
-                <li><a href="/platforms/android">Android</a></li>
-                <li><a href="/platforms/desktop">Desktop</a></li>
-                <li><a href="/platforms/vr">VR</a></li>
-                <li><a href="/platforms/xbox">Xbox</a></li>
-                <li><a href="/platforms/playstation">PlayStation</a></li>
-                <li><a href="/platforms/nintendo">Nintendo</a></li>
+                <li><Link href='/platforms/overview'>Overview</Link></li> 
+                <li><Link href='/platforms/ios'>iOS</Link></li>
+                <li><Link href='/platforms/android'>Android</Link></li>
+                <li><Link href='/platforms/desktop'>Desktop</Link></li>
+                <li><Link href='/platforms/vr'>VR</Link></li>
+                <li><Link href='/platforms/xbox'>Xbox</Link></li>
+                <li><Link href='/platforms/playstation'>PlayStation</Link></li>
+                <li><Link href='/platforms/nintendo'>Nintendo</Link></li>
               </ul>
             </li>
             <li className={styles.menuItem}>
-            <a href="/ecosystem/overview" 
+            <Link href='/ecosystem/overview' 
               onClick={(e) => handleMenuClick(e, 'ecosystem')} 
                 onDoubleClick={(e) => handleMenuDoubleClick(e, '/ecosystem/overview')}>
                   Ecosystem
-                  </a>
+                  </Link>
               <ul className={`${styles.submenu} ${activeMenu === 'ecosystem' ? styles.open : ''}`}>
-                <li><a href="/ecosystem/overview">Overview</a></li>
-                <li><a href="/ecosystem/glxr">GLXR</a></li>
-                <li><a href="/ecosystem/nebula">Nebula Notes</a></li>
-                <li><a href="/ecosystem/mea">Machine Elf Alliance</a></li>
-                <li><a href="/ecosystem/tardigrades">Tardigrades</a></li>
-                <li><a href="/ecosystem/materials">Materials</a></li>
+                <li><Link href='/ecosystem/overview'>Overview</Link></li>
+                <li><Link href='/ecosystem/glxr'>GLXR</Link></li>
+                <li><Link href='/ecosystem/nebula'>Nebula Notes</Link></li>
+                <li><Link href='/ecosystem/mea'>Machine Elf Alliance</Link></li>
+                <li><Link href='/ecosystem/tardigrades'>Tardigrades</Link></li>
+                <li><Link href='/ecosystem/materials'>Materials</Link></li>
               </ul>
             </li>
             <li className={styles.menuItem}>
-            <a href="/studio/about" 
+            <Link href='/studio/about' 
               onClick={(e) => handleMenuClick(e, 'studio')} 
                 onDoubleClick={(e) => handleMenuDoubleClick(e, '/studio/about')}>
                   Studio
-                  </a>
+                  </Link>
               <ul className={`${styles.submenu} ${activeMenu === 'studio' ? styles.open : ''}`}>
-                <li><a href="/studio/about">About</a></li>
-                <li><a href="/studio/blog">Blog</a></li>
-               {/* <li><a href="/studio/careers">Careers</a></li> */}
-                <li><a href="/studio/charter">Charter</a></li>
-                <li><a href="/studio/investors">Investors</a></li>
+                <li><Link href='/studio/about'>About</Link></li>
+                <li><Link href='/studio/blog'>Blog</Link></li>
+               {/* <li><Link href='/studio/careers'>Careers</Link></li> */}
+                <li><Link href='/studio/charter'>Charter</Link></li>
+                <li><Link href='/studio/investors'>Investors</Link></li>
               </ul>
             </li>
           </ul>
@@ -108,40 +110,40 @@ export const Header = () => {
      {/* <nav className={styles.nav}>
       <ul className={styles.menu}>
         <li className={styles.menuItem}>
-          <a href="/research-overview" className={styles.button}>Research</a>
+          <Link href='/research-overview' className={styles.button}>Research</Link>
           <ul className={styles.submenu}>
-            <li><a href="/research-overview" className={styles.button}>Overview</a></li>
-            <li><a href="/research-index" className={styles.button}>Index</a></li>
+            <li><Link href='/research-overview' className={styles.button}>Overview</Link></li>
+            <li><Link href='/research-index' className={styles.button}>Index</Link></li>
           </ul>
 </li> */}
        {/* <li className={styles.menuItem}>
-          <a href="/product-overview" className={styles.button}>Product </a>
+          <Link href='/product-overview' className={styles.button}>Product </Link>
           <ul className={styles.submenu}>
-            <li><a href="/product-overview" className={styles.button}>Overview</a></li>
-            <li><a href="/scratchpad" className={styles.button}>ScratchPad</a></li>
-            <li><a href="/journal" className={styles.button}>Journal</a></li>
-            <li><a href="/aide" className={styles.button}>AIDE</a></li>
-            <li><a href="/holly" className={styles.button}>Holly</a></li>
-            <li><a href="/customer-stories" className={styles.button}>Customer Stories</a></li>
-            <li><a href="/pricing" className={styles.button}>Pricing</a></li>
+            <li><Link href='/product-overview' className={styles.button}>Overview</Link></li>
+            <li><Link href='/scratchpad' className={styles.button}>ScratchPad</Link></li>
+            <li><Link href='/journal' className={styles.button}>Journal</Link></li>
+            <li><Link href='/aide' className={styles.button}>AIDE</Link></li>
+            <li><Link href='/holly' className={styles.button}>Holly</Link></li>
+            <li><Link href='/customer-stories' className={styles.button}>Customer Stories</Link></li>
+            <li><Link href='/pricing' className={styles.button}>Pricing</Link></li>
           </ul>
         </li>  */}
        {/*  <li className={styles.menuItem}>
-          <a href="/developer-overview" className={styles.button}>Developers</a>
+          <Link href='/developer-overview' className={styles.button}>Developers</Link>
           <ul className={styles.submenu}>
-            <li><a href="/developer-overview" className={styles.button}>Overview</a></li>
-            <li><a href="/developer-docs" className={styles.button}>Docs</a></li>
-            <li><a href="/developer-api" className={styles.button}>API Reference</a></li>
-            <li><a href="/developer-examples" className={styles.button}>Examples</a></li>
+            <li><Link href='/developer-overview' className={styles.button}>Overview</Link></li>
+            <li><Link href='/developer-docs' className={styles.button}>Docs</Link></li>
+            <li><Link href='/developer-api' className={styles.button}>API Reference</Link></li>
+            <li><Link href='/developer-examples' className={styles.button}>Examples</Link></li>
           </ul>
         </li>  */}
         {/* <li className={styles.menuItem}>
-          <a href="/about" className={styles.button}>Company</a>
+          <Link href='/about' className={styles.button}>Company</Link>
           <ul className={styles.submenu}>
-            <li><a href="/about" className={styles.button}>About</a></li>
-            <li><a href="/blog" className={styles.button}>Blog</a></li>
-            <li><a href="/careers" className={styles.button}>Careers</a></li>
-            <li><a href="/charter" className={styles.button}>Charter</a></li>
+            <li><Link href='/about' className={styles.button}>About</Link></li>
+            <li><Link href='/blog' className={styles.button}>Blog</Link></li>
+            <li><Link href='/careers' className={styles.button}>Careers</Link></li>
+            <li><Link href='/charter' className={styles.button}>Charter</Link></li>
           </ul>
         </li> 
       </ul>

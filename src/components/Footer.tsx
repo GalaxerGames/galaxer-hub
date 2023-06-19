@@ -1,70 +1,71 @@
 import Link from 'next/link';
 import styles from './modules/Footer.module.css';
+import Image from 'next/image';
 
 
 export const Footer = () => (
   <footer className={styles.footer}>
-    <a href="/">
-      <img src="/horitlogo.png" alt="Logo" className={styles.logo} />
-    </a>
+    <Link href='/'>
+      <Image src='/horitlogo.png' alt='Logo' className={styles.logo} />
+    </Link>
      <nav className={styles.nav}>
       <ul className={styles.menu}>
         <li className={styles.menuItem}>
-          <a href="/lore/codex" className={styles.button}>Codex</a>
+          <Link href='/lore/codex' className={styles.button}>Codex</Link>
           <ul className={styles.submenu}>
-            <li><a href="/lore/humanity" className={styles.button}>Humanity</a></li>
-            <li><a href="/lore/portals" className={styles.button}>Portals</a></li>
-            <li><a href="/lore/conflict" className={styles.button}>Cosmic Conflict</a></li>
-            <li><a href="/lore/droch" className={styles.button}>The Droch</a></li>
-            <li><a href="/lore/seasamh" className={styles.button}>The Seasamh</a></li>
-            <li><a href="/lore/tacaiocht" className={styles.button}>The Tacaiocht</a></li>
-            <li><a href="/lore/teadan" className={styles.button}>The Teadan</a></li>
-            <li><a href="/lore/guild" className={styles.button}>The Galaxer Guild</a></li>
+            <li><Link href='/lore/humanity' className={styles.button}>Humanity</Link></li>
+            <li><Link href='/lore/portals' className={styles.button}>Portals</Link></li>
+            <li><Link href='/lore/conflict' className={styles.button}>Cosmic Conflict</Link></li>
+            <li><Link href='/lore/droch' className={styles.button}>The Droch</Link></li>
+            <li><Link href='/lore/seasamh' className={styles.button}>The Seasamh</Link></li>
+            <li><Link href='/lore/tacaiocht' className={styles.button}>The Tacaiocht</Link></li>
+            <li><Link href='/lore/teadan' className={styles.button}>The Teadan</Link></li>
+            <li><Link href='/lore/guild' className={styles.button}>The Galaxer Guild</Link></li>
           </ul>
         </li>
         <li className={styles.menuItem}>
-          <a href="/platforms/overview">Platforms</a>
+          <Link href='/platforms/overview'>Platforms</Link>
           <ul className={styles.submenu}>
-            <li><a href="/platforms/overview">Overview</a></li> 
-            <li><a href="/platforms/ios">iOS</a></li>
-            <li><a href="/platforms/android">Android</a></li>
-            <li><a href="/platforms/desktop">Desktop</a></li>
-            <li><a href="/platforms/vr">VR</a></li>
-            <li><a href="/platforms/xbox">Xbox</a></li>
-            <li><a href="/platforms/playstation">PlayStation</a></li>
-            <li><a href="/platforms/nintendo">Nintendo</a></li>
+            <li><Link href='/platforms/overview'>Overview</Link></li> 
+            <li><Link href='/platforms/ios'>iOS</Link></li>
+            <li><Link href='/platforms/android'>Android</Link></li>
+            <li><Link href='/platforms/desktop'>Desktop</Link></li>
+            <li><Link href='/platforms/vr'>VR</Link></li>
+            <li><Link href='/platforms/xbox'>Xbox</Link></li>
+            <li><Link href='/platforms/playstation'>PlayStation</Link></li>
+            <li><Link href='/platforms/nintendo'>Nintendo</Link></li>
 
           </ul>
         </li>
         <li className={styles.menuItem}>
-          <a href="/ecosystem/overview">Ecosystem</a>
+          <Link href='/ecosystem/overview'>Ecosystem</Link>
           <ul className={styles.submenu}>
-            <li><a href="/ecosystem/overview">Overview</a></li>
-            <li><a href="/ecosystem/glxr">GLXR</a></li>
-            <li><a href="/ecosystem/nebula">Nebula Notes</a></li>
-            <li><a href="/ecosystem/mea">Machine Elf Alliance</a></li>
-            <li><a href="/ecosystem/tardigrades">Tardigrades</a></li>
-            <li><a href="/ecosystem/materials">Materials</a></li>
+            <li><Link href='/ecosystem/overview'>Overview</Link></li>
+            <li><Link href='/ecosystem/glxr'>GLXR</Link></li>
+            <li><Link href='/ecosystem/nebula'>Nebula Notes</Link></li>
+            <li><Link href='/ecosystem/mea'>Machine Elf Alliance</Link></li>
+            <li><Link href='/ecosystem/tardigrades'>Tardigrades</Link></li>
+            <li><Link href='/ecosystem/materials'>Materials</Link></li>
           </ul>
         </li>
         <li className={styles.menuItem}>
-          <a href="/studio/about">Studio</a>
+          <Link href='/studio/about'>Studio</Link>
           <ul className={styles.submenu}>
-            <li><a href="/studio/about">About</a></li>
-            <li><a href="/studio/blog">Blog</a></li>
-            {/* <li><a href="/studio/careers">Careers</a></li> */}
-            <li><a href="/studio/charter">Charter</a></li>
-            <li><a href="/studio/investors">Investors</a></li>
-            {/* <li><a href="/studio/brand">Brand</a></li> */}
+            <li><Link href='/studio/about'>About</Link></li>
+            <li><Link href='/studio/blog'>Blog</Link></li>
+            {/* <li><Link href='/studio/careers'>Careers</Link></li> */}
+            <li><Link href='/studio/charter'>Charter</Link></li>
+            <li><Link href='/studio/investors'>Investors</Link></li>
+            {/* <li><Link href='/studio/brand'>Brand</Link></li> */}
           </ul>
         </li>
 </ul> 
     </nav> 
  
    {/* <div className={styles.buttons}>
-      <Link href="https://genpen.io/login.xhtml" className={styles.loginButton}>Login
+      <Link href='https://genpen.io/login.xhtml' className={styles.loginButton}>Login
       </Link>
-      <Link href="https://genpen.io/signup.xhtml" className={styles.signUpButton}>Sign Up
+      <Link href='https://genpen.io/signup.xhtml' className={styles.signUpButton}>Sign Up
       </Link>
 </div> */}
     <hr/>
@@ -72,13 +73,13 @@ export const Footer = () => (
    
         <h1>Galaxer © 2021-2023</h1>
         <div className={styles.socialFooter}>
-        <a href="https://twitter.com/Galaxer_glxr" className={styles.socialFooter}>Twitter</a>
-        <a href="https://www.youtube.com/@galaxer-glxr" className={styles.socialFooter}>Youtube</a>
-        <a href="https://github.com/galaxergames" className={styles.socialFooter}>Github</a>
-        <a href="https://linkedin.com/galaxer" className={styles.socialFooter}>Linkedin</a> <br/>
-        <a href="/terms" className={styles.titleFooter}>Terms</a>
-        <a href="/privacy" className={styles.titleFooter}>Policy</a>
-        {/* <a href="/studio/brand" className={styles.titleFooter}>Brand</a> */}
+        <Link href='https://twitter.com/Galaxer_glxr' className={styles.socialFooter}>Twitter</Link>
+        <Link href='https://www.youtube.com/@galaxer-glxr' className={styles.socialFooter}>Youtube</Link>
+        <Link href='https://github.com/galaxergames' className={styles.socialFooter}>Github</Link>
+        <Link href='https://linkedin.com/galaxer' className={styles.socialFooter}>Linkedin</Link> <br/>
+        <Link href='/terms' className={styles.titleFooter}>Terms</Link>
+        <Link href='/privacy' className={styles.titleFooter}>Policy</Link>
+        {/* <Link href='/studio/brand' className={styles.titleFooter}>Brand</Link> */}
         </div>
     </div>
   </footer>

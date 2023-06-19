@@ -2,6 +2,7 @@ import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import styles from '../components/modules/charter.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 import '../styles/globals.css';
 import React from 'react';
 
@@ -18,7 +19,7 @@ const Terms = () => {
             
             </div>
             <div className={styles.imageContainer}>
-              <img src="/horitlogo.png" alt="Career Image" className={styles.careerImage}/>
+              <Image src='/horitlogo.png' alt='Career Image' className={styles.careerImage}/>
             </div>
           </div>
           <hr />
@@ -29,15 +30,15 @@ const Terms = () => {
 
 <p>Last updated: May 17, 2023</p>
 
-<p>Welcome to Galaxer! These terms of service ("Terms") cover your use and access to the services, client software and websites ("Services") provided by Galaxer Games. Our Privacy Policy explains how we collect and use your information while our Acceptable Use Policy outlines your responsibilities when using our Services. By using our Services, you're agreeing to be bound by these Terms, and to review our Privacy and Acceptable Use policies. If you're using our Services for an organization, you're agreeing to these Terms on behalf of that organization.</p>
+<p>Welcome to Galaxer! These terms of service (Terms) cover your use and access to the services, client software and websites (Services) provided by Galaxer Games. Our Privacy Policy explains how we collect and use your information while our Acceptable Use Policy outlines your responsibilities when using our Services. By using our Services, you're agreeing to be bound by these Terms, and to review our Privacy and Acceptable Use policies. If you're using our Services for an organization, you're agreeing to these Terms on behalf of that organization.</p>
 
 <h2>Your Stuff & Your Permissions</h2>
 
-<p>When you use our Services, you provide us with things like your files, content, messages, contacts and so on ("Your Stuff"). Your Stuff is yours. These Terms don't give us any rights to Your Stuff except for the limited rights that enable us to offer the Services.</p>
+<p>When you use our Services, you provide us with things like your files, content, messages, contacts and so on (Your Stuff). Your Stuff is yours. These Terms don't give us any rights to Your Stuff except for the limited rights that enable us to offer the Services.</p>
 
 <h2>Software</h2>
 
-<p>Some of our Services allow you to download client software ("Software") which may update automatically. So long as you comply with these Terms, we give you a limited, nonexclusive, nontransferable, revocable license to use the Software, solely to access the Services.</p>
+<p>Some of our Services allow you to download client software (Software) which may update automatically. So long as you comply with these Terms, we give you a limited, nonexclusive, nontransferable, revocable license to use the Software, solely to access the Services.</p>
 
 <h2>Termination</h2>
 

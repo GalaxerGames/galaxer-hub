@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
+import Image from 'next/image';
+import Link from 'next/link';
+
 import { useAccount, useSignTypedData } from 'wagmi';
 import MapboxGeocoding from '@mapbox/mapbox-sdk/services/geocoding';
 import { recoverTypedDataAddress } from 'viem';
@@ -77,7 +80,7 @@ export function Map() {
 
   function hubMyLocation() {
     if (!navigator.geolocation) {
-      console.log("Geolocation is not supported by your browser");
+      console.log('Geolocation is not supported by your browser');
     } else {
       navigator.geolocation.getCurrentPosition((position) => {
         const coords = [position.coords.longitude, position.coords.latitude];
@@ -104,7 +107,7 @@ export function Map() {
         });
 
       }, (error) => {
-        console.log("Unable to retrieve your location", error);
+        console.log('Unable to retrieve your location', error);
       });
     }
   }
