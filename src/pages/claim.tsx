@@ -53,11 +53,11 @@ function Claim() {
 
   useEffect(() => {
     const fetchSigner = async () => {
-      const unwatch = await watchWalletClient(
+      const unwatch = watchWalletClient(
         { chainId: 1 },
-        async (walletClient: getWalletClient | null) => {
-          if(getwalletClient !== null){
-            setSigner(getwalletClient); // directly assigning walletClient to signer
+        async (walletClient: WalletClient | null) => {
+          if (walletClient !== null) {
+            setSigner(walletClient); // directly assigning walletClient to signer
           }
         }
       );
@@ -65,6 +65,7 @@ function Claim() {
     };
     fetchSigner();
   }, []);
+
 
 
   async function claimNewToken() {
