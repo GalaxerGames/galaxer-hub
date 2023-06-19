@@ -1,11 +1,11 @@
 import { useState , useEffect } from 'react';
-import { InjectedConnector, connect, watchWalletClient, writeContract, watchContractEvent } from '@wagmi/core';
+import { InjectedConnector, connect, watchWalletClient, writeContract, getWalletClient, watchContractEvent } from '@wagmi/core';
 import GLXRClaim from '../artifacts/contracts/GLXRClaim.json'; 
 import styles from '../components/modules/claim.module.css';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import { WalletConnectConnector } from 'wagmi/dist/connectors/walletConnect';
-import { WalletClient } from 'viem/dist/types/clients/createWalletClient';
+import { WalletConnectConnector } from '@wagmi/core/connectors/walletConnect'
+
 
 const tokenAddress = '0xA17051ebD6DF3b9Ad31fe6ad4fdE373b53DF1a6a'; 
 const claimAddress = '0xd9145CCE52D386f254917e481eB44e9943F39138'; 
@@ -55,9 +55,9 @@ function Claim() {
     const fetchSigner = async () => {
       const unwatch = await watchWalletClient(
         { chainId: 1 },
-        async (walletClient: WalletClient | null) => {
-          if(walletClient !== null){
-            setSigner(walletClient); // directly assigning walletClient to signer
+        async (walletClient: getWalletClient | null) => {
+          if(getwalletClient !== null){
+            setSigner(getwalletClient); // directly assigning walletClient to signer
           }
         }
       );
@@ -91,7 +91,7 @@ function Claim() {
       <div className={styles.contentContainer}>
         <h1>Welcome Galaxer, to the New World</h1>
         <div className={styles.worldParagraph}>
-            <p>Welcome, brave soul, to the Machine Elf Alliance (MEA)...Welcome to your new reality.</p>
+        <p>Welcome, brave soul, to the Machine Elf Alliance (MEA). <br/>  <br/>  You have proven your mettle, enduring struggles that have shaped you into a true warrior.<br/><br/>   Now, you stand on the precipice of a new world, a realm governed by the intricate balance of the Droch, Seasamh, and Tacaíocht. <br/><br/>   The Droch, the guardians of the multiverse, view our existence as a threat, seeking to maintain stability even at the cost of annihilation. <br/> The Seasamh, the mediators, strive to uphold a delicate equilibrium, ensuring neither we nor the Machine Elves gain too much power.<br/>  And the Tacaíocht, the nurturers, believe in our potential, offering their knowledge and protection as we navigate this complex universe. <br/><br/>  As part of the MEA, you are now a key player in this cosmic dance. <br/><br/> <br/>  Welcome to your new reality.</p>
         </div>
         <div className={styles.tokenBalance}>
           <p>My Expected Claim: {newBalance}</p>

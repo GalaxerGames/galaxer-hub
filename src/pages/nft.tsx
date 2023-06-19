@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { recoverTypedDataAddress } from 'viem'
 import { type Address, useSignTypedData, useAccount } from 'wagmi'
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from 'next/link';
+import Image from 'next/image';
 import { Header } from '../components/Header.tsx';
 import { Footer } from '../components/Footer.tsx';
 import styles from '../components/modules/nft.module.css';
@@ -45,7 +45,7 @@ const messageCreator = (fromName, fromWallet, contents) => ({
   contents,
 } as const)
 
-const elfComponentCreator = (title, message, description, image, signButtonText) => {
+const elfComponentCreator = (title , message, description, image, signButtonText) => {
   return function ElfComponent() {
     const { data, error, isLoading, signTypedData } = useSignTypedData({
       domain,
