@@ -1,11 +1,12 @@
-import { useState , useEffect } from 'react';
-import { InjectedConnector, connect, watchWalletClient, writeContract, getWalletClient, watchContractEvent } from '@wagmi/core';
+import { useState, useEffect } from 'react';
+import { InjectedConnector, connect, writeContract } from '@wagmi/core';
+import { createWalletClient, custom } from 'viem'; 
+import { mainnet } from 'viem/chains';
 import GLXRClaim from '../artifacts/contracts/GLXRClaim.json'; 
 import styles from '../components/modules/claim.module.css';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { WalletConnectConnector } from '@wagmi/core/connectors/walletConnect'
-
 
 const tokenAddress = '0xA17051ebD6DF3b9Ad31fe6ad4fdE373b53DF1a6a'; 
 const claimAddress = '0xd9145CCE52D386f254917e481eB44e9943F39138'; 
@@ -13,12 +14,10 @@ const claimAddress = '0xd9145CCE52D386f254917e481eB44e9943F39138';
 function Claim() {
   const [balance, setBalance] = useState(null);
   const [account, setAccount] = useState<string | null>(null);
-  const [signer, setSigner] = useState<any | null>(null);
+  const [walletClient, setWalletClient] = useState<any | null>(null);
   const [selectedDays, setSelectedDays] = useState(90);
   const stakeDuration = selectedDays * 24 * 60 * 60; // convert days to seconds
   const [newBalance, setNewBalance] = useState<number | null>(null);
-  const injectedConnector = new InjectedConnector({ options: { shimDisconnect: true } });
-  const walletConnectConnector: WalletConnectConnector = new WalletConnectConnector({ options: { projectId: '...', showQrModal: true } });
 
   const handleStakeDuration = (days: number) => {
     setSelectedDays(days);
@@ -45,37 +44,24 @@ function Claim() {
 
   useEffect(() => {
     const fetchAccount = async () => {
-      const {account} = await connect({ connector: injectedConnector });
-      setAccount(account);
+      // Create a Wallet Client using viem
+      const client = createWalletClient({
+        chain: mainnet,
+        transport: custom(window.ethereum)
+      });
+
+      const [address] = await client.getAddresses();
+      setAccount(address);
+      setWalletClient(client);
     };
     fetchAccount();
-  }, [injectedConnector]);
-
-  useEffect(() => {
-    const fetchSigner = async () => {
-      const unwatch = watchWalletClient(
-        { chainId: 1 },
-        async (walletClient: WalletClient | null) => {
-          if (walletClient !== null) {
-            setSigner(walletClient); // directly assigning walletClient to signer
-          }
-        }
-      );
-      return () => unwatch();
-    };
-    fetchSigner();
   }, []);
-
-
 
   async function claimNewToken() {
     try {
-      const transactionResponse = await writeContract({
-        abi: GLXRClaim.abi,
-        contractAddress: claimAddress,
-        functionName: 'claimNewToken',
-        args: [stakeDuration, balance, merkleProofs], // merkleProofs needs to be defined in your code
-        signer: signer,
+      const transactionResponse = await walletClient.sendTransaction({ 
+        to: claimAddress,
+        data: walletClient.interface.encodeFunctionData('claimNewToken', [stakeDuration, balance, merkleProofs]), // merkleProofs needs to be defined in your code
       });
   
       console.log(`Transaction hash: ${transactionResponse.hash}`);
@@ -83,8 +69,7 @@ function Claim() {
       console.error(`Failed to claim tokens: ${error}`);
     }
   }
-  
-  
+
 
   return (
     <>

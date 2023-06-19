@@ -23,7 +23,7 @@
 
 .tokenBalance {
     text-align: center;
-    color: #fffff;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
@@ -58,3 +58,43 @@
     text-decoration: none;
     font-weight: bold;
 }
+
+@media screen and (max-width: 768px) {
+    .contentContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        height: 120vh;
+    
+    }
+  
+    .header {
+      font-size: 1.5em;
+    }
+  
+    .worldParagraph {
+      width: 100%; 
+      font-size: 0.9em;
+    }
+  
+    .tokenBalance {
+      font-size: 0.8em;
+    }
+  
+    .buttonGroup {
+      flex-direction: column;
+    }
+  
+    .buttonGroup button {
+      padding: 10px;
+      margin: 5px 0;
+    }
+  
+    .buttons {
+      padding: 10px;
+      font-size: 1em;
+    }
+  }
+  
