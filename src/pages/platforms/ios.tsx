@@ -10,7 +10,7 @@ const Ios = () => {
         <div>
             <Header />
             <div className={styles.page}>
-             <h1 className={styles.title}>Vision Pro and iOS: Breaching Reality's Veil</h1>
+             <h1 className={styles.title}>Vision Pro and iOS: Breaching Reality&apos;s Veil</h1>
             <div className={styles.buttons}>
             <Link href="https://t.me/galaxer_glxr"
              className={styles.button}>Join Waitlist

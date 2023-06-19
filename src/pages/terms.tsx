@@ -30,11 +30,11 @@ const Terms = () => {
 
 <p>Last updated: May 17, 2023</p>
 
-<p>Welcome to Galaxer! These terms of service (Terms) cover your use and access to the services, client software and websites (Services) provided by Galaxer Games. Our Privacy Policy explains how we collect and use your information while our Acceptable Use Policy outlines your responsibilities when using our Services. By using our Services, you're agreeing to be bound by these Terms, and to review our Privacy and Acceptable Use policies. If you're using our Services for an organization, you're agreeing to these Terms on behalf of that organization.</p>
+<p>Welcome to Galaxer! These terms of service (Terms) cover your use and access to the services, client software and websites (Services) provided by Galaxer Games. Our Privacy Policy explains how we collect and use your information while our Acceptable Use Policy outlines your responsibilities when using our Services. By using our Services, you&apos;re agreeing to be bound by these Terms, and to review our Privacy and Acceptable Use policies. If you&apos;re using our Services for an organization, you&apos;re agreeing to these Terms on behalf of that organization.</p>
 
 <h2>Your Stuff & Your Permissions</h2>
 
-<p>When you use our Services, you provide us with things like your files, content, messages, contacts and so on (Your Stuff). Your Stuff is yours. These Terms don't give us any rights to Your Stuff except for the limited rights that enable us to offer the Services.</p>
+<p>When you use our Services, you provide us with things like your files, content, messages, contacts and so on (Your Stuff). Your Stuff is yours. These Terms don&apos;t give us any rights to Your Stuff except for the limited rights that enable us to offer the Services.</p>
 
 <h2>Software</h2>
 
@@ -42,17 +42,17 @@ const Terms = () => {
 
 <h2>Termination</h2>
 
-<p>You're free to stop using our Services at any time. We reserve the right to suspend or terminate your access to the Services with notice to you if:</p>
+<p>You&apos;re free to stop using our Services at any time. We reserve the right to suspend or terminate your access to the Services with notice to you if:</p>
 
 <ul>
-  <li>(a) you're in breach of these Terms,</li>
-  <li>(b) you're using the Services in a manner that would cause a real risk of harm or loss to us or other users, or</li>
-  <li>(c) you don't have a Paid Account and haven't accessed our Services for 12 consecutive months.</li>
+  <li>(a) you&apos;re in breach of these Terms,</li>
+  <li>(b) you&apos;re using the Services in a manner that would cause a real risk of harm or loss to us or other users, or</li>
+  <li>(c) you don&apos;t have a Paid Account and haven&apos;t accessed our Services for 12 consecutive months.</li>
 </ul>
 
 <h2>Disputes</h2>
 
-<p>We want to address your concerns without needing a formal legal case. Before filing a claim against Galaxer Games, you agree to try to resolve the dispute informally by contacting us. We'll try to resolve the dispute informally by contacting you via email.</p>
+<p>We want to address your concerns without needing a formal legal case. Before filing a claim against Galaxer Games, you agree to try to resolve the dispute informally by contacting us. We&apos;ll try to resolve the dispute informally by contacting you via email.</p>
 
 <h2>Jurisdiction</h2>
 

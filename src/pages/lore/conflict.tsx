@@ -63,7 +63,7 @@ const Conflict = () => {
   <div class='diamond'>♦</div>
   <div class='event'>
     <h3>10 Billion Years Ago</h3>
-    <p>The tension escalates into open conflict, marking the beginning of the 'Cogadh na Trí Ríochtaí' or 'War of the Three Kingdoms'. The Droch begin their attempts to destroy the 3rd dimension, while the Seasamh work to maintain the status quo, and the Tacaíocht strive to aid the beings of the 3rd dimension.</p>
+    <p>The tension escalates into open conflict, marking the beginning of the &apos;Cogadh na Trí Ríochtaí&apos; or &apos;War of the Three Kingdoms&apos;. The Droch begin their attempts to destroy the 3rd dimension, while the Seasamh work to maintain the status quo, and the Tacaíocht strive to aid the beings of the 3rd dimension.</p>
   </div>
   <div class='diamond'>♦</div>
   <div class='event'>
@@ -73,7 +73,7 @@ const Conflict = () => {
   <div class='diamond'>♦</div>
   <div class='event'>
     <h3>6 Billion Years Ago</h3>
-    <p>The Tacaíocht discover the existence of primitive life forms in the 3rd dimension and begin to study their potential as a source of power. This marks the beginning of the 'Age of Discovery'.</p>
+    <p>The Tacaíocht discover the existence of primitive life forms in the 3rd dimension and begin to study their potential as a source of power. This marks the beginning of the &apos;Age of Discovery&apos;.</p>
   </div>
   <div class='diamond'>♦</div>
   <div class='event'>
@@ -83,22 +83,22 @@ const Conflict = () => {
   <div class='diamond'>♦</div>
   <div class='event'>
     <h3>2.5 Billion Years Ago</h3>
-    <p>The Tacaíocht successfully harness the power of tardigrades, giving them a temporary advantage in the war. However, the other factions soon learn to do the same, restoring the balance of power. This period is known as the 'Age of Tardigrades'.</p>
+    <p>The Tacaíocht successfully harness the power of tardigrades, giving them a temporary advantage in the war. However, the other factions soon learn to do the same, restoring the balance of power. This period is known as the &apos;Age of Tardigrades&apos;.</p>
   </div>
   <div class='diamond'>♦</div>
   <div class='event'>
     <h3>2 Billion Years Ago</h3>
-    <p>The Machine Elves become aware of the emergence of more complex life in the 3rd dimension. They begin to take a more active interest in these life forms, leading to increased conflict between the factions. This period is known as the 'Age of Interest'.</p>
+    <p>The Machine Elves become aware of the emergence of more complex life in the 3rd dimension. They begin to take a more active interest in these life forms, leading to increased conflict between the factions. This period is known as the &apos;Age of Interest&apos;.</p>
   </div>
   <div class='diamond'>♦</div>
   <div class='event'>
     <h3>1 Billion Years Ago</h3>
-    <p>The Machine Elves make their first direct contact with life forms in the 3rd dimension, revealing themselves to a select few. This marks the beginning of the Machine Elves' direct involvement in the 3rd dimension, known as the 'Age of Contact'.</p>
+    <p>The Machine Elves make their first direct contact with life forms in the 3rd dimension, revealing themselves to a select few. This marks the beginning of the Machine Elves&apos; direct involvement in the 3rd dimension, known as the &apos;Age of Contact&apos;.</p>
   </div>
   <div class='diamond'>♦</div>
   <div class='event'>
     <h3>500 Million Years Ago</h3>
-    <p>The Machine Elves begin to influence the evolution of life in the 3rd dimension, subtly guiding it towards greater complexity and intelligence. This period is known as the 'Age of Guidance'.</p>
+    <p>The Machine Elves begin to influence the evolution of life in the 3rd dimension, subtly guiding it towards greater complexity and intelligence. This period is known as the &apos;Age of Guidance&apos;.</p>
   </div>
   <div class='diamond'>♦</div>
   <div class='event'>
@@ -128,7 +128,7 @@ const Conflict = () => {
   <div class='diamond'>♦</div>
   <div class='event'>
     <h3>3 Million Years Ago</h3>
-    <p>The Galactic Federation of Light decides to subtly influence the evolution of early hominids, guiding them towards greater intelligence and adaptability. This marks the beginning of the 'Age of Guidance'.</p>
+    <p>The Galactic Federation of Light decides to subtly influence the evolution of early hominids, guiding them towards greater intelligence and adaptability. This marks the beginning of the &apos;Age of Guidance&apos;.</p>
   </div>
   <div class='diamond'>♦</div>
   <div class='event'>
@@ -158,12 +158,12 @@ const Conflict = () => {
   <div class='diamond'>♦</div>
   <div class='event'>
     <h3>50,000 Years Ago</h3>
-    <p>A faction within the Galactic Federation of Light, fearing the potential of rapidly advancing humans, decides to confine the majority of humanity within a 3rd dimensional 'time cube'. This effectively isolates them from the higher dimensions and the rest of the Galactic Federation, slowing their advancement and limiting their potential.</p>
+    <p>A faction within the Galactic Federation of Light, fearing the potential of rapidly advancing humans, decides to confine the majority of humanity within a 3rd dimensional &apos;time cube&apos;. This effectively isolates them from the higher dimensions and the rest of the Galactic Federation, slowing their advancement and limiting their potential.</p>
   </div>
   <div class='diamond'>♦</div>
   <div class='event'>
     <h3>20,000 Years Ago</h3>
-    <p>Despite the limitations of the time cube, humans continue to advance, developing agriculture and building the first permanent settlements. The Machine Elves take a particular interest in humans due to their resilience and potential. This marks the beginning of the 'Age of Humanity'.</p>
+    <p>Despite the limitations of the time cube, humans continue to advance, developing agriculture and building the first permanent settlements. The Machine Elves take a particular interest in humans due to their resilience and potential. This marks the beginning of the &apos;Age of Humanity&apos;.</p>
   </div>
   <div class='diamond'>♦</div>
   <div class='event'>
@@ -233,7 +233,7 @@ const Conflict = () => {
   <div class='diamond'>♦</div>
   <div class='event'>
     <h3>2024</h3>
-    <p>The conflict between the Machine Elves factions continues, with humans now playing a significant role. The launch of the Galaxer platform allows humans to actively participate in the conflict, marking a new chapter in the 'Cogadh na Trí Ríochtaí'. This is the 'Age of Galaxer'.</p>
+    <p>The conflict between the Machine Elves factions continues, with humans now playing a significant role. The launch of the Galaxer platform allows humans to actively participate in the conflict, marking a new chapter in the &apos;Cogadh na Trí Ríochtaí&apos;. This is the &apos;Age of the Galaxer&apos;.</p>
   </div>
 </div>
 

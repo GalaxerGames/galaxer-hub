@@ -19,6 +19,12 @@ export const Header = () => {
     }
   }
 
+  const handleMenuClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, menuName: string) => {
+    e.preventDefault();
+    // Handle your menu click here
+    console.log(`Menu ${menuName} clicked.`);
+  };
+
   const openNav = () => {
     setSidebarOpen(true);
   }
@@ -27,7 +33,7 @@ export const Header = () => {
     setSidebarOpen(false);
   }
 
-  const handleSubMenu = (menu) => {
+  const handleSubMenu = (menu: string) => {
     setActiveMenu(activeMenu === menu ? '' : menu);
   }
 
@@ -60,7 +66,7 @@ export const Header = () => {
             <li className={styles.menuItem}>
               <Link href='/platforms/overview' 
               onClick={(e) => handleMenuClick(e, 'platforms')} 
-                onDoubleClick={(e) => handleMenuDoubleClick(e, '/platforms/overview')}>
+                onDoubleClick={(e) => handleMenuClick(e, '/platforms/overview')}>
                   Platforms
                   </Link>
               <ul className={`${styles.submenu} ${activeMenu === 'platforms' ? styles.open : ''}`}>
@@ -77,7 +83,7 @@ export const Header = () => {
             <li className={styles.menuItem}>
             <Link href='/ecosystem/overview' 
               onClick={(e) => handleMenuClick(e, 'ecosystem')} 
-                onDoubleClick={(e) => handleMenuDoubleClick(e, '/ecosystem/overview')}>
+                onDoubleClick={(e) => handleMenuClick(e, '/ecosystem/overview')}>
                   Ecosystem
                   </Link>
               <ul className={`${styles.submenu} ${activeMenu === 'ecosystem' ? styles.open : ''}`}>
@@ -92,7 +98,7 @@ export const Header = () => {
             <li className={styles.menuItem}>
             <Link href='/studio/about' 
               onClick={(e) => handleMenuClick(e, 'studio')} 
-                onDoubleClick={(e) => handleMenuDoubleClick(e, '/studio/about')}>
+                onDoubleClick={(e) => handleMenuClick(e, '/studio/about')}>
                   Studio
                   </Link>
               <ul className={`${styles.submenu} ${activeMenu === 'studio' ? styles.open : ''}`}>

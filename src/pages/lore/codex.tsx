@@ -48,7 +48,7 @@ const Codex = () => {
         </blockquote>
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph}>
-          Its pages hold the wisdom of the past and the hope for the future,<br/> serving as a compass for those who seek to navigate the vast expanse of the universe. Whether a Galaxer seeks to understand the intricacies of interdimensional politics, the mysteries of <br/>metaphysical magic, or the strategies of cosmic combat, 'The Stellar Codex' is their ultimate guide.
+          Its pages hold the wisdom of the past and the hope for the future,<br/> serving as a compass for those who seek to navigate the vast expanse of the universe. Whether a Galaxer seeks to understand the intricacies of interdimensional politics, the mysteries of <br/>metaphysical magic, or the strategies of cosmic combat, &apos;The Stellar Codex&apos; is their ultimate guide.
           </p>
           </div>
         </div>
@@ -87,7 +87,7 @@ const Codex = () => {
         </blockquote>
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph}>
-          The grand struggle that shapes the narrative of the Galaxer universe. This conflict, spanning across dimensions and civilizations, is a clash of ideologies, resources, and power. It's a war fought not only on the battlefields with advanced weaponry and strategic prowess, but also in the hearts and minds of every Galaxer, with diplomacy, alliances, and sometimes, deception. The Cosmic Conflict is a testament to the diversity and complexity of the universe, a constant reminder of the challenges that lie ahead, and the resilience required to overcome them. It is the crucible in which heroes are forged and legends are born.
+          The grand struggle that shapes the narrative of the Galaxer universe. This conflict, spanning across dimensions and civilizations, is a clash of ideologies, resources, and power. It&apos;s a war fought not only on the battlefields with advanced weaponry and strategic prowess, but also in the hearts and minds of every Galaxer, with diplomacy, alliances, and sometimes, deception. The Cosmic Conflict is a testament to the diversity and complexity of the universe, a constant reminder of the challenges that lie ahead, and the resilience required to overcome them. It is the crucible in which heroes are forged and legends are born.
           </p>
           </div>
           <div className={styles.button}>
@@ -115,7 +115,7 @@ const Codex = () => {
         </blockquote>
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph}>
-          The guardians of equilibrium in the Galaxer universe. They stand at the crossroads of conflict and harmony, maintaining the delicate balance that keeps the cosmos in check. The Seasamh are known for their wisdom and their deep understanding of the interconnectedness of all things. They believe that every action has a consequence, and that maintaining balance is key to the survival and prosperity of all dimensions. Their role in the Cosmic Conflict is often one of mediation and diplomacy, striving to resolve disputes and prevent unnecessary warfare. The Seasamh's story is a testament to the power of balance, and the crucial role it plays in the grand tapestry of the cosmos.
+          The guardians of equilibrium in the Galaxer universe. They stand at the crossroads of conflict and harmony, maintaining the delicate balance that keeps the cosmos in check. The Seasamh are known for their wisdom and their deep understanding of the interconnectedness of all things. They believe that every action has a consequence, and that maintaining balance is key to the survival and prosperity of all dimensions. Their role in the Cosmic Conflict is often one of mediation and diplomacy, striving to resolve disputes and prevent unnecessary warfare. The Seasamh&apos;s story is a testament to the power of balance, and the crucial role it plays in the grand tapestry of the cosmos.
           </p>
           </div>
           <div className={styles.button}>
@@ -130,7 +130,7 @@ const Codex = () => {
         </blockquote>
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph}>
-          the pillars of unity and cooperation in the Galaxer universe. They are the bridge builders, the peacemakers, the ones who believe in the power of unity in diversity. The Tacaíocht are known for their unwavering support and their ability to bring together different factions for a common cause. They understand that in the vastness of the cosmos, no entity can stand alone, and that strength lies in unity. In the Cosmic Conflict, they often serve as the glue that holds alliances together, providing support and guidance to those in need. The Tacaíocht's story is a testament to the power of unity and cooperation, and the crucial role they play in maintaining harmony in the cosmos.
+          the pillars of unity and cooperation in the Galaxer universe. They are the bridge builders, the peacemakers, the ones who believe in the power of unity in diversity. The Tacaíocht are known for their unwavering support and their ability to bring together different factions for a common cause. They understand that in the vastness of the cosmos, no entity can stand alone, and that strength lies in unity. In the Cosmic Conflict, they often serve as the glue that holds alliances together, providing support and guidance to those in need. The Tacaíocht&apos;s story is a testament to the power of unity and cooperation, and the crucial role they play in maintaining harmony in the cosmos.
           </p>
           </div>
           <div className={styles.button}>

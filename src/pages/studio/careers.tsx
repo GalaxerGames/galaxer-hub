@@ -18,12 +18,12 @@ const Careers = () => {
               <Link href='https://genpen.io/login.xhtml' className={styles.button}>View all Opportunities</Link>
             </div>
             <div className={styles.imageContainer}>
-              <p>Developing AI Enhanced tools<br/>requires humans from a wide range<br/>of disciplines and backgrounds.<br/>We're always looking for the best<br/>minds to join our globally remote<br/>team.</p>
+              <p>Developing AI Enhanced tools<br/>requires humans from a wide range<br/>of disciplines and backgrounds.<br/>We&apos;re always looking for the best<br/>minds to join our globally remote<br/>team.</p>
             </div>
           </div>
           <hr />
           <div className='videoContainer'>
-           <video autoplay loop muted>
+           <video autoPlay loop muted>
            <source src='path_to_your_video.mp4' type='video/mp4' />
           Your browser does not support the video.
           </video>
@@ -31,7 +31,7 @@ const Careers = () => {
           <hr/>
           <div className={styles.quoteSection2}>
             <p className={styles.quote2}>
-              'This is a quote that takes up 50% of the viewport height'
+              This is a quote that takes up 50% of the viewport height
             </p>
           </div>
           <hr/>
@@ -96,7 +96,7 @@ const Careers = () => {
                 </ul>
               </div>
               <div className={styles.imageListItem}>
-                <img src='logotri.png' alt='Image 3 description' className={styles.image}/>
+                <Image src='logotri.png' alt='Image 3 description' className={styles.image}/>
                 <ul>
                   <li>Point 1</li>
                   <li>Point 2</li>
@@ -160,7 +160,7 @@ const Careers = () => {
               <a href='' className={styles.button}>Read about GenPen AI Internship</a>
             </div>
             <div className={styles.imageContainer}>
-              <img src='/logotri.png' alt='Career Image' className={styles.careerImage}/>
+              <Image src='/logotri.png' alt='Career Image' className={styles.careerImage}/>
             </div>
           </div>
           <hr />
@@ -174,7 +174,7 @@ const Careers = () => {
                       <p className={styles.imageCaption}>Your description for image 1.</p>
                     </div>
                     <div className={styles.imageContainerBuilt}>
-                      <img src='/logotri.png' alt='Description of image 2' className={styles.largeImagesBuilt} />
+                      <Image src='/logotri.png' alt='Description of image 2' className={styles.largeImagesBuilt} />
                       <p className={styles.imageCaption}>Your description for image 2.</p>
                     </div>
               </div>
@@ -183,7 +183,7 @@ const Careers = () => {
           <hr />
           <div className={styles.quoteSection2}>
             <p className={styles.quote2}>
-              'This is a quote that takes up 50% of the viewport height'
+              This is a quote that takes up 50% of the viewport height
             </p>
           </div>
 
@@ -192,19 +192,19 @@ const Careers = () => {
           <h3>Latest Updates</h3>
                 <div className={styles.sectionUpdates}>
             <div className={styles.sectionItemUpdates}>
-              <img src='/logotri.png' alt='Image 1' className={styles.imageUpdates}/>
+              <Image src='/logotri.png' alt='Image 1' className={styles.imageUpdates}/>
               <Link href='/link/to/post1' className={styles.button}>Blog post 1</Link>
             </div>
             <div className={styles.sectionItemUpdates}>
-              <img src='/logotri.png' alt='Image 2' className={styles.imageUpdates}/>
+              <Image src='/logotri.png' alt='Image 2' className={styles.imageUpdates}/>
               <Link href='/link/to/post2' className={styles.button}>Blog post 2</Link>
             </div>
             <div className={styles.sectionItemUpdates}>
-              <img src='/logotri.png' alt='Image 3' className={styles.imageUpdates}/>
+              <Image src='/logotri.png' alt='Image 3' className={styles.imageUpdates}/>
               <Link  href='/link/to/post3' className={styles.button}>Blog post 3</Link>
             </div>
             <div className={styles.sectionItemUpdates}>
-              <img src='/logotri.png' alt='Image 4' className={styles.imageUpdates}/>
+              <Image src='/logotri.png' alt='Image 4' className={styles.imageUpdates}/>
               <Link href='/link/to/post4' className={styles.button}>Blog post 4</Link>
             </div>
           </div>

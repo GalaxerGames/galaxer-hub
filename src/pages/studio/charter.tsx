@@ -12,7 +12,7 @@ const Charter = () => {
             <div className={styles.textContainer}>
           <h1 className={styles.header}>Galaxer Charter</h1>
               <p className={styles.paragraph}>
-                Our Charter describes the<br/>principles we use to execute<br/>on Galaxer's mission.
+                Our Charter describes the<br/>principles we use to execute<br/>on Galaxer&apos;s mission.
               </p>
             
             </div>

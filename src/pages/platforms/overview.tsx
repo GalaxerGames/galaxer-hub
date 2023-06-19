@@ -16,7 +16,7 @@ const ProductOverview = () => {
         </blockquote>
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph1}>
-            We're targeting a cross platform launch in 2024. Follow our journey.
+            We&apos;re targeting a cross platform launch in 2024. Follow our journey.
           </p>
           <div className={styles.buttons}>
             <Link href='/research-index'
@@ -44,7 +44,7 @@ const ProductOverview = () => {
         </blockquote>
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph}>
-          The integration of iOS augmented reality and the Vision Pro headset is set to revolutionize gameplay in the Galaxer universe. By merging the physical and digital worlds, these technologies create an immersive gaming experience like no other. Players will be able to interact with the game environment in real-time, using gestures and movements to control their characters and perform actions. The Vision Pro headset, with its high-resolution display and advanced tracking capabilities, will provide a seamless and realistic visual experience. This combination of augmented reality and cutting-edge hardware will bring the Galaxer universe to life, transforming the way players engage with the game and each other. The future of gaming is here, and it's more immersive and interactive than ever before.
+          The integration of iOS augmented reality and the Vision Pro headset is set to revolutionize gameplay in the Galaxer universe. By merging the physical and digital worlds, these technologies create an immersive gaming experience like no other. Players will be able to interact with the game environment in real-time, using gestures and movements to control their characters and perform actions. The Vision Pro headset, with its high-resolution display and advanced tracking capabilities, will provide a seamless and realistic visual experience. This combination of augmented reality and cutting-edge hardware will bring the Galaxer universe to life, transforming the way players engage with the game and each other. The future of gaming is here, and it&apos;s more immersive and interactive than ever before.
           </p>
           </div>
         </div>
@@ -55,7 +55,7 @@ const ProductOverview = () => {
         </blockquote>
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph}>
-          The integration of Android AR Core into the Galaxer universe is set to transform the gaming experience. AR Core's advanced capabilities in understanding the environment, tracking motion, and estimating light allow for a deeply immersive and interactive gaming experience. Players can engage with the Galaxer universe right from their living rooms, parks, or anywhere else, as the game overlays digital content onto the real world. This fusion of the physical and digital worlds allows players to interact with the game in entirely new ways, using their surroundings as part of the gameplay. The result is a more engaging, realistic, and immersive gaming experience that blurs the lines between reality and the fantastical universe of Galaxer. With Android AR Core, the future of gaming is not just on the screen, but all around us.
+          The integration of Android AR Core into the Galaxer universe is set to transform the gaming experience. AR Core&apos;s advanced capabilities in understanding the environment, tracking motion, and estimating light allow for a deeply immersive and interactive gaming experience. Players can engage with the Galaxer universe right from their living rooms, parks, or anywhere else, as the game overlays digital content onto the real world. This fusion of the physical and digital worlds allows players to interact with the game in entirely new ways, using their surroundings as part of the gameplay. The result is a more engaging, realistic, and immersive gaming experience that blurs the lines between reality and the fantastical universe of Galaxer. With Android AR Core, the future of gaming is not just on the screen, but all around us.
           </p>
           </div>
         </div>
@@ -77,7 +77,7 @@ const ProductOverview = () => {
         </blockquote>
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph}>
-          The integration of Galaxer with popular at-home VR headsets like the MetaQuest, HTC Vive, and others is set to redefine the gaming experience. These VR headsets offer a fully immersive, 360-degree view of the Galaxer universe, bringing players closer to the action than ever before. With high-resolution displays and responsive motion tracking, players can explore the cosmos, engage in interdimensional conflicts, and interact with other players in a truly immersive environment. The tactile feedback and intuitive controls of these VR headsets allow for a more natural and engaging gameplay experience. Whether you're navigating through the cosmos, strategizing with your guild, or facing off against adversaries, playing Galaxer on VR transports you directly into the heart of the action. It's not just playing a game, it's living an adventure.
+          The integration of Galaxer with popular at-home VR headsets like the MetaQuest, HTC Vive, and others is set to redefine the gaming experience. These VR headsets offer a fully immersive, 360-degree view of the Galaxer universe, bringing players closer to the action than ever before. With high-resolution displays and responsive motion tracking, players can explore the cosmos, engage in interdimensional conflicts, and interact with other players in a truly immersive environment. The tactile feedback and intuitive controls of these VR headsets allow for a more natural and engaging gameplay experience. Whether you&apos;re navigating through the cosmos, strategizing with your guild, or facing off against adversaries, playing Galaxer on VR transports you directly into the heart of the action. It&apos;s not just playing a game, it&apos;s living an adventure.
           </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ const ProductOverview = () => {
         </blockquote>
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph3}>
-          The availability of Galaxer on Xbox, including through the Game Pass subscription service, brings a new dimension to console gameplay. With the power of Xbox's hardware, players can enjoy a smooth, high-definition gaming experience right from their living rooms. The integration with Xbox Live also allows for seamless multiplayer interactions, enabling players to team up with friends, join guilds, and engage in interdimensional conflicts with players around the world.
+          The availability of Galaxer on Xbox, including through the Game Pass subscription service, brings a new dimension to console gameplay. With the power of Xbox&apos;s hardware, players can enjoy a smooth, high-definition gaming experience right from their living rooms. The integration with Xbox Live also allows for seamless multiplayer interactions, enabling players to team up with friends, join guilds, and engage in interdimensional conflicts with players around the world.
           <br/>The inclusion of Galaxer in the Xbox Game Pass library offers incredible value for subscribers. With a single subscription, players gain access to Galaxer along with a vast library of other games, allowing them to dive into the immersive universe of Galaxer without additional purchase. This accessibility, combined with the social and multiplayer features of Xbox Live, makes playing Galaxer on Xbox a compelling and convenient option for console gamers.  Our systems allow humans and AI <br /> to interact and discuss the best
             route <br /> forward. Building the protocol for <br /> governance of these
             discussions is our <br />mission.
@@ -115,8 +115,8 @@ const ProductOverview = () => {
         </blockquote>
         <div className={styles.paragraphContainer}>
           <p className={styles.paragraph3}>
-          The availability of Galaxer on the Nintendo Switch brings a unique and versatile gaming experience to players. With the Switch's hybrid design, players can enjoy Galaxer in a variety of settings, whether docked for a big-screen experience at home, or undocked for portable, on-the-go gaming. The Joy-Con controllers offer intuitive controls and immersive feedback, enhancing the interactive elements of the Galaxer universe.
-          <br/>The Nintendo Switch's multiplayer capabilities, both local and online, allow for seamless interactions with other players. This enables players to form alliances, join guilds, and engage in interdimensional conflicts with players around the world, all from their Nintendo Switch.
+          The availability of Galaxer on the Nintendo Switch brings a unique and versatile gaming experience to players. With the Switch&apos;s hybrid design, players can enjoy Galaxer in a variety of settings, whether docked for a big-screen experience at home, or undocked for portable, on-the-go gaming. The Joy-Con controllers offer intuitive controls and immersive feedback, enhancing the interactive elements of the Galaxer universe.
+          <br/>The Nintendo Switch&apos;s multiplayer capabilities, both local and online, allow for seamless interactions with other players. This enables players to form alliances, join guilds, and engage in interdimensional conflicts with players around the world, all from their Nintendo Switch.
           <br/>The inclusion of Galaxer in the Nintendo eShop provides easy access for all Switch users. With its unique blend of portability, versatility, and social gaming, the Nintendo Switch offers a unique and engaging platform for exploring the vast universe of Galaxer.
           </p>
           </div>
