@@ -72,7 +72,7 @@ const elfComponentCreator = (title, message, description, image, signButtonText)
 
     return (
       <div className={styles.signMessageContainer}>
-        <Image className={styles.image} src={image} alt={`${title} Elf`} />
+        <Image width={250} height={250} className={styles.image} src={image} alt={`${title} Elf`} />
         <div className={styles.content}>
           <h1>{title}</h1>
           <p>{description}</p>

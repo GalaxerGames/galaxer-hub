@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 export const Footer = () => (
   <footer className={styles.footer}>
-    <Link href='/'>
-      <Image src='/horitlogo.png' alt='Logo' className={styles.logo} />
+    <Link href='/' legacyBehavior>
+      <Image src='/horitlogo.png' alt='Logo' width={400} height={300} className={styles.logo} />
     </Link>
      <nav className={styles.nav}>
       <ul className={styles.menu}>

@@ -20,19 +20,20 @@ const Codex = () => {
           An ancient and revered tome for Galaxers,<br/> a compendium of knowledge and lore that spans the ages.
           </p>
           <div className={styles.buttons}>
-            <Link href='/lore/research'
-              className={styles.button}>View Research<br/> Index
+            <Link href='/lore/research' passHref className={styles.button}>
+              View Research<br/>Index
             </Link>
-            <Link href='/ecosystem/overview'
-              className={styles.button}>Learn More About Governance
+            <Link href='/ecosystem/overview' passHref className={styles.button}>
+              Learn More About Governance
             </Link>
           </div>
         </div>
       </div>
       <hr />
       <div className={styles.sectionItem}>
-    <Image src='/logo.png' alt='Research at GenPen AI' className={styles.image}/>
-   
+        <a>
+    <Image src='/logo.png' alt='Research at Galaxer' width={250} height={100} className={styles.image}/>
+   </a>
   </div>
   <hr />
   <div >
@@ -63,7 +64,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <Link href='/lore/humanity'>Learn More</Link>
+            <Link href='/lore/humanity' passHref>Learn More</Link>
             </div>
         </div>
         <hr />
@@ -77,7 +78,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <Link href='/lore/portals'>Learn More</Link>
+          <Link href='/lore/portals' passHref>Learn More</Link>
             </div>
         </div>
         <hr />
@@ -91,7 +92,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <link href='/lore/conflict'>Learn More</link>
+          <Link href='/lore/conflict' passHref>Learn More</Link>
             </div>
         </div>
         <hr />
@@ -105,7 +106,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <link href='/lore/droch'>Learn More</link>
+          <Link href='/lore/droch' passHref>Learn More</Link>
             </div>
         </div>
         <hr />
@@ -119,7 +120,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <link href='/lore/seasamh'>Learn More</link>
+          <Link href='/lore/seasamh' passHref>Learn More</Link>
             </div>
         </div>
   
@@ -134,7 +135,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <link href='/lore/taciocht'>Learn More</link>
+          <Link href='/lore/taciocht' passHref>Learn More</Link>
             </div>
         </div>
        
@@ -149,7 +150,7 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <link href='/lore/teadan'>Learn More</link>
+          <Link href='/lore/teadan' passHref>Learn More</Link>
             </div>
         </div>
         <hr />
@@ -165,14 +166,14 @@ const Codex = () => {
           </p>
           </div>
           <div className={styles.button}>
-            <link href='/lore/guild'>Learn More</link>
+          <Link href='/lore/guild' passHref>Learn More</Link>
             </div>
         </div>
        
   <hr />
   <h1 className={styles.title}>Join us to make a brighter future.</h1>
   <div className={styles.buttons}>
-    <Link href='/product/overview' className={styles.button}>Start Your Journey</Link>
+  <Link href='/product/overview' passHref className={styles.button}>Start Your Journey</Link>
   </div>
 <hr />
       <Footer />

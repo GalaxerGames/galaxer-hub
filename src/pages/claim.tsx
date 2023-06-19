@@ -69,29 +69,20 @@ function Claim() {
 
   async function claimNewToken() {
     try {
-        const transactionResponse = await writeContract({
-            abi: GLXRClaim.abi,
-            contractAddress: claimAddress,
-            functionName: 'claimNewToken',
-            args: [stakeDuration],
-            signer: signer,
-        });
-      
-        watchContractEvent({
-          abi: GLXRClaim.abi,
-          contractAddress: claimAddress,
-          eventName: 'Claimed',
-          args: [], // args needs to be provided as per the requirements of your contract
-          callback: (event: any) => {
-            console.log('Event data:', event);
-          },
-        });
+      const transactionResponse = await writeContract({
+        abi: GLXRClaim.abi,
+        contractAddress: claimAddress,
+        functionName: 'claimNewToken',
+        args: [stakeDuration, balance, merkleProofs], // merkleProofs needs to be defined in your code
+        signer: signer,
+      });
   
       console.log(`Transaction hash: ${transactionResponse.hash}`);
     } catch (error) {
       console.error(`Failed to claim tokens: ${error}`);
     }
   }
+  
   
 
   return (

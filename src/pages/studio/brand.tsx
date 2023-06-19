@@ -17,7 +17,7 @@ const Brand = () => {
             
             </div>
             <div className={styles.imageContainer}>
-              <Image src="/logotri.png" alt="Career Image" className={styles.careerImage}/>
+              <Image src="/logotri.png" alt="Career Image" width={250} height={100} className={styles.careerImage}/>
             </div>
           </div>
           <hr />

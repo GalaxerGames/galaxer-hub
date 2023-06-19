@@ -6,8 +6,12 @@ import { Footer } from '../components/Footer'
 
 export default function Home() {
   const handleScrollToVideo = () => {
-    document.getElementById("videoSection").scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById("videoSection");
+    if (element !== null) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
+  
 
   return (
     <div>
@@ -23,11 +27,11 @@ export default function Home() {
         
         <div id="videoSection" className={styles.videoSection}>
           <div className={styles.videoContainer}>
-            <video className={styles.video} src="/video1.mp4" controls></video>
+            <video className={styles.video} src="/video2.mp4" controls></video>
           </div>
           <div className={styles.textContainer}>
-            <h2 className={styles.header}>Shape the Destiny of Dimensions</h2>
-            <p className={styles.paragraph}>Galaxer is being built for the future. Search our codex for more information.</p>
+            <h2 className={styles.header}>Shape the Destiny <br/>of Dimensions</h2>
+            <p className={styles.paragraph}><b>Galaxer is being built for the future.<br/> Search our codex for more information.</b></p>
             <Link href="/lore/codex" className={styles.button}>Search Codex</Link>
             <Link href="/claim" className={styles.button}>Begin Claim</Link>
           </div>

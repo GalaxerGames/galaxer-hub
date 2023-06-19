@@ -29,7 +29,7 @@ const ProductOverview = () => {
         </div>
       </div>
       
-          <Image src='/logo.png' alt='Research at Galaxer' className={styles.image}/>
+          <Image src='/logo.png' alt='Research at Galaxer' width={250} height={100} className={styles.image}/>
           <hr />
         <div >
         <blockquote className={styles.quote}>

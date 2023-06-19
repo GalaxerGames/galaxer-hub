@@ -19,7 +19,7 @@ const Terms = () => {
             
             </div>
             <div className={styles.imageContainer}>
-              <Image src='/horitlogo.png' alt='Career Image' className={styles.careerImage}/>
+              <Image src='/horitlogo.png' alt='Career Image' width={250} height={100} className={styles.careerImage}/>
             </div>
           </div>
           <hr />

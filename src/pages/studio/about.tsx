@@ -2,7 +2,7 @@ import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
 import styles from '../../components/modules/about.module.css'
 import Link from 'next/link'
-import Image from 'next/Image'
+import Image from 'next/image'
 import '../../styles/globals.css';
 
 const About = () => {
@@ -35,7 +35,7 @@ const About = () => {
 
             </div>
             <div className={styles.imageContainer}>
-              <Image src='/logotri.png' alt='Career Image' className={styles.careerImage}/>
+              <Image src='/logotri.png' alt='Career Image' width={250} height={100} className={styles.careerImage}/>
             </div>
           </div>
           <hr />
@@ -97,7 +97,7 @@ const About = () => {
 
             </div>
             <div className={styles.imageContainer}>
-              <Image src='/logotri.png' alt='Career Image' className={styles.careerImage}/>
+              <Image src='/logotri.png' alt='Career Image' width={250} height={100} className={styles.careerImage}/>
             </div>
           </div>
           <hr />

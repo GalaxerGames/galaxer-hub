@@ -19,7 +19,7 @@ const Investors = () => {
              {/* <Link href='/blog/investors' className={styles.link}>Learn More</Link> */}
             </div>
             <div className={styles.imageContainer}>
-              <Image src='/logotri.png' alt='Career Image' className={styles.careerImage}/>
+              <Image src='/logotri.png' alt='Career Image' width={250} height={100} className={styles.careerImage}/>
             </div>
           </div>
           <hr />
@@ -45,7 +45,7 @@ const Investors = () => {
   <hr /> */}
 <div className={styles.container}>
   <div className={styles.imageContainer}>
-    <Image src='/logotri.png' alt='Image 4' className={styles.image1}/>
+    <Image src='/logotri.png' alt='Image 4' width={250} height={100} className={styles.image1}/>
   </div>
   <div className={styles.paragraphContainer}>
     <blockquote className={styles.quote}>
@@ -72,7 +72,7 @@ const Investors = () => {
 
           <Footer />
       </div>
-  );s
+  );
 }
 
 export default Investors;

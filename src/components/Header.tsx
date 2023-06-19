@@ -39,8 +39,8 @@ export const Header = () => {
 
   return (
     <header className={styles.header}>
-      <Link href='/home'>
-      <Image src='/logo.png' alt='Logo' className={styles.logo} />
+      <Link href='/home' legacyBehavior>
+      <Image src='/logo.png' alt='Logo' width={250} height={100} className={styles.logo} />
     </Link>
     <div className={styles.buttons}>
       <button onClick={onConnectWallet} className={styles.loginButton}>Connect Wallet</button>
@@ -53,6 +53,7 @@ export const Header = () => {
         <li className={`${styles.menuItem} ${activeMenu === 'lore' ? styles.menuItemActive : ''}`} onClick={() => handleSubMenu('lore')}>
             <Link href='/lore/codex'>Lore</Link>
             <ul className={`${styles.submenu} ${activeMenu === 'lore' ? styles.open : ''}`}>
+            <li><Link href='/lore/codex'>Codex</Link></li>
               <li><Link href='/lore/humanity'>Humanity</Link></li>
                 <li><Link href='/lore/portals'>Portals</Link></li>
                 <li><Link href='/lore/conflict'>Cosmic Conflict</Link></li>
@@ -157,5 +158,5 @@ export const Header = () => {
  
     
   </header>
-);
+  );
     };
