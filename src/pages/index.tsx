@@ -28,7 +28,7 @@ export default function Preload() {
             padding: 0;
             background-color: #000;
             height: 100vh;
-            overflow: hidden;
+            overflow-y: auto;
           }
         `}</style>
       </Head>
