@@ -11,7 +11,7 @@
   "dependencies": {
     "@emotion/babel-plugin": "^11.11.0",
     "@mapbox/mapbox-sdk": "^0.15.1",
-    "@rainbow-me/rainbowkit": "^1.0.1",
+    "@rainbow-me/rainbowkit": "^1.0.2",
     "encoding": "^0.1.13",
     "lokijs": "^1.5.12",
     "mapbox-gl": "^2.14.1",
@@ -19,8 +19,6 @@
     "pino-pretty": "^10.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-query": "^3.39.3",
-    "tailwindcss": "^3.3.2",
     "viem": "^1.0.7",
     "wagmi": "^1.2.0"
   },
@@ -35,6 +33,8 @@
   "browser": {
     "fs": false,
     "path": false,
-    "os": false
+    "os": false,
+    "tls": false,
+    "net": false
   }
 }

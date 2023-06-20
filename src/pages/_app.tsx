@@ -1,23 +1,15 @@
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { WagmiConfig, createConfig } from 'wagmi';
-import { configureChains, mainnet } from '@wagmi/core';
-import { polygon, polygonMumbai } from '@wagmi/core/chains';
-import { publicProvider } from 'wagmi/providers/public';
-import { AppProps } from 'next/app';
+import "../styles/globals.css";
+import "@rainbow-me/rainbowkit/styles.css";
 
-import '../styles/globals.css';
+import { AppProps } from "next/app";
 
-const queryClient = new QueryClient();
-const { publicClient, webSocketPublicClient } = configureChains([mainnet, polygon, polygonMumbai], [publicProvider()]);
-const config = createConfig({ publicClient, webSocketPublicClient });
+import WalletProvider from "../providers/WalletProvider";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <QueryClientProvider client={queryClient}>
-      <WagmiConfig config={config}>
-        <Component {...pageProps} />
-      </WagmiConfig>
-    </QueryClientProvider>
+    <WalletProvider>
+      <Component {...pageProps} />
+    </WalletProvider>
   );
 }
 
