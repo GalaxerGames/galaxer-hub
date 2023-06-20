@@ -34,7 +34,7 @@ export default function Preload() {
           </div>
       <p className={styles.paragraph}>Welcome, brave Galaxer, to the threshold of a new reality.<br/><br/> You stand at the precipice of a universe teeming with interdimensional beings, cosmic alliances, and resilient life forms, all woven together in a timeline that spans eons.
 
-<br/><br/>Here, in the realm of Galaxer, you will align with the Machine Elves, entities of higher dimensions, and choose your path in the ongoing 'Cogadh na Trí Ríochtaí', the War of the Three Kingdoms.<br/><br/> Your alliance will shape your journey, your battles, and your victories.
+<br/><br/>Here, in the realm of Galaxer, you will align with the Machine Elves, entities of higher dimensions, and choose your path in the ongoing &apos;Cogadh na Trí Ríochtaí&apos;, the War of the Three Kingdoms.<br/><br/> Your alliance will shape your journey, your battles, and your victories.
 
 <br/><br/>You will harness the power of the resilient Tardigrades, life forms of incredible adaptability, to enhance your abilities and influence the course of the cosmic conflict.<br/><br/> Each Tardigrade species offers unique powers, and collecting them will be key to your success.
 
