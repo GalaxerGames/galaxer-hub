@@ -21,7 +21,7 @@ const EcoOverview = () => {
             <Link href='https://t.me/galaxer_glxr'
               className={styles.button}>Join Whitelist
             </Link>
-            <Link href='https://snapshot.org/galaxer.eth'
+            <Link href='https://snapshot.org/#/galaxer.eth'
               className={styles.button}>Vote on Proposals
             </Link>
           </div>
