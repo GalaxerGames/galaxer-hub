@@ -6,7 +6,7 @@ import Image from 'next/image';
 export const Footer = () => (
   <footer className={styles.footer}>
     <Link href='/' legacyBehavior>
-      <Image src='/horitlogo.png' alt='Logo' width={200} height={300} className={styles.logo} />
+      <Image src='/horitlogo.png' alt='Logo' width={350} height={300} className={styles.logo} />
     </Link>
      <nav className={styles.nav}>
       <ul className={styles.menu}>
@@ -54,7 +54,7 @@ export const Footer = () => (
           <Link href='/studio/about'>Studio</Link>
           <ul className={styles.submenu}>
             <li><Link href='/studio/about'>About</Link></li>
-            <li><Link href='/studio/blog'>Blog</Link></li>
+            {/* <li><Link href='/studio/blog'>Blog</Link></li> */}
             {/* <li><Link href='/studio/careers'>Careers</Link></li> */}
             <li><Link href='/studio/charter'>Charter</Link></li>
             <li><Link href='/studio/investors'>Investors</Link></li>

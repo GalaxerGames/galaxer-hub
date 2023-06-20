@@ -12,8 +12,8 @@ const Android = () => {
             <div className={styles.page}>
              <h1 className={styles.title}>Android AR Core: Unleashing a New Dimension of Gameplay</h1>
             <div className={styles.buttons}>
-            <Link href="https://t.me/galaxer_glxr"
-             className={styles.button}>Join Waitlist
+            <Link href="https://play.google.com/store/apps/details?id=com.lunargistics.galaxer"
+             className={styles.button}>PreDownload
              </Link>
              </div>
             </div>
