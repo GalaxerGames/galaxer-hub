@@ -29,8 +29,8 @@ const EcoOverview = () => {
       </div>
       <hr />
       <div className={styles.sectionItem}>
-    <Image src='/logo.png' alt='Research at GenPen AI' width={250} height={100} className={styles.image}/>
-   
+   {/* <Image src='/logo.png' alt='Research at GenPen AI' width={250} height={100} className={styles.image}/>
+   */}
   </div>
   <hr />
   <div >
