@@ -54,7 +54,7 @@ export const Footer = () => (
           <Link href='/studio/about'>Studio</Link>
           <ul className={styles.submenu}>
             <li><Link href='/studio/about'>About</Link></li>
-            <li><Link href='/studio/blog'>Blog</Link></li>
+            {/* <li><Link href='/studio/blog'>Blog</Link></li> */}
             {/* <li><Link href='/studio/careers'>Careers</Link></li> */}
             <li><Link href='/studio/charter'>Charter</Link></li>
             <li><Link href='/studio/investors'>Investors</Link></li>

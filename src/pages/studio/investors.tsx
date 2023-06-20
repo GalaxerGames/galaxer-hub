@@ -60,7 +60,7 @@ const Investors = () => {
 
 
           <div>
-          <h1 className={styles.titleEnd}>Start investing in A LRG Corp <br /> today.</h1>
+          <h1 className={styles.titleEnd}>Start investing in <br/> A LRG Corp <br /> today.</h1>
           <div className={styles.buttonsContainerBottom}>
          <div className={styles.buttons1}>
         <Link href='https://t.me/galaxer_glxr' className={styles.button}>Inquire Here</Link>
