@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import styles from '../components/modules/nft.module.css'
-import { wagmiContractConfig } from '../components/web3/contracts'
+import { nftContract } from '../components/web3/nftContract'
 
 const elfComponentCreator = (
   title: string, 
@@ -22,11 +22,11 @@ const elfComponentCreator = (
         const [showModal, setShowModal] = useState(false)
     
         const { write, data, error, isLoading, isError } = useContractWrite({
-          ...wagmiContractConfig,
+          ...nftContract,
           functionName: 'claim',
           args: [index, factionId, merkleProof], 
-          address: `0x${wagmiContractConfig.address}`, 
-          abi: wagmiContractConfig.abi
+          address: `0x${nftContract.address}`, 
+          abi: nftContract.abi
         })
     
         const { data: receipt, isLoading: isPending, isSuccess } = useWaitForTransaction({ hash: data?.hash })
