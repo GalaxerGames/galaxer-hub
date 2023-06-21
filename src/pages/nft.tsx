@@ -42,9 +42,9 @@ const elfComponentCreator = (
             <div className={styles.content}>
               <h1>{title}</h1>
               <p>{description}</p>
-              <button disabled={isLoading} onClick={handleClick}>
-                {isLoading ? 'Claiming...' : claimButtonText}
-              </button>
+              <button className={styles.button} disabled={isLoading} onClick={handleClick}>
+                 {isLoading ? 'Claiming...' : claimButtonText}
+                </button>
             </div>
       
             {isPending && <div className={styles.loader}>Processing Transaction...</div>}
@@ -68,9 +68,9 @@ const merkleProof = ["0x1234", "0x5678"]; // add actual merkleProof
 
 const MintDroch = elfComponentCreator(
   'The Droch',
-  'Join the Droch to become an integral part of the Galaxer universe.',
+  'I solemnly pledge my allegiance to the Droch, the Warring Elves and vow to respect your strength and strategy, using your combat prowess as a guide in our journey. In a separate vow, we promise to uphold the principles of courage and determination, standing firm for the prosperity of all dimensions.',
   '/drochImage.png',
-  'Mint your Droch NFT',
+  'Sign with the Droch',
   factionId,
   index,
   merkleProof
@@ -78,9 +78,9 @@ const MintDroch = elfComponentCreator(
 
 const MintSeasamh = elfComponentCreator(
   'The Seasamh',
-  'Stand with the Seasamh to become an integral part of the Galaxer universe.',
+  'I solemnly pledge my allegiance to the Seasamh, the Balanced Elves and vow to respect your equilibrium and wisdom, using your balance as a compass in our journey. In a separate vow, we promise to maintain the harmony and stability of our shared existence, standing united for the prosperity of all dimensions.',
   '/seasamhImage.png',
-  'Mint your Seasamh NFT',
+  'Sign with the Seasamh',
   factionId,
   index,
   merkleProof
@@ -88,9 +88,9 @@ const MintSeasamh = elfComponentCreator(
 
 const MintTacaiocht = elfComponentCreator(
   'The Tacaíocht',
-  'Join the Tacaíocht to become an integral part of the Galaxer universe.',
+  'I solemnly pledge my loyalty to the Tacaíocht, the Supportive Elves and vow to honor your wisdom and guidance, using your support as a foundation for our endeavors. In a separate pledge, we promise to uphold the principles of unity and cooperation, standing together for the prosperity of all dimensions.',
   '/tacaiochtImage.png',
-  'Mint your Tacaíocht NFT',
+  'Sign with the Tacaiocht',
   factionId,
   index,
   merkleProof
@@ -98,30 +98,33 @@ const MintTacaiocht = elfComponentCreator(
 
 const MintTeadan = elfComponentCreator(
     'The Teadan',
-    'Join the Teadan to become an integral part of the Galaxer universe.',
+    'I pledge my allegiance to the Téadán, the Bright Tardigrade and vow to harness your radiant power with respect and wisdom, and to use your resilience as a beacon in our journey. In a second vow, we promise to uphold the balance and harmony of our shared existence, standing in unity for the prosperity of all dimensions.',
     '/teadanImage.png',
-    'Mint your Teadan NFT',
+    'Sign with the Teadan',
     factionId,
     index,
     merkleProof
   )
 
-export default function Home() {
-  const clientResult = useAccount();
-  return (
-    <div className={styles.container}>
-      <Header />
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Join the Machine Elf Alliance
-        </h1>
-
-        <MintDroch />
-        <MintSeasamh />
-        <MintTacaiocht />
-        <MintTeadan />
-      </main>
-      <Footer />
-    </div>
-  )
-}
+  export default function Home() {
+    const clientResult = useAccount();
+    return (
+      <div className={styles.container}>
+        <Header />
+        <main className={styles.main}>
+          <h1 className={styles.title}>
+            Join the Machine Elf Alliance
+          </h1>
+  
+          <div className={styles.nftGrid}>
+            <MintDroch />
+            <MintSeasamh />
+            <MintTacaiocht />
+            <MintTeadan />
+          </div>
+        </main>
+        <Footer />
+      </div>
+    )
+  }
+  
