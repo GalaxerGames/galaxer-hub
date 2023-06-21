@@ -16,10 +16,18 @@
 }
 
 .image {
-  width: 100%;
-  max-width: 250px;
-  object-fit: contain;
+  width: 50%;
+  border: 1px solid #4CAF50;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px #4CAF50, 0 0 15px #4CAF50, 0 0 20px #4CAF50;
+  transition: box-shadow 0.5s ease-in-out;
 }
+
+.image:hover {
+  box-shadow: 0 0 20px #4CAF50, 0 0 30px #4CAF50, 0 0 40px #4CAF50;
+}
+
 
 .button {
   background-color: #ffbf0095; /* Change this color to your preferred hue */
