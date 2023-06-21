@@ -12,18 +12,21 @@ export default function Home() {
     }
   }
   
-
   return (
     <div>
       <Header />
+      <video autoPlay loop muted className={styles.backgroundVideo}>
+        <source src="/globe_celtic.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className={styles.page}>
         <div className={styles.titleSection}>
           <h1 className={styles.title}>Welcome Galaxer,<br/> to the New World</h1>
           <div className={styles.buttons}>
-           
             <button onClick={handleScrollToVideo} className={styles.button}>View Teaser</button>
           </div>
         </div>
+      
         
         <div id="videoSection" className={styles.videoSection}>
           <div className={styles.videoContainer}>

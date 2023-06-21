@@ -19,6 +19,12 @@ const ResearchIndex = () => {
       category: "Paper",
       link: "https://nftstorage.link/ipfs/bafybeighklnwdafystiv3epmv26cdjnrlc2j435vqbstpzdmf6wij3e7tm"
     },
+    {
+      date: "2023-06-21",
+      name: "Pitch Deck",
+      category: "Deck",
+      link: "https://nftstorage.link/ipfs/bafybeicrasdg7cv7ezg2c4imvmeo3tpokyddud7cbgtf3blz6wkgjakcku"
+    },
   ];
 
   return (
@@ -64,7 +70,7 @@ const ResearchIndex = () => {
         <hr />
         <h1 className={styles.title}>Join us to make a brighter future.</h1>
         <div className={styles.buttons}>
-            <Link href="/companyCareers" className={styles.button}>Begin Session</Link>
+            <Link href="/ecosystem/overview" className={styles.button}>Begin Session</Link>
         </div>
         <hr />
             <Footer />
