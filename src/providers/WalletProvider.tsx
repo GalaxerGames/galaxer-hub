@@ -35,6 +35,7 @@ const WalletProvider: React.FC<WalletProviderProps> = ({ children }) => {
       <RainbowKitProvider
         coolMode
         chains={chains}
+        initialChain={137}
         theme={darkTheme({
           accentColor: "#252525",
           accentColorForeground: "#ffbf0095",
