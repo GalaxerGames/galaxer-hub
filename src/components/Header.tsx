@@ -191,8 +191,8 @@ export const Header = () => {
                 <li>
                   <Link href="/studio/about">About</Link>
                 </li>
-                <li>
-                 {/* <Link href="/studio/blog">Blog</Link>
+               {/* <li>
+                  <Link href="/studio/blog">Blog</Link>
                 </li> */}
                 {/* <li><Link href='/studio/careers'>Careers</Link></li> */}
                 <li>
