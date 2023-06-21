@@ -12,8 +12,8 @@ const GLXR = () => {
           <div className={styles.page}>
              <h1 className={styles.title}>Machine Elf Alliance</h1>
             <div className={styles.buttons}>
-            <Link href="https://t.me/galaxer_glxr"
-             className={styles.button}>Learn More
+            <Link href="/nft"
+             className={styles.button}>Sign with the Alliance
              </Link>
              </div>
             </div>

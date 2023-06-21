@@ -68,38 +68,40 @@ export const Header = () => {
               }`}
               onClick={() => handleSubMenu("lore")}
             >
-              <Link href="/lore/codex">Lore</Link>
+              <Link href="/lore/codex">
+                ♦ Lore
+                </Link>
               <ul
                 className={`${styles.submenu} ${
                   activeMenu === "lore" ? styles.open : ""
                 }`}
               >
                 <li>
-                  <Link href="/lore/codex">Codex</Link>
+                  <Link href="/lore/codex">♦ Codex</Link>
                 </li>
                 <li>
-                  <Link href="/lore/humanity">Humanity</Link>
+                  <Link href="/lore/humanity">♦ Humanity</Link>
                 </li>
                 <li>
-                  <Link href="/lore/portals">Portals</Link>
+                  <Link href="/lore/portals">♦ Portals</Link>
                 </li>
                 <li>
-                  <Link href="/lore/conflict">Cosmic Conflict</Link>
+                  <Link href="/lore/conflict">♦ Cosmic Conflict</Link>
                 </li>
                 <li>
-                  <Link href="/lore/droch">The Droch</Link>
+                  <Link href="/lore/droch">♦ The Droch</Link>
                 </li>
                 <li>
-                  <Link href="/lore/seasamh">The Seasamh</Link>
+                  <Link href="/lore/seasamh">♦ The Seasamh</Link>
                 </li>
                 <li>
-                  <Link href="/lore/tacaiocht">The Tacaiocht</Link>
+                  <Link href="/lore/tacaiocht">♦ The Tacaiocht</Link>
                 </li>
                 <li>
-                  <Link href="/lore/teadan">The Teadan</Link>
+                  <Link href="/lore/teadan">♦ The Teadan</Link>
                 </li>
                 <li>
-                  <Link href="/lore/guild">The Galaxer Guild</Link>
+                  <Link href="/lore/guild">♦ The Galaxer Guild</Link>
                 </li>
               </ul>
             </li>
@@ -109,7 +111,7 @@ export const Header = () => {
                 onClick={(e) => handleMenuClick(e, "platforms")}
                 onDoubleClick={(e) => handleMenuClick(e, "/platforms/overview")}
               >
-                Platforms
+                ♦ Platforms
               </Link>
               <ul
                 className={`${styles.submenu} ${
@@ -117,28 +119,28 @@ export const Header = () => {
                 }`}
               >
                 <li>
-                  <Link href="/platforms/overview">Overview</Link>
+                  <Link href="/platforms/overview">♦ Overview</Link>
                 </li>
                 <li>
-                  <Link href="/platforms/ios">iOS</Link>
+                  <Link href="/platforms/ios">♦ iOS</Link>
                 </li>
                 <li>
-                  <Link href="/platforms/android">Android</Link>
+                  <Link href="/platforms/android">♦ Android</Link>
                 </li>
                 <li>
-                  <Link href="/platforms/desktop">Desktop</Link>
+                  <Link href="/platforms/desktop">♦ Desktop</Link>
                 </li>
                 <li>
-                  <Link href="/platforms/vr">VR</Link>
+                  <Link href="/platforms/vr">♦ VR</Link>
                 </li>
                 <li>
-                  <Link href="/platforms/xbox">Xbox</Link>
+                  <Link href="/platforms/xbox">♦ Xbox</Link>
                 </li>
                 <li>
-                  <Link href="/platforms/playstation">PlayStation</Link>
+                  <Link href="/platforms/playstation">♦ PlayStation</Link>
                 </li>
                 <li>
-                  <Link href="/platforms/nintendo">Nintendo</Link>
+                  <Link href="/platforms/nintendo">♦ Nintendo</Link>
                 </li>
               </ul>
             </li>
@@ -148,7 +150,7 @@ export const Header = () => {
                 onClick={(e) => handleMenuClick(e, "ecosystem")}
                 onDoubleClick={(e) => handleMenuClick(e, "/ecosystem/overview")}
               >
-                Ecosystem
+               ♦ Ecosystem
               </Link>
               <ul
                 className={`${styles.submenu} ${
@@ -156,22 +158,22 @@ export const Header = () => {
                 }`}
               >
                 <li>
-                  <Link href="/ecosystem/overview">Overview</Link>
+                  <Link href="/ecosystem/overview">♦ Overview</Link>
                 </li>
                 <li>
-                  <Link href="/ecosystem/glxr">GLXR</Link>
+                  <Link href="/ecosystem/glxr">♦ GLXR</Link>
                 </li>
                 <li>
-                  <Link href="/ecosystem/nebula">Nebula Notes</Link>
+                  <Link href="/ecosystem/nebula">♦ Nebula Notes</Link>
                 </li>
                 <li>
-                  <Link href="/ecosystem/mea">Machine Elf Alliance</Link>
+                  <Link href="/ecosystem/mea">♦ Machine Elf Alliance</Link>
                 </li>
                 <li>
-                  <Link href="/ecosystem/tardigrades">Tardigrades</Link>
+                  <Link href="/ecosystem/tardigrades">♦ Tardigrades</Link>
                 </li>
                 <li>
-                  <Link href="/ecosystem/materials">Materials</Link>
+                  <Link href="/ecosystem/materials">♦ Materials</Link>
                 </li>
               </ul>
             </li>
@@ -181,7 +183,7 @@ export const Header = () => {
                 onClick={(e) => handleMenuClick(e, "studio")}
                 onDoubleClick={(e) => handleMenuClick(e, "/studio/about")}
               >
-                Studio
+               ♦ Studio
               </Link>
               <ul
                 className={`${styles.submenu} ${
@@ -189,17 +191,17 @@ export const Header = () => {
                 }`}
               >
                 <li>
-                  <Link href="/studio/about">About</Link>
+                  <Link href="/studio/about">♦ About</Link>
                 </li>
                {/* <li>
                   <Link href="/studio/blog">Blog</Link>
                 </li> */}
                 {/* <li><Link href='/studio/careers'>Careers</Link></li> */}
                 <li>
-                  <Link href="/studio/charter">Charter</Link>
+                  <Link href="/studio/charter">♦ Charter</Link>
                 </li>
                 <li>
-                  <Link href="/studio/investors">Investors</Link>
+                  <Link href="/studio/investors">♦ Investors</Link>
                 </li>
               </ul>
             </li>
@@ -209,7 +211,7 @@ export const Header = () => {
                 onClick={(e) => handleMenuClick(e, "overview")}
                 onDoubleClick={(e) => handleMenuClick(e, "/ecosystem/overview")}
               >
-                Claims
+               ♦ Claims
               </Link>
               <ul
                 className={`${styles.submenu} ${
@@ -217,10 +219,10 @@ export const Header = () => {
                 }`}
               >
                 <li>
-                  <Link href="/claim">CLaim GLXR</Link>
+                  <Link href="/claim">♦ CLaim GLXR</Link>
                 </li>
                 <li>
-                  <Link href="/nft">Claim NFTs</Link>
+                  <Link href="/nft">♦ Claim NFTs</Link>
                 </li>
               </ul>
             </li>
