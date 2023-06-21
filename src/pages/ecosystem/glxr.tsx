@@ -10,6 +10,7 @@ const GLXR = () => {
       <div>
           <Header />
           <div className={styles.page}>
+         <Image src='/logotri.png' alt='The GLXR Token' width={250} height={100} className={styles.image}/>
              <h1 className={styles.title}>GLXR Token</h1>
             <div className={styles.buttons}>
             <Link href="https://t.me/galaxer_glxr"
