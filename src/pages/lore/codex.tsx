@@ -173,7 +173,7 @@ const Codex = () => {
   <hr />
   <h1 className={styles.title}>Join us to make a brighter future.</h1>
   <div className={styles.buttons}>
-  <Link href='/product/overview' passHref className={styles.button}>Start Your Journey</Link>
+  <Link href='/ecosystem/overview' passHref className={styles.button}>Start Your Journey</Link>
   </div>
 <hr />
       <Footer />
