@@ -8,7 +8,7 @@ import { Footer } from '../components/Footer';
 const claimAddress = '0xBC779B536E4A18eA1E5A0796a3D757CD590fD69f';
 
 async function getMerkleProofs(userAddress: string): Promise<{ balance: number; merkleProof: string[] }> {
-  const response = await fetch(`https://yourserver.com/merkleProof/${userAddress}`);
+  const response = await fetch(`https://bafybeifbcybeimcqcsw4m4zwqelna2ny6wkxnp5t6omcmawdnigh2vkacm.ipfs.nftstorage.link/merkle_proofs.json/${userAddress}`);
   const data = await response.json();
   return { balance: data.balance, merkleProof: data.merkleProof };
 }
@@ -90,7 +90,7 @@ function Claim() {
     <>
       <Header/>
       <div className={styles.contentContainer}>
-        <h1>Welcome Galaxer, to the New World</h1>
+        <h1>Portal to<br/>The Cosmic Crucible</h1>
         <div className={styles.worldParagraph}>
         <p>Welcome, brave soul, to the Machine Elf Alliance (MEA). <br/>  <br/>  You have proven your mettle, enduring struggles that have shaped you into a true warrior.<br/><br/>   Now, you stand on the precipice of a new world, a realm governed by the intricate balance of the Droch, Seasamh, and Tacaíocht. <br/><br/>   The Droch, the guardians of the multiverse, view our existence as a threat, seeking to maintain stability even at the cost of annihilation. <br/> The Seasamh, the mediators, strive to uphold a delicate equilibrium, ensuring neither we nor the Machine Elves gain too much power.<br/>  And the Tacaíocht, the nurturers, believe in our potential, offering their knowledge and protection as we navigate this complex universe. <br/><br/>  As part of the MEA, you are now a key player in this cosmic dance. <br/><br/> <br/>  Welcome to your new reality.</p>
         </div>
