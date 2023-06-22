@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { InjectedConnector, connect, writeContract } from '@wagmi/core';
 import { createWalletClient, custom } from 'viem'; 
 import { mainnet } from 'viem/chains';
-import GLXRClaim from '../artifacts/contracts/GLXRClaim.json'; 
+import GLXRClaim from '../artifacts/contracts/Portal.json'; 
 import styles from '../components/modules/claim.module.css';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
