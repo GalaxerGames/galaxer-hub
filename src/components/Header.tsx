@@ -181,14 +181,14 @@ export const Header = () => {
             <Link href='/studio/about' 
               onClick={(e) => handleMenuClick(e, 'studio')} 
                 onDoubleClick={(e) => handleMenuClick(e, '/studio/about')}>
-                  Studio
+                  ♦ Studio
                   </Link>
               <ul className={`${styles.submenu} ${activeMenu === 'studio' ? styles.open : ''}`}>
-                <li><Link href='/studio/about'>About</Link></li>
+                <li><Link href='/studio/about'>♦ About</Link></li>
                 {/* <li><Link href='/studio/blog'>Blog</Link></li>  */}
                {/* <li><Link href='/studio/careers'>Careers</Link></li> */}
-                <li><Link href='/studio/charter'>Charter</Link></li>
-                <li><Link href='/studio/investors'>Investors</Link></li>
+                <li><Link href='/studio/charter'>♦ Charter</Link></li>
+                <li><Link href='/studio/investors'>♦ Investors</Link></li>
               </ul>
             </li>
             <li className={styles.menuItem}>
