@@ -1,5 +1,8 @@
-[
+{ 
+	"abi": [
 	{
+		"constant": true,
+		
 		"inputs": [
 			{
 				"internalType": "contract GALAXER",
@@ -235,4 +238,4 @@
 		"stateMutability": "nonpayable",
 		"type": "function"
 	}
-]
+] }
