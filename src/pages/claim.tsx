@@ -6,7 +6,7 @@ import ClaimGLXR from '../artifacts/contracts/CosmicCrucible.json';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
-const claimAddress = '0xBC779B536E4A18eA1E5A0796a3D757CD590fD69f';
+const claimAddress = '0x40E74645F63b0Fb47e95cDEc0CaAE89286A5b4eD';
 
 async function getMerkleProofs(userAddress: string): Promise<{ balance: number; merkleProof: string[] }> {
   const response = await fetch(`https://bafybeid5bb646kqadw2zeqj2w4q2w4ocozdy3scu7t2jnpqjcwjzyrte3m.ipfs.nftstorage.link/outputGLXR.json/${userAddress}`);
