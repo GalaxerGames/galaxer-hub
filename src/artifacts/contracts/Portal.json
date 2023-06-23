@@ -1,13 +1,16 @@
-[
+{ 
+	"abi": [
 	{
+		"constant": true,
+		
 		"inputs": [
 			{
-				"internalType": "contract GLXRToken",
+				"internalType": "contract GALAXER",
 				"name": "_newToken",
 				"type": "address"
 			},
 			{
-				"internalType": "contract GLXRStaker",
+				"internalType": "contract CosmicCrucible",
 				"name": "_staker",
 				"type": "address"
 			},
@@ -38,6 +41,25 @@
 		],
 		"name": "OwnershipTransferred",
 		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "addressClaimed",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
 	},
 	{
 		"inputs": [
@@ -162,20 +184,7 @@
 		"name": "newToken",
 		"outputs": [
 			{
-				"internalType": "contract GLXRToken",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "oldTokenAddress",
-		"outputs": [
-			{
-				"internalType": "address",
+				"internalType": "contract GALAXER",
 				"name": "",
 				"type": "address"
 			}
@@ -208,7 +217,7 @@
 		"name": "staker",
 		"outputs": [
 			{
-				"internalType": "contract GLXRStaker",
+				"internalType": "contract CosmicCrucible",
 				"name": "",
 				"type": "address"
 			}
@@ -229,4 +238,4 @@
 		"stateMutability": "nonpayable",
 		"type": "function"
 	}
-]
+] }
