@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 import { createWalletClient, custom } from 'viem';
 import { mainnet } from 'viem/chains';
 import styles from '../components/modules/claim.module.css';
+import ClaimGLXR from '../artifacts/contracts/CosmicCrucible.json';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
 const claimAddress = '0xBC779B536E4A18eA1E5A0796a3D757CD590fD69f';
 
 async function getMerkleProofs(userAddress: string): Promise<{ balance: number; merkleProof: string[] }> {
-  const response = await fetch(`https://bafybeifbcybeimcqcsw4m4zwqelna2ny6wkxnp5t6omcmawdnigh2vkacm.ipfs.nftstorage.link/merkle_proofs.json/${userAddress}`);
+  const response = await fetch(`https://bafybeid5bb646kqadw2zeqj2w4q2w4ocozdy3scu7t2jnpqjcwjzyrte3m.ipfs.nftstorage.link/outputGLXR.json/${userAddress}`);
   const data = await response.json();
   return { balance: data.balance, merkleProof: data.merkleProof };
 }
