@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useContractWrite, useWaitForTransaction } from 'wagmi';
 import { createWalletClient, custom } from 'viem';
 import { mainnet } from 'viem/chains';
 import styles from '../components/modules/claim.module.css';
-import ClaimGLXR from '../artifacts/contracts/CosmicCrucible.json';
+import Portal from '../artifacts/contracts/Portal.json'; 
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
@@ -76,13 +77,12 @@ function Claim() {
       }
   
       const { merkleProof } = await getMerkleProofs(account);
+      
+      const contract = new walletClient.eth.Contract(Portal.abi, claimAddress);
   
-      const transactionResponse = await walletClient.sendTransaction({
-        to: claimAddress,
-        data: walletClient.interface.encodeFunctionData('claimNewToken', [stakeDuration, newBalance, merkleProof]),
-      });
+      const transactionResponse = await contract.methods.claimNewToken(stakeDuration, newBalance, merkleProof).send({ from: account });
   
-      console.log(`Transaction hash: ${transactionResponse.hash}`);
+      console.log(`Transaction hash: ${transactionResponse.transactionHash}`);
     } catch (error: any) {
       setError(`Failed to claim tokens: ${(error as Error).message}`);
     }
