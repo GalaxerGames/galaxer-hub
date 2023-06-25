@@ -6,7 +6,7 @@ import Portal from '../artifacts/contracts/Portal.json';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
-const balanceJsonUrl = 'https://bafybeibqbhprtnmueudgn7udzqr2qnqbf72qixoq2dkkaxcpgoi7vf2tqy.ipfs.nftstorage.link/outputGLXR.json';
+const balanceJsonUrl = 'https://bafybeidw6f3jnislw4hxynccq2vkq3sgikhsarvpzd5y4izolx4p6qvrly.ipfs.nftstorage.link/outputGLXR.json';
 const claimAddress = "0x5511a0180A1add063CCdD932C07B8257954F3bbE"; 
 
 async function fetchBalance(userAddress: string): Promise<number> {
@@ -62,16 +62,16 @@ function Claim() {
 
       switch (selectedDays) {
         case 180:
-          multiplier = 10;
-          break;
-        case 270:
           multiplier = 100;
           break;
+        case 270:
+          multiplier = 1000;
+          break;
         case 365:
-          multiplier = 250;
+          multiplier = 2000;
           break;
         default:
-          multiplier = 1;
+          multiplier = 10;
       }
 
       setClaim(balance * multiplier);
@@ -118,7 +118,7 @@ function Claim() {
       <div className={styles.contentContainer}>
         <h1>Portal to<br/>The Cosmic Crucible</h1>
         <div className={styles.worldParagraph}>
-          <p>Welcome, brave soul, to the Machine Elf Alliance (MEA). ... </p>
+        <p>Welcome, brave soul, to the Machine Elf Alliance (MEA). <br/>  <br/>  You have proven your mettle, enduring struggles that have shaped you into a true warrior.<br/><br/>   Now, you stand on the precipice of a new world, a realm governed by the intricate balance of the Droch, Seasamh, and Tacaíocht. <br/><br/>   The Droch, the guardians of the multiverse, view our existence as a threat, seeking to maintain stability even at the cost of annihilation. <br/> The Seasamh, the mediators, strive to uphold a delicate equilibrium, ensuring neither we nor the Machine Elves gain too much power.<br/>  And the Tacaíocht, the nurturers, believe in our potential, offering their knowledge and protection as we navigate this complex universe. <br/><br/>  As part of the MEA, you are now a key player in this cosmic dance. <br/><br/> <br/>  Welcome to your new reality.</p>
         </div>
         <div className={styles.tokenBalance}>
           <p>My Balance: {balance}</p>
