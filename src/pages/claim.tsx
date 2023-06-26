@@ -38,6 +38,14 @@ async function fetchBalance(userAddress: string): Promise<number> {
   }
 }
 
+function largeNumberToBigNumber(value: string): ethers.BigNumber {
+  const parts = value.split('.');
+  const integerPart = ethers.BigNumber.from(parts[0]);
+  const decimalPart = parts[1] ? ethers.BigNumber.from(parts[1]) : ethers.BigNumber.from('0');
+  const combined = integerPart.mul(ethers.BigNumber.from(10).pow(decimalPart.toString().length)).add(decimalPart);
+  return combined;
+}
+
 
 
 function Claim() {
@@ -99,18 +107,28 @@ function Claim() {
   async function claimNewToken() {
     try {
       if (!account.address || balance === null || !provider) {
-        throw new Error('Account, balance or provider not loaded');
+        throw new Error('Account, balance, or provider not loaded');
       }
   
       const contract = new ethers.Contract(claimAddress, Portal.abi, provider.getSigner());
   
-      const transactionResponse = await contract.claimNewToken(stakeDuration, balance);
+      const balanceString = ethers.utils.formatUnits(balance.toString(), 18);
+  
+      const balanceBigNumber = largeNumberToBigNumber(balanceString);
+  
+      const transactionResponse = await contract.claimNewToken(stakeDuration, balanceBigNumber);
   
       console.log(`Transaction hash: ${transactionResponse.hash}`);
     } catch (error: any) {
       setError(`Failed to claim tokens: ${(error as Error).message}`);
+      console.error(`Failed to claim tokens: ${(error as Error).message}`);
     }
   }
+  
+  
+  
+
+  
   
   return (
     <>

@@ -1,7 +1,7 @@
 { 
     "abi": [
         {
-            "constant": true,
+            "constant": false,
 		"inputs": [
 			{
 				"internalType": "contract GALAXER",
