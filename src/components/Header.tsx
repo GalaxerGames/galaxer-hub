@@ -210,6 +210,9 @@ export const Header = () => {
                 <li>
                   <Link href="/nft">♦ Claim NFTs</Link>
                 </li>
+                <li>
+                  <Link href="/map">♦ Hub Map</Link>
+                </li>
               </ul>
             </li>
           </ul>
