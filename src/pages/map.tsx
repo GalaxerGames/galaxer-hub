@@ -3,7 +3,8 @@ import Mapbox, { LngLatLike, Map as MapboxMap } from 'mapbox-gl';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../components/modules/map.module.css';
-
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 import { useAccount, useSignTypedData } from 'wagmi';
 import MapboxGeocoding, { GeocodeQueryType, GeocodeRequest } from '@mapbox/mapbox-sdk/services/geocoding';
 import { recoverTypedDataAddress } from 'viem';
@@ -122,6 +123,8 @@ export function Map() {
   }
 
   return (
+    <>
+    <Header />
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100vh' }}>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh', width: '100%' }}>
         <button onClick={hubMyLocation} style={{ position: 'absolute', top: '10px' }}>
@@ -143,5 +146,9 @@ export function Map() {
       )}
       {error && <div>Error: {error?.message}</div>}
     </div>
+    <Footer/>
+    </>
   );
 }
+
+export default Map;
