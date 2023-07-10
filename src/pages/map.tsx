@@ -1,17 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
-import mapboxgl, { LngLatLike, Map as MapboxMap } from "mapbox-gl";
-import { Header } from "../components/Header";
+import mapboxgl, { Map as MapboxMap } from "mapbox-gl";
+import { useEffect, useRef, useState } from "react";
+import { useAccount } from "wagmi";
 import { Footer } from "../components/Footer";
-import { useAccount, useSignTypedData } from "wagmi";
-import MapboxGeocoding, {
-  GeocodeQueryType,
-  GeocodeRequest,
-} from "@mapbox/mapbox-sdk/services/geocoding";
-import { recoverTypedDataAddress } from "viem";
+import { Header } from "../components/Header";
+import styles from "../components/modules/map.module.css";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 mapboxgl.accessToken =
-  "pk.eyJ1IjoiZ2FsYXhlciIsImEiOiJjbGkwN2x2NzgwN3ZkM2RwY2kyeXppeGkwIn0.-u0aVxVb8Nxyn-hvkyyZnw";
-// const geocodingClient = MapboxGeocoding({ accessToken: Mapbox.accessToken });
+  "pk.eyJ1IjoiZ2FsYXhlciIsImEiOiJjbGkwN2x2NzgwN3ZkM2RwY2kyeXppeGkwIn0.-u0aVxVb8Nxyn-hvkyyZnw"; //TODO env
 
 const domain = {
   name: "Ether Mail",
@@ -20,34 +16,13 @@ const domain = {
   verifyingContract: "0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC",
 } as const;
 
-const types = {
-  Person: [
-    { name: "name", type: "string" },
-    { name: "wallet", type: "address" },
-  ],
-  Location: [
-    { name: "city", type: "string" },
-    { name: "coordinates", type: "string" },
-  ],
-} as const;
-
 export function Map() {
-  const mapContainerRef = useRef<HTMLElement | null>(null);
+  const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<MapboxMap | null>(null);
-  const [location, setLocation] = useState<number[] | null>(null);
-  const [city, setCity] = useState<string | null>(null);
   const account = useAccount();
-  const [recoveredAddress, setRecoveredAddress] = useState<string | null>(null);
-  const [lng, setLng] = useState(-70.9);
-  const [lat, setLat] = useState(42.35);
-  const [zoom, setZoom] = useState(9);
-
-  const message = {
-    name: "Galaxer",
-    wallet: account?.address || "",
-    city: city,
-    coordinates: location ? location.toString() : undefined,
-  } as const;
+  const [lat, setLat] = useState(38.7283837617133);
+  const [lng, setLng] = useState(-9.152658912920923);
+  const [zoom, setZoom] = useState(15);
 
   /* const { data, error, isLoading, signTypedData } = useSignTypedData({
     domain,
@@ -79,19 +54,40 @@ export function Map() {
       center: [lng, lat],
       zoom: zoom,
     });
-    /*     if (mapContainerRef.current) {
-      Mapbox.accessToken = "YOUR_MAPBOX_ACCESS_TOKEN";
-      const map = new Mapbox.Map({
-        container: mapContainerRef.current,
-        style: "mapbox://styles/mapbox/streets-v11",
-        center: [-74.5, 40],
-        zoom: 9,
-      });
+    mapRef.current.on("move", () => {
+      setLng(+mapRef.current!.getCenter().lng.toFixed(4));
+      setLat(+mapRef.current!.getCenter().lat.toFixed(4));
+      setZoom(+mapRef.current!.getZoom().toFixed(2));
+    });
+    // mapRef.current.on("load", () => {
+    //   mapRef.current!.addLayer({
+    //     id: "rpd_parks",
+    //     type: "fill",
+    //     source: {
+    //       type: "vector",
+    //       url: "mapbox://mapbox.3o7ubwm8",
+    //     },
+    //     "source-layer": "RPD_Parks",
+    //     layout: {
+    //       visibility: "visible",
+    //     },
+    //     paint: {
+    //       "fill-color": "rgba(61,153,80,0.55)",
+    //     },
+    //   });
+    // });
 
-      mapRef.current = map;
-
-      return () => map.remove();
-    } */
+    mapRef.current.addControl(
+      new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true,
+        },
+        // When active the map will receive updates to the device's location as it changes.
+        trackUserLocation: true,
+        // Draw an arrow next to the location dot to indicate which direction the device is heading.
+        showUserHeading: true,
+      })
+    );
   }, []);
 
   /*  function hubMyLocation() {
@@ -145,30 +141,29 @@ export function Map() {
           flexDirection: "column",
           alignItems: "center",
           height: "100vh",
+          padding: "0 0.2rem",
         }}
       >
         <div
           style={{
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
-            height: "50vh",
+            alignItems: "flex-start",
+            height: "70vh",
             width: "100%",
+            position: "relative",
           }}
         >
-          <button style={{ position: "absolute", top: "10px" }}>Find Me</button>
+          <div className={styles.mapOverlay}>
+            Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+          </div>
           <div
             ref={mapContainerRef}
             style={{ width: "100%", height: "60dvh" }}
           />
         </div>
-        {location && (
-          <p>
-            Location: {location[0]}, {location[1]}
-          </p>
-        )}
-        {city && <p>City: {city}</p>}
-        {account && <p>Wallet Address: {account.address}</p>}
+
+        {/* {account && <p>Wallet Address: {account.address}</p>} */}
         {/*  <button disabled={isLoading} onClick={() => signTypedData()}>
           {isLoading ? "Check Wallet" : "Hub My Location"}
         </button>

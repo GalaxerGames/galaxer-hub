@@ -1,22 +1,20 @@
 /* styles/globals.css */
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #212121;
-    color: #757575;
-  }
-  .button {
-    text-decoration: none;
-    background-color: #ffbf0095(50, 100%, 50%, 0.588);
-    color: #252525;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  .header {
-    position: sticky;
-    top: 0;
-    z-index: 100; /* Optional: Increase the z-index to ensure the header remains on top of other elements when scrolling */
-  }
-  
-  
+  font-family: "Roboto", sans-serif;
+  background-color: #212121;
+  color: #757575;
+}
+.button {
+  text-decoration: none;
+  background-color: #ffbf0095(50, 100%, 50%, 0.588);
+  color: #252525;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Optional: Increase the z-index to ensure the header remains on top of other elements when scrolling */
+}
