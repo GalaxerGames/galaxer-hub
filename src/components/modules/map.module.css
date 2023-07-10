@@ -10,3 +10,19 @@
   margin: 12px;
   border-radius: 4px;
 }
+
+.button {
+  color: #fff;
+  background-color: #ffbf0095;
+  text-decoration: none;
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}

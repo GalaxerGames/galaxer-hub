@@ -1,10 +1,13 @@
+import "mapbox-gl/dist/mapbox-gl.css";
+
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 import mapboxgl, { Map as MapboxMap } from "mapbox-gl";
 import { useEffect, useRef, useState } from "react";
-import { useAccount } from "wagmi";
+import { useAccount, useSignTypedData } from "wagmi";
+
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import styles from "../components/modules/map.module.css";
-import "mapbox-gl/dist/mapbox-gl.css";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiZ2FsYXhlciIsImEiOiJjbGkwN2x2NzgwN3ZkM2RwY2kyeXppeGkwIn0.-u0aVxVb8Nxyn-hvkyyZnw"; //TODO env
@@ -12,45 +15,46 @@ mapboxgl.accessToken =
 const domain = {
   name: "Ether Mail",
   version: "1",
-  chainId: 1,
   verifyingContract: "0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC",
+} as const;
+const types = {
+  Person: [
+    { name: "name", type: "string" },
+    { name: "wallet", type: "address" },
+  ],
+  Location: [
+    { name: "lat", type: "string" },
+    { name: "lng", type: "string" },
+  ],
 } as const;
 
 export function Map() {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<MapboxMap | null>(null);
   const account = useAccount();
-  const [lat, setLat] = useState(38.7283837617133);
-  const [lng, setLng] = useState(-9.152658912920923);
+  const [lat, setLat] = useState(38.77);
+  const [lng, setLng] = useState(-9.16);
   const [zoom, setZoom] = useState(15);
 
-  /* const { data, error, isLoading, signTypedData } = useSignTypedData({
+  const message = {
+    name: "Galaxer",
+    wallet: account?.address ?? "0x0000000000000000000000000000000000000000",
+    lat: lat.toString(),
+    lng: lng.toString(),
+  } as const;
+
+  const { data, error, isLoading, signTypedData } = useSignTypedData({
     domain,
     types,
     message,
-    primaryType: "Person",
+    primaryType: "Location",
   });
-
-  useEffect(() => {
-    if (!data) return;
-    (async () => {
-      setRecoveredAddress(
-        await recoverTypedDataAddress({
-          domain,
-          types,
-          message,
-          primaryType: "Person",
-          signature: data,
-        })
-      );
-    })();
-  }, [data]); */
 
   useEffect(() => {
     if (mapRef.current || !mapContainerRef.current) return; // initialize map only once
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style: "mapbox://styles/mapbox/streets-v12",
+      style: "mapbox://styles/notnull/cljx109b0025z01p544i88cu2",
       center: [lng, lat],
       zoom: zoom,
     });
@@ -59,23 +63,6 @@ export function Map() {
       setLat(+mapRef.current!.getCenter().lat.toFixed(4));
       setZoom(+mapRef.current!.getZoom().toFixed(2));
     });
-    // mapRef.current.on("load", () => {
-    //   mapRef.current!.addLayer({
-    //     id: "rpd_parks",
-    //     type: "fill",
-    //     source: {
-    //       type: "vector",
-    //       url: "mapbox://mapbox.3o7ubwm8",
-    //     },
-    //     "source-layer": "RPD_Parks",
-    //     layout: {
-    //       visibility: "visible",
-    //     },
-    //     paint: {
-    //       "fill-color": "rgba(61,153,80,0.55)",
-    //     },
-    //   });
-    // });
 
     mapRef.current.addControl(
       new mapboxgl.GeolocateControl({
@@ -88,49 +75,41 @@ export function Map() {
         showUserHeading: true,
       })
     );
-  }, []);
-
-  /*  function hubMyLocation() {
-    if (!navigator.geolocation) {
-      console.log("Geolocation is not supported by your browser");
-    } else {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const coords: LngLatLike = [
-            position.coords.longitude,
-            position.coords.latitude,
-          ];
-          if (mapRef.current) {
-            mapRef.current.flyTo({
-              center: coords,
-              essential: true,
-            });
-
-            new Mapbox.Marker().setLngLat(coords).addTo(mapRef.current);
-
-            setLocation(coords);
-
-            const geocodeRequest: GeocodeRequest = {
-              query: coords,
-              limit: 1,
-              types: ["place"] as GeocodeQueryType[],
-            };
-
-            geocodingClient
-              .reverseGeocode(geocodeRequest)
-              .send()
-              .then((response) => {
-                const match = response.body.features[0];
-                setCity(match.place_name);
-              });
-          }
+    mapRef.current?.on("load", () => {
+      mapRef.current?.addSource("conchas", {
+        type: "geojson",
+        data: {
+          type: "Feature",
+          properties: {},
+          geometry: {
+            type: "Polygon",
+            coordinates: [
+              [
+                [-9.160108748701258, 38.77175500653879],
+                [-9.156370187288598, 38.77243700384257],
+                [-9.156008089062645, 38.77105264541929],
+                [-9.153958881361838, 38.7715064335177],
+                [-9.149270380036956, 38.7692060953158],
+                [-9.151550257678489, 38.7676878314473],
+                [-9.158796192502676, 38.76888295595547],
+                [-9.160108748701258, 38.77175500653879],
+              ],
+            ],
+          },
         },
-        (error) => {
-          console.log("Unable to retrieve your location", error);
-        }
-      );
-    }
-  } */
+      });
+      mapRef.current?.addLayer({
+        id: "conchas",
+        type: "fill",
+        source: "conchas", // reference the data source
+        layout: {},
+        paint: {
+          "fill-color": "#0080ff",
+          "fill-opacity": 0.5,
+        },
+      });
+    });
+  }, []);
 
   return (
     <>
@@ -142,6 +121,7 @@ export function Map() {
           alignItems: "center",
           height: "100vh",
           padding: "0 0.2rem",
+          gap: "2em",
         }}
       >
         <div
@@ -149,7 +129,7 @@ export function Map() {
             display: "flex",
             justifyContent: "center",
             alignItems: "flex-start",
-            height: "70vh",
+            height: "80vh",
             width: "100%",
             position: "relative",
           }}
@@ -159,21 +139,27 @@ export function Map() {
           </div>
           <div
             ref={mapContainerRef}
-            style={{ width: "100%", height: "60dvh" }}
+            style={{ width: "100%", height: "80dvh" }}
           />
         </div>
-
-        {/* {account && <p>Wallet Address: {account.address}</p>} */}
-        {/*  <button disabled={isLoading} onClick={() => signTypedData()}>
-          {isLoading ? "Check Wallet" : "Hub My Location"}
-        </button>
+        {account?.address ? (
+          <button
+            className={styles.button}
+            disabled={isLoading}
+            onClick={() => signTypedData()}
+          >
+            {isLoading ? "Check Wallet" : "Hub My Location"}
+          </button>
+        ) : (
+          <ConnectButton chainStatus={"none"} showBalance={false} />
+        )}
         {data && (
           <div>
             <div>Signature: {data}</div>
-            <div>Recovered address {recoveredAddress}</div>
+            {/* <div>Recovered address {recoveredAddress}</div> */}
           </div>
         )}
-        {error && <div>Error: {error?.message}</div>} */}
+        {error && <div>Error: {error?.message}</div>}
       </div>
       <Footer />
     </>
