@@ -53,13 +53,9 @@ export const Header = () => {
         id="mySidebar"
         className={`${styles.sidebar} ${sidebarOpen ? styles.open : ""}`}
       >
-        <Link
-          href="javascript:void(0)"
-          className={styles.closebtn}
-          onClick={closeNav}
-        >
+        <button className={styles.closebtn} onClick={closeNav}>
           ×
-        </Link>
+        </button>
         <nav className={styles.nav}>
           <ul className={styles.menu}>
             <li
@@ -68,9 +64,7 @@ export const Header = () => {
               }`}
               onClick={() => handleSubMenu("lore")}
             >
-              <Link href="/lore/codex">
-                ♦ Lore
-                </Link>
+              <Link href="/lore/codex">♦ Lore</Link>
               <ul
                 className={`${styles.submenu} ${
                   activeMenu === "lore" ? styles.open : ""
@@ -150,7 +144,7 @@ export const Header = () => {
                 onClick={(e) => handleMenuClick(e, "ecosystem")}
                 onDoubleClick={(e) => handleMenuClick(e, "/ecosystem/overview")}
               >
-               ♦ Ecosystem
+                ♦ Ecosystem
               </Link>
               <ul
                 className={`${styles.submenu} ${
@@ -178,17 +172,29 @@ export const Header = () => {
               </ul>
             </li>
             <li className={styles.menuItem}>
-            <Link href='/studio/about' 
-              onClick={(e) => handleMenuClick(e, 'studio')} 
-                onDoubleClick={(e) => handleMenuClick(e, '/studio/about')}>
-                  ♦ Studio
-                  </Link>
-              <ul className={`${styles.submenu} ${activeMenu === 'studio' ? styles.open : ''}`}>
-                <li><Link href='/studio/about'>♦ About</Link></li>
+              <Link
+                href="/studio/about"
+                onClick={(e) => handleMenuClick(e, "studio")}
+                onDoubleClick={(e) => handleMenuClick(e, "/studio/about")}
+              >
+                ♦ Studio
+              </Link>
+              <ul
+                className={`${styles.submenu} ${
+                  activeMenu === "studio" ? styles.open : ""
+                }`}
+              >
+                <li>
+                  <Link href="/studio/about">♦ About</Link>
+                </li>
                 {/* <li><Link href='/studio/blog'>Blog</Link></li>  */}
-               {/* <li><Link href='/studio/careers'>Careers</Link></li> */}
-                <li><Link href='/studio/charter'>♦ Charter</Link></li>
-                <li><Link href='/studio/investors'>♦ Investors</Link></li>
+                {/* <li><Link href='/studio/careers'>Careers</Link></li> */}
+                <li>
+                  <Link href="/studio/charter">♦ Charter</Link>
+                </li>
+                <li>
+                  <Link href="/studio/investors">♦ Investors</Link>
+                </li>
               </ul>
             </li>
             <li className={styles.menuItem}>
@@ -197,7 +203,7 @@ export const Header = () => {
                 onClick={(e) => handleMenuClick(e, "overview")}
                 onDoubleClick={(e) => handleMenuClick(e, "/ecosystem/overview")}
               >
-               ♦ Claims
+                ♦ Claims
               </Link>
               <ul
                 className={`${styles.submenu} ${

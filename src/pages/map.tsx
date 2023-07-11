@@ -25,6 +25,7 @@ const types = {
   Location: [
     { name: "lat", type: "string" },
     { name: "lng", type: "string" },
+    { name: "timeSpent", type: "string" },
   ],
 } as const;
 
@@ -35,19 +36,58 @@ export function Map() {
   const [lat, setLat] = useState(38.77);
   const [lng, setLng] = useState(-9.16);
   const [zoom, setZoom] = useState(15);
+  const [timeSpent, setTimeSpent] = useState(0); //in seconds
+  const [isActive, setIsActive] = useState(false);
+  const timeRef = useRef<any | null>(null);
 
-  const message = {
+  const firstMessage = {
     name: "Galaxer",
     wallet: account?.address ?? "0x0000000000000000000000000000000000000000",
-    lat: lat.toString(),
-    lng: lng.toString(),
+    lat: lat.toString(), //TODO:
+    lng: lng.toString(), //TODO:
+    timeSpent: "0s",
   } as const;
-
-  const { data, error, isLoading, signTypedData } = useSignTypedData({
+  const {
+    data,
+    error,
+    isLoading,
+    signTypedData: signHubLocation,
+  } = useSignTypedData({
     domain,
     types,
-    message,
+    message: firstMessage,
     primaryType: "Location",
+    onSuccess() {
+      setTimeSpent(0);
+      timeRef.current = setInterval(() => {
+        setTimeSpent((prev) => prev + 1);
+      }, 1000);
+      setIsActive(true);
+    },
+  });
+  const finishMessage = {
+    name: "Galaxer",
+    wallet: account?.address ?? "0x0000000000000000000000000000000000000000",
+    lat: lat.toString(), //TODO:
+    lng: lng.toString(), //TODO:
+    timeSpent: `${timeSpent}s`,
+  } as const;
+  const {
+    data: finishData,
+    error: finishError,
+    isLoading: finishIsLoading,
+    signTypedData: signFinish,
+  } = useSignTypedData({
+    domain,
+    types,
+    message: finishMessage,
+    primaryType: "Location",
+    onSuccess() {
+      setIsActive(false);
+      setTimeSpent(0);
+
+      mapRef.current?.setPaintProperty("conchas", "fill-color", "#ffbf00");
+    },
   });
 
   useEffect(() => {
@@ -111,6 +151,38 @@ export function Map() {
     });
   }, []);
 
+  const getBtn = () => {
+    if (!isActive)
+      return (
+        <button
+          className={styles.button}
+          disabled={isLoading}
+          onClick={() => {
+            signHubLocation();
+          }}
+        >
+          {"Hub My Location"}
+        </button>
+      );
+    else {
+      return (
+        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+          <button
+            className={styles.button}
+            disabled={isLoading}
+            onClick={() => {
+              signFinish();
+            }}
+          >
+            {"Finish"}
+          </button>
+          <div>
+            <span>{timeSpent}</span>s
+          </div>
+        </div>
+      );
+    }
+  };
   return (
     <>
       <Header />
@@ -143,13 +215,7 @@ export function Map() {
           />
         </div>
         {account?.address ? (
-          <button
-            className={styles.button}
-            disabled={isLoading}
-            onClick={() => signTypedData()}
-          >
-            {isLoading ? "Check Wallet" : "Hub My Location"}
-          </button>
+          getBtn()
         ) : (
           <ConnectButton chainStatus={"none"} showBalance={false} />
         )}
@@ -160,6 +226,13 @@ export function Map() {
           </div>
         )}
         {error && <div>Error: {error?.message}</div>}
+        {finishData && (
+          <div>
+            <div>Signature: {finishData}</div>
+            {/* <div>Recovered address {recoveredAddress}</div> */}
+          </div>
+        )}
+        {finishError && <div>Error: {finishError?.message}</div>}
       </div>
       <Footer />
     </>
