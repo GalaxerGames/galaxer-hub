@@ -33,8 +33,8 @@ export function Map() {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<MapboxMap | null>(null);
   const account = useAccount();
-  const [lat, setLat] = useState(38.77);
-  const [lng, setLng] = useState(-9.16);
+  const [lat, setLat] = useState(43.64);
+  const [lng, setLng] = useState(-71.355);
   const [zoom, setZoom] = useState(15);
   const [timeSpent, setTimeSpent] = useState(0); //in seconds
   const [isActive, setIsActive] = useState(false);
