@@ -36,8 +36,8 @@ export default function Home() {
             <h2 className={styles.header}>Shape the Destiny <br/>of Dimensions</h2>
             <p className={styles.paragraph}><b>Galaxer is being built for the future.<br/> Search our codex for more information.</b></p>
             <Link href="/lore/codex" className={styles.button}>Search Codex</Link>
-            <Link href="/claim" className={styles.button}>Begin GLXR Claim</Link>
-            <Link href="/nft" className={styles.button}>Sign with the MEA</Link>
+           {/* <Link href="/claim" className={styles.button}>Begin GLXR Claim</Link>
+            <Link href="/nft" className={styles.button}>Sign with the MEA</Link>*/}
           </div>
         </div>
         {/* <div id="claimSection" className={styles.claimSection}>
