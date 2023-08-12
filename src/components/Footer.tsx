@@ -48,6 +48,7 @@ export const Footer = () => (
             <li><Link href='/ecosystem/materials'>Materials</Link></li>
             <li><Link href='/claim'>Claim GLXR</Link></li>
             <li><Link href='/nft'>Claim NFTs</Link></li>
+            <li><Link href='/map'>Hub Map</Link></li>
           </ul>
         </li>
         <li className={styles.menuItem}>

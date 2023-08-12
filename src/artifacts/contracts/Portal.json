@@ -1,8 +1,7 @@
 { 
-	"abi": [
-	{
-		"constant": true,
-		
+    "abi": [
+        {
+            "constant": false,
 		"inputs": [
 			{
 				"internalType": "contract GALAXER",
@@ -13,11 +12,6 @@
 				"internalType": "contract CosmicCrucible",
 				"name": "_staker",
 				"type": "address"
-			},
-			{
-				"internalType": "bytes32",
-				"name": "_merkleRoot",
-				"type": "bytes32"
 			}
 		],
 		"stateMutability": "nonpayable",
@@ -43,19 +37,13 @@
 		"type": "event"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "addressClaimed",
+		"inputs": [],
+		"name": "MAX_CLAIM_AMOUNT",
 		"outputs": [
 			{
-				"internalType": "bool",
+				"internalType": "uint256",
 				"name": "",
-				"type": "bool"
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -72,11 +60,6 @@
 				"internalType": "uint256",
 				"name": "amount",
 				"type": "uint256"
-			},
-			{
-				"internalType": "bytes32[]",
-				"name": "_merkleProof",
-				"type": "bytes32[]"
 			}
 		],
 		"name": "claimNewToken",
@@ -98,82 +81,19 @@
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "claimWindowDuration",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "claimWindowEndTime",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
-			}
-		],
-		"name": "claimed",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
 		"inputs": [
 			{
 				"internalType": "address",
 				"name": "",
 				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
 			}
 		],
-		"name": "merkleProofs",
+		"name": "hasClaimed",
 		"outputs": [
 			{
-				"internalType": "bytes32",
+				"internalType": "bool",
 				"name": "",
-				"type": "bytes32"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "merkleRoot",
-		"outputs": [
-			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
+				"type": "bool"
 			}
 		],
 		"stateMutability": "view",
@@ -237,5 +157,38 @@
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address[]",
+				"name": "addresses",
+				"type": "address[]"
+			}
+		],
+		"name": "whitelistAddresses",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "whitelisted",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
 	}
-] }
+]
+}
